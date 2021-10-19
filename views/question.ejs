@@ -1,0 +1,47 @@
+<% include ./include/header %>
+
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>문의하기</h2>
+      <p>탐지앗에 대해 문의할 내용을 아래 양식에 적어주세요.</p>
+    </div>
+
+    
+    <form id="contact-form">
+      <div class="row">
+        <div class="form-group col" >
+          <label for="exampleFormControlInput1">성함</label>
+          <input type="text" class="form-control" name="name" id="question_name" placeholder="ex) 홍길동" autocomplete="off">
+        </div>
+        <div class="form-group col" >
+          <label for="exampleFormControlInput2">이메일 주소</label>
+          <input type="email" class="form-control" name="email" id="question_email" placeholder="ex) name@example.com" autocomplete="off">
+        </div>
+        <div class="form-group col" >
+          <label for="exampleFormControlInput3">전화 번호</label>
+          <input type="phone" class="form-control" name="phone" id="question_name" placeholder="ex) 010-1234-1234" autocomplete="off">
+        </div>
+      
+      </div>
+      <div class="form-group" style="margin-top: 30px;">
+        <label for="exampleFormControlInput1">제목</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="ex) 제목" autocomplete="off">
+      </div>
+      
+      <div class="form-group" style="margin-top: 30px;">
+        <label for="exampleFormControlTextarea1">문의 내용</label>
+        <textarea class="form-control" id="question_contents" name="message" rows="10"  placeholder="ex) 문의 내용" autocomplete="off"></textarea>
+      </div>
+      <button type="submit" value="Send" class="btn btn-outline-success" style="float: right; margin-top: 30px;">전송 하기</button>
+    </form>
+
+  </div>
+ 
+</section><!-- End Features Section -->
+
+
+<% include include/footer %>

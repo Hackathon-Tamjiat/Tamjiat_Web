@@ -1,0 +1,99 @@
+<% include ../include/dash_header %>
+
+                <!-- partial -->
+                <div class="main-panel">
+                  <div class="content-wrapper">
+                  <div class="row">
+                      <div class="col-12 grid-margin stretch-card">
+                      <div class="card">
+                          <div class="card-body">
+                            <h4 class="card-title" style = "margin: 30px 0 0 0; font-size: 30px; color: darkred;">피해 농작물 상태&nbsp;<i class="mdi mdi mdi-hospital"></i></h4>
+                          <p class="card-description" style = "margin: 0.8rem 0 0 0">
+                            피해 농작물에 대한 상태를 확인해보세요.
+                          </p>
+                          <form class="forms-sample" style="margin: 50px 0 0 0;" action="/dash/dcropDelete" method="POST">
+                          <div class="form-group row" style = "margin: 30px 0 0 0;">
+                              <div class="card col" style="margin: 0 50px 0 0;">
+                                  <div class="card-body">
+                                    <h3 class="card-title">농작물 종류</h3>
+                                    <ul class="list-star" style="font-size: 20px;">
+                                      <li><%= db_data[0].cropsName%></li>
+                                    </ul>
+                                  </div>
+                              </div>
+                              <div class="card col" >
+                                  <div class="card-body">
+                                    <h3 class="card-title">농작물 이름</h3>
+                                    <ul class="list-star" style="font-size: 20px;">
+                                      <li><%= db_data[0].cropsCultivar %></li>
+                                    </ul>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="card" style = "margin: 30px 0 0 0;">
+                              <div class="card-body">
+                                <h4 class="card-title">AI 진단</h4>
+                                <div class="row" style="margin: 20px 0 0 0;">
+                                  <div class="col">
+                                      <p class="card-description">
+                                          발생 현황 : <label class="badge badge-warning"><%= db_data[0].cropsDate %></label></h4><br><br>
+                                          진단 결과 : <label class="badge badge-success"><%= db_data[0].AICheck%></label></h4>
+                                      </p>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 500px; margin: 0 auto;">
+                                  <img src="/upload/<%= db_data[0].cropsImage %> " width="500" height="500" alt="No Images">
+                                </div>
+                                </div>
+                                <% if (db_data[0].cdName != "진행중") { %>
+                                <div class="row" style="margin: 50px 0 0 0;">
+                                    <hr class="my-4">
+                                    <div class="col">
+                                      <h3 class="text-warning" style="font-weight: bold;"><%= db_data[0].cdName %> (<%= db_data[0].cdNameEng%> )</h3>
+                                      <label class="badge badge-danger" style = "margin: 10px 0 10px 0;"><%= db_data[0].cdOccurDate%></label>
+                                      <div class="card" style = "margin: 20px 0 0 0;">
+                                        <div class="card-body">
+                                          <h5 class="card-title text-success">병징</h5>
+                                          <hr class="my-4">
+                                          <P><%= db_data[0].cdSickness%></P>
+                                        </div>
+                                      </div>
+                                      <div class="card" style = "margin: 30px 0 30px 0;">
+                                        <div class="card-body">
+                                          <h5 class="card-title text-success">해결 방안</h5>
+                                          <hr class="my-4">
+                                          <P><%= db_data[0].cdSolution%></P>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                
+                              <% } %>
+                              </div>
+                              <div class="card" style = "margin: 30px 0 0 0;">
+                                <div class="card-body">
+                                  <h4 class="card-title">Memo</h4>
+                                  <hr class="my-4">
+                                  <P><%= db_data[0].cropsMemo%></P>
+                                </div>
+                                <input type="hidden" name="did" value="<%= db_data[0].did %>">
+                            </div>
+                            <button type="button" class="btn btn-success btn-icon-text"style="float: right; margin: 25px 0 0 0;" onclick="location.href='/dash/dcrop/1'">
+                              <i class="mdi mdi-checkbox-marked-circle-outline"></i>                                                    
+                              &nbsp; 확인
+                            </button>
+                            <button type="submit" class="btn btn-danger btn-icon-text"style="float: right; margin: 25px 15px 0 0;">
+                              <i class="mdi mdi-block-helper"></i>                                                    
+                              &nbsp; 삭제
+                            </button>
+                          </form>
+                          </div>
+                        </div>
+                    </div>
+                  </div>                
+              </div>
+          </div>
+      </div>
+  </div>
+
+<% include ../include/dash_footer %>

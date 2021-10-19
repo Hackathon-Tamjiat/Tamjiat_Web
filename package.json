@@ -1,0 +1,58 @@
+{
+  "name": "hello-world",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.21.3",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.1.0",
+    "cheerio": "^1.0.0-rc.10",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "date-utils": "^1.2.21",
+    "dayjs": "^1.10.6",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "ejs": "~2.6.1",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "fs": "^0.0.1-security",
+    "helmet": "^4.6.0",
+    "html2canvas": "^1.3.2",
+    "http-errors": "^1.6.3",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.3",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.12",
+    "openweather-apis": "^4.4.1",
+    "passport": "^0.4.1",
+    "passport-kakao": "^1.0.1",
+    "passport-local": "^1.0.0",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2",
+    "session-file-store": "^1.5.0",
+    "sharp": "^0.29.0",
+    "socket.io": "^2.2.0",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
+  },
+  "description": "��#\u0000 \u0000t\u0000a\u0000m\u0000j\u0000i\u0000a\u0000t\u0000_\u0000w\u0000e\u0000b\u0000\r\u0000 \u0000",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tamjiat/tamjiat_web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tamjiat/tamjiat_web/issues"
+  },
+  "homepage": "https://github.com/Tamjiat/tamjiat_web#readme"
+}

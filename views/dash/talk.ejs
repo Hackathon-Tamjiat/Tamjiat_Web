@@ -1,0 +1,37 @@
+<% include ../include/dash_header_talk %>
+
+    <!-- partial -->
+    <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card" style = "margin: 20px 0 80px 0">
+                  <div class="card-body">
+                      <h4 class="card-title" style = "margin: 10px 0 0 0; font-size: 30px; color: rgb(72, 145, 103);">토론방
+                        &nbsp;<i class="mdi mdi-wechat"></i></h4>
+                    <p class="card-description" style = "margin: 0.8rem 0 20px 0">
+                      농작물에 대한 다양한 토론을 진행해보세요!
+                    </p>
+                    <div class="container">
+                        <div id="message-container" class="overflow-auto">
+                        </div>
+                        <form id="send-container">
+                          <input
+                            type="text"
+                            id="message-input"
+                            class="form-control"
+                            maxlength="400"
+                            autocomplete="off"
+                            required
+                          />
+                          <button type="submit" id="send-button" class="btn btn-inverse-success btn-fw">
+                            <i class="mdi mdi-arrow-right-bold"></i>
+                          </button>
+                        </form>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+          </div>
+<% include ../include/dash_footer %>

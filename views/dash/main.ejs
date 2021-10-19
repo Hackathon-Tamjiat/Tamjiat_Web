@@ -1,0 +1,399 @@
+<% include ../include/dash_header %>
+<div class="main-panel" id="main_dash">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="home-tab">
+          <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">진행 사항</a>
+              </li>
+              <li class="nav-item">
+                <select id = "cropSelecor" class="form-select" aria-label="Default select example" style="border: 1px solid transparent;; background-color: transparent; font-size: 14px;">
+                  <option selected>선택하시오</option>
+                  <% for (var i = 0; i < ListData.length; i++ ) { %>
+                    <option value="<%= ListData[i].cropsName %>"><%= ListData[i].cropsName %></option>
+                  <% } %>
+                </select>
+              </li>
+
+            </ul>
+
+            <div>
+              <div class="btn-wrapper">
+                <button href="#" class="btn btn-otline-dark align-items-center"  id="sh-link"><i class="icon-share"></i> 링크 복사</button>
+                <button href="#" class="btn btn-otline-dark" onclick="window.print()"><i class="icon-printer"></i> 프린트</button>
+                <button href="#" class="btn btn-primary text-white me-0" onclick="downImg()"><i class="icon-download"></i> 사진</button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content tab-content-basic">
+            <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="statistics-details d-flex align-items-center justify-content-between">
+                    <div>
+                      <p class="statistics-title">총 성장 진행률</p>
+                      <h3 class="rate-percentage" id="avgPercent"> - </h3>
+                    </div>
+                    <div>
+                      <p class="statistics-title">수확 예정일</p>
+                      <h3 class="rate-percentage" id="nearHavestDate"> - </h3>
+                    </div>
+                    <div>
+                      <p class="statistics-title"> 총 수확 진행률</p>
+                      <h3 class="rate-percentage" id="totalYieldPercent"> - </h3>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <p class="statistics-title">당일 병 해충 발생 건수</p>
+                      <h3 class="rate-percentage" id="totalDiseaseCount"> - </h3>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                      <p class="statistics-title"></p>
+                      <h3 class="rate-percentage"></h3>
+                      <p class="text-success d-flex"><span></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-8 d-flex flex-column">
+                  <div class="row flex-grow">
+                    <div class="col-12 col-lg-4 col-lg-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="d-sm-flex justify-content-between align-items-start">
+                            <div>
+                              <h4 class="card-title card-title-dash">월별 재배 농작물 통계</h4>
+                              <h5 class="card-subtitle card-subtitle-dash">월별 재배 농작물을 확인해 주세요 !</h5>
+                            </div>
+                            <div id="performance-line-legend"></div>
+                          </div>
+                          <div class="chartjs-wrapper mt-5">
+                            <canvas id="performaneLine"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column" id="weatherArea">
+                  <div class="row flex-grow">
+                    <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+                      <div class="card bg-primary card-rounded">
+                        <div class="card-body pb-0">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <h4 class="card-title card-title-dash text-white mb-4">오늘의 날씨</h4>
+                              <p class="status-summary-ight-white mb-1" id="locate">-</p>
+                              <h2 class="text-info" id="temp">0 ℃</h2>
+                            </div>
+                            <div class="col-sm-6">
+                              <i class="mdi mdi-near-me" style="font-size: 110px; color:rgb(236, 171, 31); padding-bottom: 100px;"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="d-flex justify-content-between align-items-center mb-1 mb-sm-0">
+                                <i class="mdi mdi-weather-rainy" style="font-size: 60px;color:blue;"></i>
+                                <div>
+                                  <p class="text-small mb-2">강수량</p>
+                                  <h4 class="mb-0 fw-bold" id="rain">0 mm</h4>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="d-flex justify-content-between align-items-center">
+                                <i class="mdi mdi-weather-windy" style="font-size: 60px; color:skyblue;"></i>
+                                <div>
+                                  <p class="text-small mb-2">풍속</p>
+                                  <h4 class="mb-0 fw-bold" id="windspeed">0 m/s</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                     <div class="row">
+                      <div class="col-lg-8 d-flex flex-column">
+                        <div class="row flex-grow">
+                          <div class="col-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="d-sm-flex justify-content-between align-items-start">
+                                  <div>
+                                    <h4 class="card-title card-title-dash">재배 종목 진행사항</h4>
+                                   <p class="card-subtitle card-subtitle-dash">현재 재배 종목 진행률을 파악하세요.</p>
+                                  </div>
+                                  <div>
+                                    <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button" onClick="location.href='dash/crop/1'"><i class="mdi mdi-leaf"></i>농작물 더보기</button>
+                                  </div>
+                                </div>
+                                <div class="table-responsive  mt-1">
+                                  <table class="table select-table">
+                                    <thead>
+                                      <tr>
+                                        <th>
+                                          <div class="form-check form-check-flat mt-0">
+                                            <label class="form-check-label">
+                                              <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                                          </div>
+                                        </th>
+                                        <th>종목</th>
+                                        <th>농사 시작일</th>
+                                        <th>진행률</th>
+                                        <th>상태</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <% for (var i = 0; i < PercentData.length; i++) { %>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check form-check-flat mt-0">
+                                            <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" aria-checked="false"><i class="input-helper"></i></label>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <div class="d-flex ">
+                                            <div>
+                                              <h6><%= PercentData[i].cropsName %></h6>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <h6><%= PercentData[i].cropsStart %></h6>
+                                        </td>
+                                        <td>
+                                          <div>
+                                            <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                                              <p class="text-success"><%= PercentData[i].percent %></p>
+                                            </div>
+                                            <div class="progress progress-md">
+                                              <div class="progress-bar bg-success" role="progressbar" style="width: <%= PercentData[i].percent %>%" aria-valuenow="<%= PercentData[i].percent %>" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </div>
+                                        </td>
+                                        <td> 
+                                          <% if (PercentData[i].percent >= 100) {%>
+                                            <div class="badge badge-opacity-warning">완료</div>                                         
+                                          <% } else { %>
+                                            <div class="badge badge-opacity-warning">진행중</div>
+                                          <% } %>
+                                        </td>
+                                      </tr>
+                                      <% } %>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row flex-grow">
+                          <div class="col-md-6 col-lg-6 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body card-rounded">
+                                <h4 class="card-title  card-title-dash">농작물 재배 현황</h4>
+                                
+                                <% for (var i = 0; i < FinishData.length; i++ ) { %>
+                                  <div class="list align-items-center border-bottom py-2">
+                                  <div class="wrapper w-100">
+                                    <p class="mb-2 font-weight-medium">
+                                      <%= FinishData[i].cropsName %>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="d-flex align-items-center">
+                                        <i class="mdi mdi-calendar text-muted me-1"></i>
+                                        <p class="mb-0 text-small text-muted"><%= FinishData[i].cropsEnd %></p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <% } %>
+                                <div class="list align-items-center pt-3">
+                                  <div class="wrapper w-100">
+                                    <p class="mb-0">
+                                      <a href="/dash/cropCulture/1" class="fw-bold text-primary">전체 보기<i class="mdi mdi-arrow-right ms-2"></i></a>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-lg-6 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                  <h4 class="card-title card-title-dash">병ㆍ해충 발생 현황</h4>
+                                </div>
+                                <ul class="bullet-line-list">
+                                  <% for (var i = 0; i < DiseaseData.length; i++) { %>
+                                  <li>
+                                    <div class="d-flex justify-content-between">
+                                      <div><span class="text-light-green"><%= DiseaseData[i].cdName %></span></div>
+                                      <p><%= DiseaseData[i].cropsDate %></p>
+                                    </div>
+                                  </li>
+                                  <% } %>
+                                </ul>
+                                <div class="list align-items-center pt-3">
+                                  <div class="wrapper w-100">
+                                    <p class="mb-0">
+                                      <a href="/dash/pest/1" class="fw-bold text-primary">전체 보기<i class="mdi mdi-arrow-right ms-2"></i></a>
+                                    </p>
+                                  </div>
+                                </td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column">
+                  <div class="row flex-grow">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="card-title card-title-dash">재배 종목별 그래프</h4>
+                              </div>
+                              <canvas class="my-auto" id="doughnutChart" height="200"></canvas>
+                              <div id="doughnut-chart-legend" class="mt-5 text-center"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row flex-grow">
+                    <div class="col-12 grid-margin stretch-card">
+                      <div class="card card-rounded">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                  <h4 class="card-title card-title-dash">2021년 피해 농작물 발생 현황</h4>
+                                </div>
+                               
+                              </div>
+                              <div class="mt-3">
+                                <canvas id="leaveReport" style="height: 350px;"></canvas>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<%=key%>&libraries=services,clusterer,drawing"></script>
+  <script type = "text/javascript"
+          src = "http://maps.googleapis.com/maps/api/js?sensor=true">
+  </script>
+
+  <script>
+
+    $(document).ready(function (){
+      console.log("로딩다됨")
+      var geocoder = new kakao.maps.services.Geocoder();
+
+      function searchAddrFromCoords(coords, callback) {
+        // 좌표로 행정동 주소 정보를 요청합니다
+        geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback);
+      }
+
+      function displayCenterInfo(result, status) {
+        if (status === kakao.maps.services.Status.OK) {
+          for(var i = 0; i < result.length; i++) {
+            // 행정동의 region_type 값은 'H' 이므로
+            if (result[i].region_type === 'H') {
+              console.log( result[i].address_name)
+              $("#locate").text(result[i].address_name);
+              break;
+            }
+          }
+        }
+      }
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+                function (location) {
+                  //succ - 유저가 허용버튼을 클릭하여 값을 가져올 수 있는 상태
+                  var lat = location.coords.latitude;
+                  var lon = location.coords.longitude;
+                  var latlng = new kakao.maps.LatLng(lat, lon)
+                  searchAddrFromCoords(latlng, displayCenterInfo);
+                  $.ajax({
+                    url: '/dash/getWayWeather',
+                    type: 'POST',
+                    data: {lat: lat, lon: lon,},
+                    success: function (data) {
+                      $("#temp").text(data.result.temp + " ℃");
+                      $("#rain").text(data.result.rain + "mm");
+                      $("#windspeed").text(data.result.windspeed + " m/s");
+                    }
+                  });
+                },
+                function (error) {
+                  //fail - 유저가 차단버튼을 클릭하여 값을 가져올 수 없는 상태
+                  console.log("error1")
+                }
+        );
+      } else {
+        console.log("error2")
+        //fail - 애초에 GPS 정보를 사용할 수 없는 상태
+      }
+
+
+    })
+
+    $("#cropSelecor").on("change", function(){
+      var test;
+      $.ajax({
+        url:"/dash/Header",
+        type:"POST",
+        data: {cropsName : this.value},
+        success:function(db_data){
+          console.log(db_data)
+          $("#avgPercent").text(db_data.result.avgPercent+ "%");
+          $("#nearHavestDate").text(db_data.result.nearHavestDate);
+          $("#totalYieldPercent").text(db_data.result.totalYieldPercent+"%");
+          $("#totalDiseaseCount").text(db_data.result.totalDiseaseCount);
+          $("#damagedCropsCount").text(db_data.result.damagedCropsCount);
+          $("#locate").text(db_data.result.locate);
+          $("#temp").text(db_data.result.temp + " ℃");
+          $("#rain").text(db_data.result.rain + " mm");
+          $("#windspeed").text(db_data.result.windspeed + " m/s");
+        }
+      })
+    })
+  </script>
+
+
+<% include ../include/dash_footer_main %>

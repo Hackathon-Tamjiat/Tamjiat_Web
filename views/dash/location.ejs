@@ -1,0 +1,118 @@
+<% include ../include/dash_header %>
+<style>
+    .map_wrap {
+        position: relative;
+        width: 100%;
+        height: 350px;
+    }
+
+    .title {
+        font-weight: bold;
+        display: block;
+    }
+
+    .hAddr {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        border-radius: 2px;
+        background: #fff;
+        background: rgba(255, 255, 255, 0.8);
+        z-index: 1;
+        padding: 5px;
+    }
+
+    #centerAddr {
+        display: block;
+        margin-top: 2px;
+        font-weight: normal;
+    }
+
+    .bAddr {
+        padding: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+</style>
+<!-- partial -->
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card" style="height: 800px;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="margin: 30px 0 0 0; font-size: 30px; color: green;">내 농작물 위치 <i
+                                    class="mdi mdi-map-marker"></i></h4>
+                        <p class="card-description" style="margin: 0.8rem 0 0 0">
+                            나의 농작물을 지도로 확인해보세요 !
+                        </p>
+                        <div class="map_wrap">
+                            <div id="map"
+                                 style="width:100%;height:630px;position:relative;overflow:hidden;margin-top:25px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<%=key%>&libraries=services,clusterer,drawing"></script>
+
+        <script>
+            $(document).ready(function () {
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                    mapOption = {
+                        center: new kakao.maps.LatLng('<%= CropLocations[0].latitude %>', '<%= CropLocations[0].longitude %>'), // 지도의 중심좌표
+                        level: 5 // 지도의 확대 레벨
+                    };
+
+                var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+                var positions = [
+                    <% for(var i = 0; i < CropLocations.length; i++){ %>
+                    {
+                        latlng: new kakao.maps.LatLng('<%= CropLocations[i].latitude %>', '<%= CropLocations[i].longitude %>'),
+                        iwContent: '<div class="bAddr">' +
+                            '<span class="title">위치</span>' +
+                            '<%= CropLocations[i].locate %>' +
+                            '<span class="title">농작물</span>' +
+                            '<%= CropLocations[i].cropsName + '(' + CropLocations[i].cropsCultivar %>' + ')' +
+                            '</div>'
+                    },
+                    <% } %>
+                ];
+
+                console.log(positions)
+
+                for (var i = 0; i < positions.length; i++) {
+                    // 마커를 생성합니다
+                    var marker = new kakao.maps.Marker({
+                        map: map, // 마커를 표시할 지도
+                        position: positions[i].latlng, // 마커를 표시할 위치
+                    });
+
+                    var infowindow = new kakao.maps.InfoWindow({
+                        content: positions[i].iwContent
+                    });
+                    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+                }
+
+                // 인포윈도우를 표시하는 클로저를 만드는 함수입니다
+                function makeOverListener(map, marker, infowindow) {
+                    return function () {
+                        infowindow.open(map, marker);
+                    };
+                }
+
+                // 인포윈도우를 닫는 클로저를 만드는 함수입니다
+                function makeOutListener(infowindow) {
+                    return function () {
+                        infowindow.close();
+                    };
+                }
+            })
+
+        </script>
+
+
+<% include ../include/dash_footer %>

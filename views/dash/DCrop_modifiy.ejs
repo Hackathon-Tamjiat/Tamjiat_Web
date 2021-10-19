@@ -1,0 +1,53 @@
+<% include ../include/dash_header %>
+    <!-- partial -->
+    <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title" style = "margin: 30px 0 0 0; font-size: 30px; color: darkred;">피해 농작물 등록하기 <i class="mdi mdi mdi-hospital"></i></h4>
+                  <p class="card-description" style = "margin: 0.8rem 0 0 0">
+                    피해 농작물을 등록해주세요.
+                  </p>
+                  <form class="forms-sample" style="margin: 50px 0 0 0;" action="/dash/dcropInsert" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label for="Cropkind">농작물 종류</label>
+                        <select class="form-select" aria-label="Default select example" id="Cropkind" name="Cropkind">
+                          <% for (var i = 0; i < codeData.length; i++) { %>
+                            <option><%= codeData[i].cropsName %></option>
+                          <% } %>
+                        </select>
+                      </div>
+                    <div class="form-group">
+                      <label for="CropName">농작물 이름</label>
+                      <input type="text" class="form-control" id="CropName" name="CropName" placeholder="ex) 벼">
+                    </div>
+                    <div class="form-group">
+                        <label>농작물 이미지 업로드</label>
+                        <input type="file" name="attachments" class="file-upload-default">
+                        <div class="input-group col-xs-12">
+                          <input type="text" class="form-control file-upload-info" disabled="" placeholder="농작물 이미지" style="height: 44px;">
+                          <span class="input-group-append">
+                            <button class="file-upload-browse btn btn-primary" type="button">업로드</button>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="cropmemo">메모</label>
+                      <textarea class="form-control" id="cropmemo" name="cropmemo" rows="3" style="height: 150px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-icon-text"style="float: right; margin: 25px 0 0 0;">
+                      <i class="mdi mdi-plus"></i>                                                    
+                      &nbsp; 등록하기
+                    </button>
+                    <button type="button" class="btn btn-warning btn-icon-text"style="float: right; margin: 25px 20px 0 0;">
+                      <i class="mdi mdi-minus"></i>                                                    
+                      &nbsp; 취소하기
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+<% include ../include/dash_footer %>

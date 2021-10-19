@@ -1,0 +1,381 @@
+<!-- content-wrapper ends -->
+<!-- partial:partials/_footer.html -->
+<footer class="footer">
+    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium Bootstrap admin template from BootstrapDash.</span>
+        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+    </div>
+</footer>
+<!-- partial -->
+</div>
+<!-- main-panel ends -->
+</div>
+<!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- plugins:js -->
+<script src="/../../dash_assets/vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<script src="/../../dash_assets/vendors/chart.js/Chart.min.js"></script>
+<script src="/../../dash_assets/vendors/select2/select2.min.js"></script>
+<script src="/../../dash_assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="/../../dash_assets/vendors/progressbar.js/progressbar.min.js"></script>
+
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="/../../dash_assets/js/off-canvas.js"></script>
+<script src="/../../dash_assets/js/hoverable-collapse.js"></script>
+<script src="/../../dash_assets/js/template.js"></script>
+<script src="/../../dash_assets/js/settings.js"></script>
+<script src="/../../dash_assets/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="/../../dash_assets/js/dashboard.js"></script>
+<script src="/../../dash_assets/js/Chart.roundedBarCharts.js"></script>
+<script src="/../../dash_assets/js/file-upload.js"></script>
+<script src="/../../dash_assets/js/typeahead.js"></script>
+<script src="/../../dash_assets/js/select2.js"></script>
+<!-- End custom js for this page-->
+
+
+<script src="/../../dash_assets/js/html2canvas.js"></script>
+<script type="text/javascript">
+    //이미지(png)로 다운로드
+    function downImg(){
+        html2canvas($("#main_dash")[0]).then(function(canvas){
+            var myImage = canvas.toDataURL();
+            downloadURI(myImage, "농작물 Dash.png") 
+        });
+    }
+  
+    function downloadURI(uri, name){
+        var link = document.createElement("a")
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+    }
+  </script>
+<script>
+    function getRandomColor() {
+        return "#" + Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    $(function () {
+        $("#datepicker").datepicker(); // yyyy-mm-dd 형식으로 date타입 포멧
+        $("#datepicker2").datepicker(); // yyyy-mm-dd 형식으로 date타입 포멧
+
+    });
+
+    //일별 농작물 성장률 및 병해충 발생률
+    if ($("#performaneLine").length) {
+        var graphGradient = document.getElementById("performaneLine").getContext('2d');
+        var graphGradient2 = document.getElementById("performaneLine").getContext('2d');
+        var saleGradientBg = graphGradient.createLinearGradient(5, 0, 5, 100);
+        saleGradientBg.addColorStop(0, 'rgba(26, 115, 232, 0.18)');
+        saleGradientBg.addColorStop(1, 'rgba(26, 115, 232, 0.02)');
+        var saleGradientBg2 = graphGradient2.createLinearGradient(100, 0, 50, 150);
+        saleGradientBg2.addColorStop(0, 'rgba(0, 208, 255, 0.19)');
+        saleGradientBg2.addColorStop(1, 'rgba(0, 208, 255, 0.03)');
+        var salesTopData = {
+            labels: [<% for(var i = 0; i < CurveData.length; i++){ %>
+                    '<%= CurveData[i].date %>',
+                    <% } %>],
+            datasets: [{
+                label: '재배 농작물',
+                data: [<% for(var i = 0; i < CurveData.length; i++){ %>
+                    '<%= CurveData[i].cnt %>',
+                    <% } %>],
+                backgroundColor: saleGradientBg,
+                borderColor: [
+                    '#1F3BB3',
+                ],
+                borderWidth: 1.5,
+                fill: true, // 3: no fill
+                pointBorderWidth: 1,
+                pointRadius: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+                pointHoverRadius: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+                pointBackgroundColor: ['#1F3BB3)', '#1F3BB3', '#1F3BB3', '#1F3BB3', '#1F3BB3)', '#1F3BB3', '#1F3BB3', '#1F3BB3', '#1F3BB3)', '#1F3BB3', '#1F3BB3', '#1F3BB3', '#1F3BB3)'],
+                pointBorderColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff',],
+            }]
+        };
+
+        var salesTopOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    gridLines: {
+                        display: true,
+                        drawBorder: false,
+                        color: "#F0F0F0",
+                        zeroLineColor: '#F0F0F0',
+                    },
+                    ticks: {
+                        max : 20,
+                        min : 0,
+                        beginAtZero: false,
+                        autoSkip: true,
+                        maxTicksLimit: 15,
+                        fontSize: 10,
+                        color: "#6B778C"
+                    }
+                }],
+                xAxes: [{
+                    gridLines: {
+                        display: false,
+                        drawBorder: false,
+                    },
+                    ticks: {
+                        beginAtZero: false,
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10,
+                        color: "#6B778C"
+                    }
+                }],
+            },
+            legend: false,
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<div class="chartjs-legend"><ul>');
+                for (var i = 0; i < chart.data.datasets.length; i++) {
+                    console.log(chart.data.datasets[i]); // see what's inside the obj.
+                    text.push('<li>');
+                    text.push('<span style="background-color:' + chart.data.datasets[i].borderColor + '">' + '</span>');
+                    text.push(chart.data.datasets[i].label);
+                    text.push('</li>');
+                }
+                text.push('</ul></div>');
+                return text.join("");
+            },
+
+            elements: {
+                line: {
+                    tension: 0.4,
+                }
+            },
+            tooltips: {
+                backgroundColor: 'rgba(31, 59, 179, 1)',
+            }
+        }
+        var salesTop = new Chart(graphGradient, {
+            type: 'line',
+            data: salesTopData,
+            options: salesTopOptions
+        });
+        document.getElementById('performance-line-legend').innerHTML = salesTop.generateLegend();
+    }
+
+    //재배 종목별 그래프
+    if ($("#doughnutChart").length) {
+        var doughnutChartCanvas = $("#doughnutChart").get(0).getContext("2d");
+        var doughnutPieData = {
+            datasets: [{
+                data: [
+                    <% for(var i = 0; i < DonutData.length; i++){ %>
+                    '<%= DonutData[i].count %>',
+                    <% } %>
+                ],
+                backgroundColor: [
+                    <% for(var i = 0; i < DonutData.length; i++){ %>
+                        getRandomColor(),
+                    <% } %>
+                ],
+                borderColor: [
+                    <% for(var i = 0; i < DonutData.length; i++){ %>
+                    "#00ff0000",
+                    <% } %>
+                ],
+            }],
+
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            labels: [
+                <% for(var i = 0; i < DonutData.length; i++){ %>
+                '<%= DonutData[i].crops %>',
+                <% } %>
+            ]
+        };
+        var doughnutPieOptions = {
+            cutoutPercentage: 50,
+            animationEasing: "easeOutBounce",
+            animateRotate: true,
+            animateScale: false,
+            responsive: true,
+            maintainAspectRatio: true,
+            showScale: true,
+            legend: false,
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<div class="chartjs-legend"><ul class="justify-content-center">');
+                for (var i = 0; i < chart.data.datasets[0].data.length; i++) {
+                    text.push('<li><span style="background-color:' + chart.data.datasets[0].backgroundColor[i] + '">');
+                    text.push('</span>');
+                    if (chart.data.labels[i]) {
+                        text.push(chart.data.labels[i]);
+                    }
+                    text.push('</li>');
+                }
+                text.push('</div></ul>');
+                return text.join("");
+            },
+
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0
+                }
+            },
+            tooltips: {
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        return data['labels'][tooltipItem[0]['index']];
+                    },
+                    label: function (tooltipItem, data) {
+                        return data['datasets'][0]['data'][tooltipItem['index']];
+                    }
+                },
+
+                backgroundColor: '#fff',
+                titleFontSize: 14,
+                titleFontColor: '#0B0F32',
+                bodyFontColor: '#737F8B',
+                bodyFontSize: 11,
+                displayColors: false
+            }
+        };
+        var doughnutChart = new Chart(doughnutChartCanvas, {
+            type: 'doughnut',
+            data: doughnutPieData,
+            options: doughnutPieOptions
+        });
+        document.getElementById('doughnut-chart-legend').innerHTML = doughnutChart.generateLegend();
+    }
+
+    //피해 농작물 발생 현황 그래프
+    if ($("#leaveReport").length) {
+        var leaveReportChart = document.getElementById("leaveReport").getContext('2d');
+        var leaveReportData = {
+            labels: [ "1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"],
+            datasets: [{
+                label: '피해농작물',
+                data: [
+                    <% for(var i = 0; i < BarData.length; i++){ %>
+                    '<%= BarData[i].cnt %>',
+                    <% } %>],
+                backgroundColor: "#52CDFF",
+                borderColor: [
+                    '#52CDFF',
+                ],
+                borderWidth: 0,
+                fill: true, // 3: no fill
+
+            }]
+        };
+
+        var leaveReportOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    gridLines: {
+                        display: true,
+                        drawBorder: false,
+                        color: "rgba(255,255,255,.05)",
+                        zeroLineColor: "rgba(255,255,255,.05)",
+                    },
+                    ticks: {
+                        max:10,
+                        min:0,
+                        beginAtZero: true,
+                        autoSkip: true,
+                        maxTicksLimit: 10,
+                        fontSize: 10,
+                        color: "#6B778C"
+                    }
+                }],
+                xAxes: [{
+                    barPercentage: 0.5,
+                    gridLines: {
+                        display: false,
+                        drawBorder: false,
+                    },
+                    ticks: {
+                        beginAtZero: false,
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10,
+                        color: "#6B778C"
+                    }
+                }],
+            },
+            legend: false,
+
+            elements: {
+                line: {
+                    tension: 0.4,
+                }
+            },
+            tooltips: {
+                backgroundColor: 'rgba(31, 59, 179, 1)',
+            }
+        }
+        var leaveReport = new Chart(leaveReportChart, {
+            type: 'bar',
+            data: leaveReportData,
+            options: leaveReportOptions
+        });
+    }
+</script>
+<script>
+    $(document).on("click", "#sh-link", function(e) 
+        { // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no');
+        var html = "<input id='clip_target' type='text' value='' style='position:absolute;top:-9999em;'/>";
+        $(this).append(html);
+        
+        var input_clip = document.getElementById("clip_target");
+            //현재 url 가져오기 
+            var _url = $(location).attr('href');
+        $("#clip_target").val(_url);
+        
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) { 
+            var editable = input_clip.contentEditable; 
+            var readOnly = input_clip.readOnly; 
+            
+            input_clip.contentEditable = true; 
+            input_clip.readOnly = false; 
+            
+            var range = document.createRange(); 
+            range.selectNodeContents(input_clip); 
+            var selection = window.getSelection(); 
+            selection.removeAllRanges(); 
+            selection.addRange(range); 
+            input_clip.setSelectionRange(0, 999999); 
+            input_clip.contentEditable = editable; 
+            input_clip.readOnly = readOnly; 
+        } else { 
+            input_clip.select(); 
+        } 
+        try { 
+            var successful = document.execCommand('copy'); 
+            input_clip.blur(); 
+            if (successful) { 
+                alert("URL이 복사 되었습니다."); 
+                // 링크복사 시 화면 크기 고정 
+                $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes'); 
+            } else { 
+                alert('이 브라우저는 지원하지 않습니다.'); 
+            } 
+        } catch (err) { 
+            alert('이 브라우저는 지원하지 않습니다.'); 
+        } 
+    }); //클립보드 복사
+</script>
+</body>
+
+</html>

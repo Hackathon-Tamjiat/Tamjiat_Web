@@ -1,0 +1,123 @@
+<% include ../include/dash_header %>
+
+
+    <!-- partial -->
+    <div class="main-panel">
+        <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                <h4 class="card-title" style = "margin: 30px 0 0 0; font-size: 30px; color: green;">농작물<i class="mdi mdi-leaf"></i></h4>
+                <p class="card-description" style = "margin: 0.8rem 0 0 0">
+                    등록한 농작물의 상태를 확인해주세요.
+                </p>
+                <form class="forms-sample" style="margin: 50px 0 0 0;" action="/dash/cropDelete" method="POST">
+                  <div class="form-group row" style = "margin: 30px 0 0 0;">
+                    <div class="card col" style="margin: 0 50px 0 0;">
+                        <div class="card-body">
+                          <h3 class="card-title">농작물 종류</h3>
+                          <ul class="list-star" style="font-size: 20px;">
+                            <li><%= db_data[0].cropsName%></li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="card col" >
+                        <div class="card-body">
+                          <h3 class="card-title">농작물 이름</h3>
+                          <ul class="list-star" style="font-size: 20px;">
+                            <li><%= db_data[0].cropsCultivar%></li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style = "margin: 30px 0 0 0;">
+                    <div class="card-body">
+                      <h4 class="card-title">기본 사항</h4>
+                      <div class="row" style="margin: 50px 0 0 0;">
+                        <div class="col">
+                            <p class="card-description">
+                                농작물 재배 유형
+                            </p>
+                             <ul class="list-ticked">
+                               <li><%= db_data[0].categoryName%></li>
+                             </ul>
+                          </div>
+                          <div class="col">
+                            <p class="card-description">
+                                농작물 위치
+                            </p>
+                             <ul class="list-ticked">
+                               <li><%= db_data[0].locate%></li>
+                             </ul>
+                          </div>
+                          <div class="col">
+                            <p class="card-description">
+                                비료
+                            </p>
+                             <ul class="list-ticked">
+                               <li><%= db_data[0].useCompost%></li>
+                             </ul>
+                          </div>
+                      </div>
+                      <hr class="my-4">
+                      <div class="row" style="margin: 50px 0 0 0;">
+                        <div class="col">
+                            <p class="card-description">
+                                파종시기
+                            </p>
+                             <ul class="list-ticked">
+                               <li><%= db_data[0].cropsStart%></li>
+                             </ul>
+                          </div>
+                          <div class="col">
+                            <p class="card-description">
+                                재배예정시기
+                            </p>
+                             <ul class="list-ticked">
+                               <li><%= db_data[0].cropsEnd%></li>
+                             </ul>
+                          </div>
+                          <div class="col">
+                            <p class="card-description">
+                                예상 수확량
+                            </p>
+                             <ul class="list-ticked">
+                               <li><%= db_data[0].goalYield%></li>
+                             </ul>
+                          </div>
+                          <div class="col">
+                            <p class="card-description">
+                                현재 수확량
+                            </p>
+                             <ul class="list-ticked">
+                               <li><%= db_data[0].currentYield%></li>
+                             </ul>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card" style = "margin: 30px 0 0 0;">
+                    <div class="card-body">
+                      <h4 class="card-title">Memo</h4>
+                      <hr class="my-4">
+                      <P><%= db_data[0].cropsMemo%></P>
+                    </div>
+                    <input type="hidden" name="cid" value="<%= db_data[0].cid %>">
+                </div>
+                    <button type="button" class="btn btn-success btn-icon-text"style="float: right; margin: 25px 0 0 3px;" onclick="location.href='/dash/crop/1'">
+                        <i class="mdi mdi-checkbox-marked-circle-outline"></i>                                                    
+                        &nbsp; 확인
+                    </button>
+                    <button type="submit" class="btn btn-danger btn-icon-text"style="float: right; margin: 25px 15px 0 0;">
+                        <i class="mdi mdi-block-helper"></i>                                                    
+                        &nbsp; 삭제
+                    </button>
+                  </form>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<% include ../include/dash_footer %>

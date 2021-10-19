@@ -1,0 +1,113 @@
+<% include ../include/dash_header %>
+
+    <!-- partial -->
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card" style = "margin: 50px 0 80px 0">
+                  <div class="card-body">
+                    <h4 class="card-title" style = "margin: 30px 0 0 0; font-size: 30px;color: orange;">농작물 재배&nbsp;<i class="mdi mdi-weather-sunny"></i></h4>
+                    <p class="card-description" style = "margin: 0.8rem 0 0 0">
+                      수확 시기를 확인하여 진행률 100%인 농작물을 재배 해주세요!
+                    </p>
+                    <div class="table-responsive" style = "margin: 25px 0 20px 0"> 
+                      <form class="forms-sample" style="margin: 50px 0 0 0;" action="/dash/cropFinish" method="POST">
+                        <table class="table table-bordered" style="text-align: center;">
+                            <thead>
+                              <tr>
+                                <th class="col-md-1">
+                                    번호
+                                </th>
+                                <th class="col-md-1">
+                                  종류
+                                </th>
+                                <th class="col-md-2">
+                                    농작물
+                                </th>
+                                <th>
+                                    진행률
+                                </th>
+                                <th class="col-md-1">
+                                    농사 시작일
+                                </th>
+                                <th class="col-md-1">
+                                    재배 예정일
+                                </th>
+                                <th class="col-md-1">
+                                    수확
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <% for(var i =(c_num - 1) * max_value; i < c_num * max_value; i++){ %>
+                                <% var data_value=db_data[i]; if(data_value===undefined){ continue; } %>
+                                <tr onclick="location.href='/dash/cropCulture/<%= data_value.cid %>'">
+                              <tr>
+                                <td>
+                                  <%= i+1 %>
+                                </td>
+                                <td>
+                                  <%= data_value.cropsName %>
+                                </td>
+                                <td>
+                                  <%= data_value.cropsCultivar %>
+                                </td>
+                                <td>
+                                  <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: <%= data_value.percent %>%" aria-valuenow="<%= data_value.percent %>" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                </td>
+                                <td>
+                                    <%= data_value.cropsStart %>
+                                </td>
+                                <td> 
+                                    <%= data_value.cropsEnd %>
+                                </td>
+                                <td>
+                                    <% if (data_value.percent >= 100) {%>
+                                      <button type="submit" class="btn btn-outline-primary btn-icon-text">
+                                        <i class="ti-reload btn-icon-prepend"></i>                                                    
+                                        수확 완료
+                                      </button>
+                                      <input type="hidden" name="cid" value="<%= data_value.cid %>">
+                                    <% } else { %>
+                                      <button type="button" class="btn btn-outline-warning btn-icon-text">
+                                        <i class="ti-alert btn-icon-prepend"></i>                                                    
+                                        수확중
+                                      </button>
+                                    <% } %>
+                                </td>
+                              </tr>
+                              
+                          
+                              <% } %>
+                            </tbody>
+                          </table>
+                          </form>
+                          <nav>
+                            <ul class="pagination justify-content-center mt-5">
+                              <% if(c_num == 1) { %>
+                                  <li class="page-item"><a id="prev" class="page-link" style="color: black; display:none;" href="/dash/cropCulture/<%=Number(c_num)-1%>">">이전</a></li>
+                              <% } else if (c_num > 1) { %>
+                                  <li class="page-item"><a id="prev" class="page-link" style="color: black; display:block;" href="/dash/cropCulture/<%=Number(c_num)-1%>">이전</a></li>
+                              <% } %>
+                              <% for(var j = 1; j<= Math.ceil(db_data.length / max_value); j++){ %>
+                                <%if(j != c_num){%>
+                                  <li class="page-item"><a class="page-link" style="color: black;" href="/dash/cropCulture/<%= j %>"><%= j %></a>
+                                <%}else{%>
+                                  <li class="page-item"><a class="page-link" style="color: black; background-color: #c8c8c8;" href="/dash/cropCulture/<%= j %>"><%= j %></a>
+                                <%}%>
+                              <% } if(c_num == Math.ceil(db_data.length / max_value)) { %>
+                                  <li class="page-item"><a id="next" class="page-link" style="color: black; display:none;" href="/dash/cropCulture/<%=Number(c_num)+1%>">다음</a></li>
+                              <% } else if (c_num < Math.ceil(db_data.length / max_value)) { %>
+                                  <li class="page-item"><a id="next" class="page-link" style="color: black; display:block;" href="/dash/cropCulture/<%=Number(c_num)+1%>">다음</a></li>
+                              <% } %></ul>
+                          </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+<% include ../include/dash_footer %>

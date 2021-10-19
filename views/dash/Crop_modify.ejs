@@ -1,0 +1,204 @@
+<% include ../include/dash_header %>
+<style>
+  .map_wrap {position:relative;width:100%;height:350px;}
+  .title {font-weight:bold;display:block;}
+  .hAddr {position:absolute;left:10px;top:10px;border-radius: 2px;background:#fff;background:rgba(255,255,255,0.8);z-index:1;padding:5px;}
+  #centerAddr {display:block;margin-top:2px;font-weight: normal;}
+  .bAddr {padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+</style>
+    <!-- partial -->
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" style = "margin: 30px 0 0 0; font-size: 30px; color: green;">농작물 등록하기 <i class="mdi mdi-leaf"></i></h4>
+                <p class="card-description" style = "margin: 0.8rem 0 0 0">
+                  새롭게 추가하고 싶은 농작물을 등록해주세요.
+                </p>
+                <form class="forms-sample" style="margin: 50px 0 0 0;" action="/dash/cropInsert" method="POST">
+                  <div class="form-group">
+                    <label for="Cropkind">농작물 종류</label>
+                      <select class="form-select" aria-label="Default select example" id="Cropkind" name="Cropkind">
+                        <% for (var i = 0; i < codeData.length; i++) { %>
+                          <option><%= codeData[i].cropsName %></option>
+                        <% } %>
+                      </select>
+                    </div>
+                  <div class="form-group">
+                    <label for="CropName">농작물 이름</label>
+                    <input type="text" class="form-control" id="CropName" name="CropName" placeholder="ex) 금빛 토마토">
+                  </div>
+                  <div class="form-group">
+                    <label for="CropcategoryName">농작물 재배 유형</label>
+                      <select class="form-select" aria-label="Default select example" id="CropcategoryName" name="CropcategoryName">
+                        <% for (var i = 0; i < categoryData.length; i++) { %>
+                          <option><%=categoryData[i].categoryName %></option>
+                        <% } %>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="useCompost">비료</label>
+                    <input type="text" class="form-control" id="useCompost" name="useCompost" placeholder="ex) 한국산 비료">
+                  </div>
+                  <div class="form-group">
+                    <label for="Croplocation">농작물 위치</label>
+                    <div class="map_wrap">
+                      <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+                      <div class="hAddr">
+                        <span class="title">지도중심기준 행정동 주소정보</span>
+                        <span id="centerAddr"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col">
+                      <label for="Sowing2">파종 시기</label>
+                      <input type="text" class="form-control" id="datepicker" name="cropsStart" placeholder="ex) 2021-08-01">
+                    </div>
+                    <div class="col">
+                      <label for="Sowing2">재배 예정 시기</label>
+                      <input type="text" class="form-control" id="datepicker2" name="cropsEnd"placeholder="ex) 2021-09-01">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col">
+                      <label for="goalYield">예상 수확량</label>
+                      <input type="text" class="form-control" id="goalYield" name="goalYield" placeholder="ex) 2500">
+                    </div>
+                    <div class="col">
+                      <label for="currentYield">현재 수확량</label>
+                      <input type="text" class="form-control" id="currentYield" name="currentYield" placeholder="ex) 3200">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="cropmemo">메모</label>
+                    <textarea class="form-control" id="cropmemo" name="cropmemo"rows="3" style="height: 150px;"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-success btn-icon-text"style="float: right; margin: 25px 0 0 0;">
+                    <i class="mdi mdi-plus"></i>                                                    
+                    &nbsp; 등록하기
+                  </button>
+                  <button type="button" class="btn btn-warning btn-icon-text"style="float: right; margin: 25px 20px 0 0;">
+                    <i class="mdi mdi-minus"></i>                                                    
+                    &nbsp; 취소하기
+                  </button>
+                  
+                  <input type="hidden" id="Croplocation" name="Croplocation" value="">
+                  <input type="hidden" id="send_lat" name="send_lat" value="">
+                  <input type="hidden" id="send_lng" name="send_lng" value="">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=20a7b309a310827233d1145c6526b7cf&libraries=services,clusterer,drawing"></script>
+        <script>
+          /*
+          * lat lng를 등록할 때 같이 보내야함*/
+          var send_lat = 0;
+          var send_lng = 0;
+
+          $(document).ready(function (){
+            console.log("로딩다됨")
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(
+                      function (location) {
+                        //succ - 유저가 허용버튼을 클릭하여 값을 가져올 수 있는 상태
+                        var lat = location.coords.latitude;
+                        var lon = location.coords.longitude;
+
+                        console.log("lat" + lat);
+                        console.log("lot" + lon);
+
+                        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+                        var options = { //지도를 생성할 때 필요한 기본 옵션
+                          center: new kakao.maps.LatLng(lat, lon), //지도의 중심좌표.
+                          level: 1 //지도의 레벨(확대, 축소 정도)
+                        };
+
+                        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+                        var geocoder = new kakao.maps.services.Geocoder(); // 주소-좌표 변환 객체 생성성
+
+                        var marker = new kakao.maps.Marker(),
+                                infowindow = new kakao.maps.InfoWindow({zindex:1});
+
+                        searchAddrFromCoords(map.getCenter(), displayCenterInfo);
+
+                        kakao.maps.event.addListener(map, 'click', function (mouseEvent){
+                          searchDetailAddrFromCoords(mouseEvent.latLng, function (result, status){
+                            if (status === kakao.maps.services.Status.OK) {
+                              var detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
+                              detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
+
+                              var content = '<div class="bAddr">' +
+                                      '<span class="title">법정동 주소정보</span>' +
+                                      detailAddr +
+                                      '</div>';
+
+                              // 마커를 클릭한 위치에 표시합니다
+                              marker.setPosition(mouseEvent.latLng);
+                              send_lat = mouseEvent.latLng.getLat()
+                              send_lng = mouseEvent.latLng.getLng()
+                              console.log("클릭한 위치" + send_lat);
+                              console.log("클릭한 위치" + send_lng);
+                              console.log(result[0].address.address_name);
+                              $("#send_lat").val(send_lat);
+                              $("#send_lng").val(send_lng);
+                              $("#Croplocation").val(result[0].address.address_name);
+
+                              marker.setMap(map);
+
+                              // 인포윈도우에 클릭한 위치에 대한 법정동 상세 주소정보를 표시합니다
+                              infowindow.setContent(content);
+                              infowindow.open(map, marker);
+                            }
+                          })
+                        });
+
+                        // 중심 좌표나 확대 수준이 변경됐을 때 지도 중심 좌표에 대한 주소 정보를 표시하도록 이벤트를 등록합니다
+                        kakao.maps.event.addListener(map, 'idle', function() {
+                          searchAddrFromCoords(map.getCenter(), displayCenterInfo);
+                        });
+
+                        function searchAddrFromCoords(coords, callback) {
+                          // 좌표로 행정동 주소 정보를 요청합니다
+                          geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback);
+                        }
+
+                        function searchDetailAddrFromCoords(coords, callback) {
+                          // 좌표로 법정동 상세 주소 정보를 요청합니다
+                          geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+                        }
+
+                        // 지도 좌측상단에 지도 중심좌표에 대한 주소정보를 표출하는 함수입니다
+                        function displayCenterInfo(result, status) {
+                          if (status === kakao.maps.services.Status.OK) {
+                            var infoDiv = document.getElementById('centerAddr');
+
+                            for(var i = 0; i < result.length; i++) {
+                              // 행정동의 region_type 값은 'H' 이므로
+                              if (result[i].region_type === 'H') {
+                                infoDiv.innerHTML = result[i].address_name;
+                                break;
+                              }
+                            }
+                          }
+                        }
+                      },
+                      function (error) {
+                        //fail - 유저가 차단버튼을 클릭하여 값을 가져올 수 없는 상태
+                      }
+              );
+            } else {
+              //fail - 애초에 GPS 정보를 사용할 수 없는 상태
+            }
+          })
+
+        </script>
+
+
+<% include ../include/dash_footer %>

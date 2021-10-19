@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>( 주 ) 탐지앗</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="/../../dash_assets/vendors/feather/feather.css">
+  <link rel="stylesheet" href="/../../dash_assets/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="/../../dash_assets/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="/../../dash_assets/vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="/../../dash_assets/vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="/../../dash_assets/vendors/css/vendor.bundle.base.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+
+  <!-- include summernote css/js-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+ 
+
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="/../../dash_assets/js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/../../dash_assets/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link href="./assets/img/favicon.png" rel="icon">
+
+</head>
+<body>   
+  <div class="container-scroller"> 
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+        <div>
+          <a class="navbar-brand brand-logo" href="/dash">
+            <img src="/../../dash_assets/images/logo.svg" alt="logo" />
+          </a>
+          <a class="navbar-brand brand-logo-mini" href="/dash">
+            <img src="/../../dash_assets/images/logo-mini.svg" alt="logo" />
+          </a>
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-top"> 
+        <ul class="navbar-nav">
+          <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+            <h1 class="welcome-text">어서오세요 ! <span class="text-black fw-bold"><%= username %> 님.</span></h1>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item d-none d-lg-block">
+            <div id="datepicker-popup" class="input-group date navbar-date-picker">
+              <span class="input-group-addon input-group-prepend border-right">
+                <span class="icon-calendar input-group-text calendar-icon"></span>
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </li>
+          <li class="nav-item">
+            <form class="search-form" action="#">
+              
+            </form>
+          </li>
+          <li class="nav-item dropdown"> 
+            <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="icon-bell"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="countDropdown">
+              <a class="dropdown-item py-3">
+                <p class="mb-0 font-weight-medium float-left">농작물 현황 알림판</p>
+                <span class="badge badge-pill badge-primary float-right">더 보기</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="/../../dash_assets/images/faces/face12.jpg" alt="image" class="img-sm profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">토마토</p>
+                  <p class="fw-light small-text mb-0"> 100 % </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="/../../dash_assets/images/faces/face12.jpg" alt="image" class="img-sm profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">양배추</p>
+                  <p class="fw-light small-text mb-0"> 72 % </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <img src="/../../dash_assets/images/faces/face1.jpg" alt="image" class="img-sm profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow py-2">
+                  <p class="preview-subject ellipsis font-weight-medium text-dark">콩</p>
+                  <p class="fw-light small-text mb-0"> 83 % </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+            <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="img-xs rounded-circle" src="<%= userimg %>" alt="Profile image"> </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+              <div class="dropdown-header text-center">
+                <img class="img-md rounded-circle" src="<%= userimg %>" alt="Profile image" width="50px" height="50px">
+                <p class="mb-1 mt-3 font-weight-semibold"><%= username %>님</p>
+              </div>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>로그아웃</a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">사이드 메뉴 색 변경</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border me-3"></div>Dark</div>
+          
+        </div>
+      </div>
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/dash">
+              <i class="mdi mdi-grid-large menu-icon"></i>
+              <span class="menu-title">메인 화면</span>
+            </a>
+          </li>
+          <li class="nav-item nav-category">관리</li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-crop" aria-expanded="false" aria-controls="ui-basic">
+              <i class="menu-icon mdi mdi-leaf"></i>
+              <span class="menu-title">농작물</span>
+              <i class="menu-arrow"></i> 
+            </a>
+            <div class="collapse" id="ui-crop">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" onclick="location.href='/dash/crop/1';" style="cursor: pointer;">농작물 상태</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/dash/cropCulture/1">농작물 재배</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/dash/dcrop/1">피해 농작물 상태</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-dcrop" aria-expanded="false" aria-controls="ui-basic2">
+              <i class="menu-icon mdi mdi-bug"></i>
+              <span class="menu-title">병ㆍ해충</span>
+              <i class="menu-arrow"></i> 
+            </a>
+            <div class="collapse" id="ui-dcrop">
+              <ul class="nav flex-column sub-menu" >
+                <li class="nav-item"> <a class="nav-link" href="/dash/pest/1">병ㆍ해충 발생 현황</a></li>
+              </ul>
+            </div>
+          </li>
+          <!--농작물 위치-->
+          <li class="nav-item nav-category">위치</li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dash/location" aria-expanded="false" aria-controls="location">
+              <i class="menu-icon mdi mdi-map-marker"></i>
+              <span class="menu-title">내 농작물 위치</span>
+            </a>
+          </li>
+          <!-- 알림판 -->
+          <li class="nav-item nav-category">알림</li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dash/notice/1" aria-expanded="false" aria-controls="notice">
+              <i class="menu-icon mdi mdi-card-text-outline"></i>
+              <span class="menu-title">공지사항</span>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/dash/talk" aria-expanded="false" aria-controls="form-elements">
+              <i class="menu-icon mdi mdi-card-text-outline"></i>
+              <span class="menu-title">토론방</span>
+            </a>
+          </li>
+          <!-- 프로필 -->
+          <li class="nav-item nav-category">프로필</li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="menu-icon mdi mdi-account-circle-outline"></i>
+              <span class="menu-title"> </span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Logout </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item nav-category">도움말</li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="menu-icon mdi mdi-file-document"></i>
+              <span class="menu-title">탐지앗 사용 설명서</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
