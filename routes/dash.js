@@ -19,8 +19,10 @@ router.post('/cropMulter', upload.fields([{name:'myFile', maxCount:1}]), dashCon
 router.get('/',dashController.dash_main);
 router.get('/crop/:num',dashController.dashCrop);
 router.get('/cropAdd',dashController.dashCropAdd);
+router.get('/cropUpdate',dashController.dashCropUpdate);
 router.get('/cropDetail/:num',dashController.dashCropDetail);
 router.post('/cropInsert',dashController.dashinsertCrop);
+
 router.post('/cropDelete',dashController.dashCropDelete);
 
 router.get('/dcrop/:num',dashController.dashDCrop);
@@ -34,6 +36,7 @@ router.get('/pest/:num',dashController.dashPest);
 
 router.get('/notice/:num',dashController.dashNotice);
 router.get('/noticeDetail/:num',dashController.dashNoticeDetail);
+router.get('/noticeUpdate',dashController.dashNoticeUpdate);
 router.get('/noticeInsert',dashController.dashNoticeInsert);
 router.post('/noticeInsert',dashController.dashNoticeInsertData);
 router.post('/noticeDelete',dashController.dashNoticeDelete);
@@ -46,8 +49,5 @@ router.post('/Header',dashController.dashHeader);
 router.post('/getWayWeather',dashController.getWayWeather);
 
 router.get('/weather/today',weatherController.todayWeather);
-
-
-
 
 module.exports = router

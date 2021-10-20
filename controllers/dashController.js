@@ -144,6 +144,16 @@ function dashCropAdd(req, res, next) {
     }).catch(err => res.send("<script>alert('err')</script>"));
 }
 
+function dashCropUpdate(req, res, next) {
+    var parameters = {
+        "cid": req.params.num,
+        "uid": req.session.userid
+    }
+    DashDAO.select_cropDetail(parameters).then((db_data) => {
+        res.render('dash/Crop_update', {codeData, categoryData, db_data, username: req.session.userName, userimg:req.session.img});
+    }).catch(err => res.send("<script>alert('err')</script>"));
+}
+
 function dashCropDetail(req, res, next) {
     var parameters = {
         "cid": req.params.num,
@@ -303,6 +313,14 @@ function dashNoticeDetail(req, res, next) {
     }
     DashDAO.select_noticeDetail(parameters).then((db_data) => {
         res.render('dash/notice_detail', {db_data, userimg:req.session.img,username: req.session.userName});
+    }).catch(err => res.send("<script>alert('err')</script>"));
+}
+function dashNoticeUpdate(req, res, next) {
+    var parameters = {
+        "nid": req.params.num
+    }
+    DashDAO.select_noticeDetail(parameters).then((db_data) => {
+        res.render('dash/notice_update', {db_data, userimg:req.session.img,username: req.session.userName});
     }).catch(err => res.send("<script>alert('err')</script>"));
 }
 
@@ -598,6 +616,7 @@ module.exports = {
     dash_cropMulter,
     dashCrop,
     dashCropAdd,
+    dashCropUpdate,
     dashCropDetail,
     dashCropDelete,
     dashCropPercent,
@@ -610,6 +629,7 @@ module.exports = {
     dashNotice,
     dashNoticeDetail,
     dashNoticeDelete,
+    dashNoticeUpdate,
     dashNoticeInsert,
     dashNoticeInsertData,
     dashPest,
