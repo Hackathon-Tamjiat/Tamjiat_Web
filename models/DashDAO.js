@@ -102,7 +102,7 @@ function select_cropPercent(parameters) {
     return new Promise(function (resolve, reject) {
         db.query(`SELECT cid, cropsName, cropsCultivar, 
         ROUND(((TIMESTAMPDIFF(DAY, cropsStart, NOW()))/(TIMESTAMPDIFF(DAY, cropsStart, cropsEnd))) * 100) AS percent 
-        ,cropsStart, cropsEnd FROM userCrop WHERE uid = '${parameters.uid}';`, function (error, db_data) {
+        ,cropsStart, cropsEnd FROM userCrop WHERE uid = '${parameters.uid}' and cropsFinish = 'false';`, function (error, db_data) {
             if (error) {
                 logger.error(
                     "DB error [userCrop]" +
