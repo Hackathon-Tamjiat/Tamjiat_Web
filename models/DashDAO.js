@@ -97,6 +97,52 @@ function insert_crop(parameters) {
         });
     })
 }
+function update_crop(parameters) {
+    return new Promise(function (resolve, reject) {
+        db.query(`UPDATE userCrop SET 
+        cropsName = '${parameters.cropsName}',
+        categoryName = '${parameters.categoryName}',
+        cropsCultivar = '${parameters.cropsCultivar}',
+        locate = '${parameters.locate}',
+        useCompost = '${parameters.useCompost}',
+        cropsStart='${parameters.cropsStart}',
+        cropsEnd = '${parameters.cropsEnd}',
+        goalYield = '${parameters.goalYield}',
+        currentYield = '${parameters.currentYield}', 
+        cropsMemo = '${parameters.cropsMemo}',
+        latitude='${parameters.send_lat}',
+        longitude='${parameters.send_lng}' , 
+        cropsFinish = 'false'
+        WHERE 
+        uid = '${parameters.uid}' and cid = '${parameters.cid}'`, function (error, db_data) {
+            if (error) {
+                logger.error(
+                    "DB error [userCrop]" +
+                    "\n \t" + `UPDATE userCrop SET 
+                    cropsName = '${parameters.cropsName}',
+                    categoryName = '${parameters.categoryName}',
+                    cropsCultivar = '${parameters.cropsCultivar}',
+                    locate = '${parameters.locate}',
+                    useCompost = '${parameters.useCompost}',
+                    cropsStart='${parameters.cropsStart}',
+                    cropsEnd = '${parameters.cropsEnd}',
+                    goalYield = '${parameters.goalYield}',
+                    currentYield = '${parameters.currentYield}', 
+                    cropsMemo = '${parameters.cropsMemo}',
+                    latitude='${parameters.send_lat}',
+                    longitude='${parameters.send_lng}' , 
+                    cropsFinish = 'false'
+                    WHERE 
+                    uid = '${parameters.uid}' and cid = '${parameters.cid}'` +
+                    "\n \t" + error);
+                reject('DB ERR');
+                //throw error;
+            } else {
+                resolve(db_data);
+            }
+        });
+    })
+}
 
 function select_cropPercent(parameters) {
     return new Promise(function (resolve, reject) {
@@ -238,6 +284,22 @@ function insert_notice(parameters) {
                     "DB error [notice]" +
                     "\n \t" + `SELECT *
                                FROM notice` +
+                    "\n \t" + error);
+                reject('DB ERR');
+                //throw error;
+            } else {
+                resolve(db_data);
+            }
+        });
+    })
+}
+function update_notice(parameters) {
+    return new Promise(function (resolve, reject) {
+        db.query(`UPDATE notice SET nTitle = '${parameters.nTitle}',nContent = '${parameters.nContent}',nWriter = '${parameters.nWriter}',nDate = NOW() WHERE nid = '${parameters.nid}'`, function (error, db_data) {
+            if (error) {
+                logger.error(
+                    "DB error [notice]" +
+                    "\n \t" + `UPDATE notice SET nTitle = '${parameters.nTitle}',nContent = '${parameters.nContent}',nWriter = '${parameters.nWriter}',nDate = NOW() WHERE nid = '${parameters.nid}'` +
                     "\n \t" + error);
                 reject('DB ERR');
                 //throw error;
@@ -594,6 +656,7 @@ module.exports = {
     select_cropDisease,
     insert_crop,
     insert_dcrop,
+    update_crop,
     delete_crop,
     delete_dcrop,
     delete_notice,
@@ -603,6 +666,7 @@ module.exports = {
     select_dcropDetail,
     select_notice,
     insert_notice,
+    update_notice,
     select_noticeDetail,
     select_totalGrowPercent,
     select_nearHarvestDate,
