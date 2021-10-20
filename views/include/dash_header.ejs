@@ -30,7 +30,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="/../../dash_assets/css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link href="./assets/img/favicon.png" rel="icon">
+  <link href="/../assets/img/favicon.png" rel="icon">
 
 </head>
 <body>   
@@ -38,11 +38,6 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
-        <div class="me-3">
-          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
-            <span class="icon-menu"></span>
-          </button>
-        </div>
         <div>
           <a class="navbar-brand brand-logo" href="/dash">
             <img src="/../../dash_assets/images/logo.svg" alt="logo" />
@@ -55,7 +50,7 @@
       <div class="navbar-menu-wrapper d-flex align-items-top"> 
         <ul class="navbar-nav">
           <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-            <h1 class="welcome-text">어서오세요 ! <span class="text-black fw-bold"><%= username %> 님.</span></h1>
+            <h1 class="welcome-text">어서오세요 ! <span class="text-black fw-bold"><%= username %> 농부님.</span></h1>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
@@ -202,20 +197,6 @@
               <i class="menu-icon mdi mdi-card-text-outline"></i>
               <span class="menu-title">토론방</span>
             </a>
-          </li>
-          <!-- 프로필 -->
-          <li class="nav-item nav-category">프로필</li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="menu-icon mdi mdi-account-circle-outline"></i>
-              <span class="menu-title"> </span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Logout </a></li>
-              </ul>
-            </div>
           </li>
           <li class="nav-item nav-category">도움말</li>
           <li class="nav-item">
