@@ -22,7 +22,7 @@ router.get('/cropAdd',dashController.dashCropAdd);
 router.get('/cropUpdate',dashController.dashCropUpdate);
 router.get('/cropDetail/:num',dashController.dashCropDetail);
 router.post('/cropInsert',dashController.dashinsertCrop);
-
+router.post('/cropUpdate',dashController.dashupdateCrop);
 router.post('/cropDelete',dashController.dashCropDelete);
 
 router.get('/dcrop/:num',dashController.dashDCrop);
@@ -39,6 +39,7 @@ router.get('/noticeDetail/:num',dashController.dashNoticeDetail);
 router.get('/noticeUpdate',dashController.dashNoticeUpdate);
 router.get('/noticeInsert',dashController.dashNoticeInsert);
 router.post('/noticeInsert',dashController.dashNoticeInsertData);
+router.post('/noticeUpdate',dashController.dashNoticeUpdateData);
 router.post('/noticeDelete',dashController.dashNoticeDelete);
 
 router.get('/talk',dashController.dashTalk);

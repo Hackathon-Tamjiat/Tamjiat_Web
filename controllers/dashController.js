@@ -193,6 +193,30 @@ function dashinsertCrop(req, res, next) {
     }).catch(err => res.send("<script>alert('err')</script>"));
 }
 
+function dashupdateCrop(req, res, next) {
+    parameters = {
+        "cropsName": req.body.Cropkind,
+        "uid": req.session.userid,
+        "cropsCultivar": req.body.CropName,
+        "categoryName": req.body.CropcategoryName,
+        "useCompost": req.body.useCompost,
+        "locate": req.body.Croplocation,
+        "cropsStart": req.body.cropsStart,
+        "cropsEnd": req.body.cropsEnd,
+        "goalYield": req.body.goalYield,
+        "currentYield": req.body.currentYield,
+        "cropsMemo": req.body.cropmemo,
+        "send_lat":req.body.send_lat,
+        "send_lng":req.body.send_lng,
+        "cid":req.body.cidx
+    }
+    console.log(parameters.send_lat)
+    console.log(parameters.send_lng)
+    DashDAO.update_crop(parameters).then((db_data) => {
+        res.redirect('/dash/crop/1')
+    }).catch(err => res.send("<script>alert('err')</script>"));
+}
+
 function dashCropPercent(req, res, next) {
     var parameters = {
         "uid": req.session.userid
@@ -338,6 +362,19 @@ function dashNoticeInsertData(req, res, next) {
         res.redirect('/dash/notice/1')
     }).catch(err => res.send("<script>alert('err')</script>"));
 }
+
+function dashNoticeUpdateData(req, res, next) {
+    var parameters = {
+        "nid":req.body.nidx,
+        "nTitle": req.body.nTitle,
+        "nContent": req.body.nContent,
+        "nWriter": req.session.userName,
+    }
+    DashDAO.insert_notice(parameters).then((db_data) => {
+        res.redirect('/dash/notice/1')
+    }).catch(err => res.send("<script>alert('err')</script>"));
+}
+
 
 function dashTalk(req, res, next) {
     res.render('dash/talk', {userimg:req.session.img,username: req.session.userName});
@@ -621,6 +658,7 @@ module.exports = {
     dashCropDelete,
     dashCropPercent,
     dashinsertCrop,
+    dashupdateCrop,
     dashDCrop,
     dashDCropAdd,
     dashDCropDetail,
@@ -632,6 +670,7 @@ module.exports = {
     dashNoticeUpdate,
     dashNoticeInsert,
     dashNoticeInsertData,
+    dashNoticeUpdateData,
     dashPest,
     dashTalk,
     dashHeader,
