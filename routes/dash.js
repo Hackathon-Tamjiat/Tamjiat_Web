@@ -49,5 +49,12 @@ router.post('/Header',dashController.dashHeader);
 router.post('/getWayWeather',dashController.getWayWeather);
 
 router.get('/weather/today',weatherController.todayWeather);
+router.get('/logout', (req,res)=> {
+    req.logout();
+    req.session.destroy(()=> {
+        res.cookie('connect.sid', '', {maxAge:0});
+        res.redirect('/')
+    });
+});
 
 module.exports = router

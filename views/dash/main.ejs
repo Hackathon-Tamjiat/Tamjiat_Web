@@ -172,9 +172,15 @@
                                         </td>
                                         <td>
                                           <div style="margin-left: 20px;">
+                                            <% if (PercentData[i].percent >= 100) {%>
                                             <div class="progress progress-md">
-                                              <div class="progress-bar bg-success" role="progressbar" style="width:100%" aria-valuenow="<%= PercentData[i].percent %>" aria-valuemin="0" aria-valuemax="100"></div>
+                                              <div class="progress-bar bg-danger" role="progressbar" style="width:<%= PercentData[i].percent %>%" aria-valuenow="<%= PercentData[i].percent %>" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
+                                            <% } else { %>
+                                              <div class="progress progress-md">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width:<%= PercentData[i].percent %>%" aria-valuenow="<%= PercentData[i].percent %>" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                            <% } %>
                                           </div>
                                         </td>
                                         <td> 
