@@ -8,9 +8,9 @@
             <div class="card-body">
               <h4 class="card-title" style = "margin: 30px 0 0 0; font-size: 30px;color: green;">공지사항&nbsp;<i class="mdi mdi-clipboard-text"></i></h4>
               <p class="card-description" style = "margin: 0.8rem 0 0 0">
-                탐지앗의 공지사항을 등록해주세요.
+                탐지앗의 공지사항을 수정해주세요.
               </p>
-              <form class="forms-sample" style="margin: 50px 0 0 0;" action="/dash/noticeInsert" method="POST">
+              <form class="forms-sample" style="margin: 50px 0 0 0;" action="/dash/noticeUpdate" method="POST">
                 <div class="form-group">
                     <input type="text" class="form-control" id="Croplocation"  name = "nTitle" placeholder="제목" style="height: 50px; margin: 30px 0 0 0">
                 </div>
@@ -34,10 +34,12 @@
                     });
                 </script>
             </div>
+
+            <input type="hidden" name="nidx" value="<%= db_data[0].nid %>">
             <div style="float: right; margin: 10px 0 25px 0">
-                <button type="submit" class="btn btn-success btn-icon-text"style="float: right; margin: 0 20px 0 15px;">
+                <button type="submit" class="btn btn-warning btn-icon-text"style="float: right; margin: 0 20px 0 15px;">
                   <i class="mdi mdi-hospital"></i>                                                    
-                  &nbsp; 등록하기
+                  &nbsp; 수정하기
                 </button>
 
           </form>

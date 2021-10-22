@@ -19,7 +19,7 @@ router.post('/cropMulter', upload.fields([{name:'myFile', maxCount:1}]), dashCon
 router.get('/',dashController.dash_main);
 router.get('/crop/:num',dashController.dashCrop);
 router.get('/cropAdd',dashController.dashCropAdd);
-router.get('/cropUpdate',dashController.dashCropUpdate);
+router.get('/cropUpdate/:num',dashController.dashCropUpdate);
 router.get('/cropDetail/:num',dashController.dashCropDetail);
 router.post('/cropInsert',dashController.dashinsertCrop);
 router.post('/cropUpdate',dashController.dashupdateCrop);
@@ -36,7 +36,7 @@ router.get('/pest/:num',dashController.dashPest);
 
 router.get('/notice/:num',dashController.dashNotice);
 router.get('/noticeDetail/:num',dashController.dashNoticeDetail);
-router.get('/noticeUpdate',dashController.dashNoticeUpdate);
+router.get('/noticeUpdate/:num',dashController.dashNoticeUpdate);
 router.get('/noticeInsert',dashController.dashNoticeInsert);
 router.post('/noticeInsert',dashController.dashNoticeInsertData);
 router.post('/noticeUpdate',dashController.dashNoticeUpdateData);
