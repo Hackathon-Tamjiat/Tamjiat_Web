@@ -150,7 +150,8 @@ function dashCropUpdate(req, res, next) {
         "uid": req.session.userid
     }
     DashDAO.select_cropDetail(parameters).then((db_data) => {
-        res.render('dash/Crop_update', {codeData, categoryData, db_data, username: req.session.userName, userimg:req.session.img});
+        console.log(db_data)
+        res.render('dash/Crop_modify', {codeData, categoryData, db_data, username: req.session.userName, userimg:req.session.img});
     }).catch(err => res.send("<script>alert('err')</script>"));
 }
 
@@ -210,8 +211,7 @@ function dashupdateCrop(req, res, next) {
         "send_lng":req.body.send_lng,
         "cid":req.body.cidx
     }
-    console.log(parameters.send_lat)
-    console.log(parameters.send_lng)
+    console.log(parameters)
     DashDAO.update_crop(parameters).then((db_data) => {
         res.redirect('/dash/crop/1')
     }).catch(err => res.send("<script>alert('err')</script>"));
@@ -344,7 +344,7 @@ function dashNoticeUpdate(req, res, next) {
         "nid": req.params.num
     }
     DashDAO.select_noticeDetail(parameters).then((db_data) => {
-        res.render('dash/notice_update', {db_data, userimg:req.session.img,username: req.session.userName});
+        res.render('dash/notice_modify', {db_data, userimg:req.session.img,username: req.session.userName});
     }).catch(err => res.send("<script>alert('err')</script>"));
 }
 
@@ -370,7 +370,7 @@ function dashNoticeUpdateData(req, res, next) {
         "nContent": req.body.nContent,
         "nWriter": req.session.userName,
     }
-    DashDAO.insert_notice(parameters).then((db_data) => {
+    DashDAO.update_notice(parameters).then((db_data) => {
         res.redirect('/dash/notice/1')
     }).catch(err => res.send("<script>alert('err')</script>"));
 }
@@ -600,7 +600,7 @@ function dashcropFinish(req, res, next) {
 function dashCropDelete(req, res, next) {
     var parameters = {
         "uid": req.session.userid,
-        "cid":req.body.cid
+        "cid":req.body.cidx
     }
     DashDAO.delete_crop(parameters).then((db_data) => {
         res.redirect('/dash/crop/1')

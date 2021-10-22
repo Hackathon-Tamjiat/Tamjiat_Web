@@ -103,13 +103,13 @@
                       <hr class="my-4">
                       <P><%= db_data[0].cropsMemo%></P>
                     </div>
-                    <input type="hidden" name="cid" value="<%= db_data[0].cid %>">
+                    <input type="hidden" name="cidx" value="<%= db_data[0].cid %>">
                 </div>
                     <button type="button" class="btn btn-success btn-icon-text"style="float: right; margin: 25px 0 0 3px;" onclick="location.href='/dash/crop/1'">
                         <i class="mdi mdi-checkbox-marked-circle-outline"></i>                                                    
                         &nbsp; 확인
                     </button>
-                    <button type="submit" class="btn btn-warning btn-icon-text"style="float: right; margin: 25px 15px 0 0;">
+                    <button type="button" class="btn btn-warning btn-icon-text"style="float: right; margin: 25px 15px 0 0;"onclick="location.href='/dash/cropUpdate/<%= db_data[0].cid %>'">
                       <i class="mdi mdi-autorenew"></i>                                                    
                         &nbsp; 수정
                     </button>

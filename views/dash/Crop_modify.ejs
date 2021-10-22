@@ -17,10 +17,11 @@
                 <p class="card-description" style = "margin: 0.8rem 0 0 0">
                   새롭게 추가하고 싶은 농작물을 등록해주세요.
                 </p>
-                <form class="forms-sample" style="margin: 50px 0 0 0;" action="/dash/cropInsert" method="POST">
+                <form class="forms-sample" style="margin: 50px 0 0 0;" action="/dash/cropUpdate" method="POST">
                   <div class="form-group">
                     <label for="Cropkind">농작물 종류</label>
                       <select class="form-select" aria-label="Default select example" id="Cropkind" name="Cropkind">
+                        <option value="<%= db_data[0].cropsName %>" selected><%= db_data[0].cropsName %></option>
                         <% for (var i = 0; i < codeData.length; i++) { %>
                           <option><%= codeData[i].cropsName %></option>
                         <% } %>
@@ -28,11 +29,12 @@
                     </div>
                   <div class="form-group">
                     <label for="CropName">농작물 이름</label>
-                    <input type="text" class="form-control" id="CropName" name="CropName" placeholder="ex) 금빛 토마토">
+                    <input type="text" class="form-control" id="CropName" name="CropName" placeholder="ex) 금빛 토마토" value="<%=db_data[0].cropsCultivar %>"> 
                   </div>
                   <div class="form-group">
                     <label for="CropcategoryName">농작물 재배 유형</label>
                       <select class="form-select" aria-label="Default select example" id="CropcategoryName" name="CropcategoryName">
+                        <option value="<%= db_data[0].cropsName %>" selected><%= db_data[0].categoryName %></option>
                         <% for (var i = 0; i < categoryData.length; i++) { %>
                           <option><%=categoryData[i].categoryName %></option>
                         <% } %>
@@ -40,7 +42,7 @@
                   </div>
                   <div class="form-group">
                     <label for="useCompost">비료</label>
-                    <input type="text" class="form-control" id="useCompost" name="useCompost" placeholder="ex) 한국산 비료">
+                    <input type="text" class="form-control" id="useCompost" name="useCompost" placeholder="ex) 한국산 비료" value="<%=db_data[0].useCompost %>">
                   </div>
                   <div class="form-group">
                     <label for="Croplocation">농작물 위치</label>
@@ -55,39 +57,40 @@
                   <div class="form-group row">
                     <div class="col">
                       <label for="Sowing2">파종 시기</label>
-                      <input type="text" class="form-control" id="datepicker" name="cropsStart" placeholder="ex) 2021-08-01">
+                      <input type="text" class="form-control" id="datepicker" name="cropsStart" placeholder="ex) 2021-08-01" value="<%=db_data[0].cropsStart %>">
                     </div>
                     <div class="col">
                       <label for="Sowing2">재배 예정 시기</label>
-                      <input type="text" class="form-control" id="datepicker2" name="cropsEnd"placeholder="ex) 2021-09-01">
+                      <input type="text" class="form-control" id="datepicker2" name="cropsEnd"placeholder="ex) 2021-09-01" value="<%=db_data[0].cropsEnd %>">
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col">
                       <label for="goalYield">예상 수확량</label>
-                      <input type="text" class="form-control" id="goalYield" name="goalYield" placeholder="ex) 2500">
+                      <input type="text" class="form-control" id="goalYield" name="goalYield" placeholder="ex) 3200" value="<%=db_data[0].goalYield %>">
                     </div>
                     <div class="col">
                       <label for="currentYield">현재 수확량</label>
-                      <input type="text" class="form-control" id="currentYield" name="currentYield" placeholder="ex) 3200">
+                      <input type="text" class="form-control" id="currentYield" name="currentYield" placeholder="ex) 2500" value="<%=db_data[0].currentYield %>">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="cropmemo">메모</label>
-                    <textarea class="form-control" id="cropmemo" name="cropmemo"rows="3" style="height: 150px;"></textarea>
+                    <textarea class="form-control" id="cropmemo" name="cropmemo"rows="3" style="height: 150px;" ><%=db_data[0].cropsMemo %></textarea>
                   </div>
-                  <button type="submit" class="btn btn-success btn-icon-text"style="float: right; margin: 25px 0 0 0;">
+                  <button type="submit" class="btn btn-warning btn-icon-text"style="float: right; margin: 25px 0 0 0;">
                     <i class="mdi mdi-plus"></i>                                                    
-                    &nbsp; 수정완료
+                    &nbsp; 수정하기
                   </button>
-                  <button type="button" class="btn btn-warning btn-icon-text"style="float: right; margin: 25px 20px 0 0;">
+                  <button type="button" class="btn btn-danger btn-icon-text"style="float: right; margin: 25px 20px 0 0;">
                     <i class="mdi mdi-minus"></i>                                                    
                     &nbsp; 취소하기
                   </button>
                   
-                  <input type="hidden" id="Croplocation" name="Croplocation" value="">
-                  <input type="hidden" id="send_lat" name="send_lat" value="">
-                  <input type="hidden" id="send_lng" name="send_lng" value="">
+                  <input type="hidden" name="cidx" value="<%= db_data[0].cid %>">
+                  <input type="hidden" id="Croplocation" name="Croplocation" value="<%=db_data[0].locate %>">
+                  <input type="hidden" id="send_lat" name="send_lat" value="<%=db_data[0].latitude %>">
+                  <input type="hidden" id="send_lng" name="send_lng" value="<%=db_data[0].longitude %>">
                 </form>
               </div>
             </div>
