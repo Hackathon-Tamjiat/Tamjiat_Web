@@ -104,6 +104,7 @@ function dash_main(req, res, next) {
                 DiseaseData = db_data
                 DashDAO.select_dashDonut(parameters).then((db_data)=>{
                     DonutData = db_data
+                    console.log(DonutData)
                     DashDAO.select_dashBar(parameters).then((db_data)=>{
                         BarData = db_data
                             DashDAO.select_dashCurve(parameters).then((db_data)=>{
