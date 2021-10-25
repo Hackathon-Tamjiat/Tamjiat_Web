@@ -634,7 +634,7 @@ function delete_notice(parameters) {
 function select_appData(parameter) {
     return new Promise(function (resolve, reject) {
         db.query(`SELECT ud.cdName, ud.cropsImage, cd.cdSolution, cd.cdNameEng, cd.cdOccurDate, cd.cdSickness, cd.cdPathogen FROM userDcrop 
-        as ud JOIN diseaseCode as cd ON cd.cdName = ud.cdName WHERE ud.uid = '${parameter.uid}' and ud.cduuid = '${parameter.cduuid}' AND ud.cdName="${parameter.result}";`, function (error, db_data) {
+        as ud JOIN diseaseCode as cd ON cd.cdName = ud.cdName WHERE ud.uid = '${parameter.uid}' and ud.cduuid = '${parameter.cduuid}' AND ud.cdName='${parameter.result}'`, function (error, db_data) {
             if (error) {
                 logger.error(
                     "DB error [userDCrop]"+
