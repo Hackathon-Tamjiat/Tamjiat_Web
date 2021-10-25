@@ -60,7 +60,7 @@
   </script>
 <script>
     function getRandomColor() {
-        return "#" + Math.floor(Math.random() * 16777215).toString(16);
+        return "#" + Math.floor(Math.random() * (16555115 - 16333015 + 1) + 16333015 ).toString(16);
     }
 
     $(function () {
@@ -180,8 +180,14 @@
                     <% } %>
                 ],
                 backgroundColor: [
-                    <% for(var i = 0; i < DonutData.length; i++){ %>
-                        getRandomColor(),
+                    <% if(DonutData.length == 1){ %>
+                        '#6ab04c',
+                    <% } else if(DonutData.length == 2) { %>
+                        '#6ab04c','#badc58',
+                    <% } else { %>
+                        <% for(var i =0; i<DonutData.length; i++) { %>
+                            getRandomColor(),
+                        <% } %>
                     <% } %>
                 ],
                 borderColor: [
