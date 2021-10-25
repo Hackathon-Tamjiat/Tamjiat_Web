@@ -96,6 +96,7 @@ function dash_main(req, res, next) {
     var key = process.env.KAKAO_MAP_API_KEY
     DashDAO.select_dashMenuList(parameters).then((db_data)=>{
         ListData = db_data;
+        console.log(ListData)
         DashDAO.select_cropPercent(parameters).then((db_data)=>{
         PercentData = db_data
         DashDAO.select_dashcropFinish(parameters).then((db_data)=>{
@@ -590,10 +591,15 @@ function dashcropFinish(req, res, next) {
     }).catch(err => res.send("<script>alert('err')</script>"));
 }
 function dashcropFinish(req, res, next) {
+    var cidx = req.body.cid
+    var cidxx = cidx.toString().replace(",","','")
+    var cidxxx = cidxx.toString()
+   
     var parameters = {
         "uid": req.session.userid,
-        "cid":req.body.cid
+        "cid": cidxxx
     }
+    console.log(parameters.cid)
     DashDAO.update_dashcropFinish(parameters).then((db_data) => {
         res.redirect('/dash')
     }).catch(err => res.send("<script>alert('err')</script>"));

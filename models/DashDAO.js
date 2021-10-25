@@ -380,7 +380,7 @@ function select_countDisease_totalCrops(parameters) {
 
 function select_dashMenuList(parameters) {
     return new Promise(function (resolve, reject) {
-        db.query(`SELECT DISTINCT cropsName FROM userCrop WHERE uid = '${parameters.uid}'`, function (error, db_data) {
+        db.query(`SELECT DISTINCT cropsName FROM userCrop WHERE uid = '${parameters.uid}' and cropsFinish = 'false'`, function (error, db_data) {
             if (error) {
                 logger.error(
                     "DB error [userCrop]" +
@@ -436,11 +436,11 @@ function select_dashcropFinish(parameters) {
 }
 function update_dashcropFinish(parameters) {
     return new Promise(function (resolve, reject) {
-        db.query(`UPDATE userCrop SET cropsFinish = 'true' WHERE uid = '${parameters.uid}' and cid ='${parameters.cid}'`, function (error, db_data) {
+        db.query(`UPDATE userCrop SET cropsFinish = 'true' WHERE uid = '${parameters.uid}' and cid IN ('${parameters.cid}')`, function (error, db_data) {
             if (error) {
                 logger.error(
                     "DB error [userCrop]" +
-                    "\n \t" +`UPDATE userCrop SET cropsFinish = 'true' WHERE uid = '${parameters.uid}' and cid ='${parameters.cid}'` +
+                    "\n \t" +`UPDATE userCrop SET cropsFinish = 'true' WHERE uid = '${parameters.uid}' and cid IN('${parameters.cid}')` +
                     "\n \t" + error);
                 reject('DB ERR');
                 //throw error;

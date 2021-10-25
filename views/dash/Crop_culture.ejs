@@ -35,7 +35,10 @@
                                     재배 예정일
                                 </th>
                                 <th class="col-md-1">
-                                    수확
+                                  <button type="submit" class="btn btn-danger btn-icon-text" >
+                                    <i class="ti-reload btn-icon-prepend"></i>                                                    
+                                    수확 하기
+                                  </button>
                                 </th>
                               </tr>
                             </thead>
@@ -66,27 +69,19 @@
                                 </td>
                                 <td>
                                     <% if (data_value.percent >= 100) {%>
-                                      <button type="submit" class="btn btn-outline-primary btn-icon-text">
-                                        <i class="ti-reload btn-icon-prepend"></i>                                                    
-                                        수확 완료
-                                      </button>
                                       <input type="hidden" name="cid" value="<%= data_value.cid %>">
+                                      <h6 class="card-title text-warning" style="margin-top: 20px;">수확 완료&nbsp;<i class="mdi mdi-flag-triangle"></i></h6>
                                     <% } else { %>
-                                      <button type="button" class="btn btn-outline-warning btn-icon-text">
-                                        <i class="ti-alert btn-icon-prepend"></i>                                                    
-                                        수확중
-                                      </button>
+                                       <h6 class="card-title text-success" style="margin-top: 20px;">수확중&nbsp;<i class="mdi mdi-leaf"></i></h6>                                                    
                                     <% } %>
                                 </td>
                               </tr>
-                              
-                          
                               <% } %>
                             </tbody>
                           </table>
                           </form>
                           <nav>
-                            <ul class="pagination justify-content-center mt-5">
+                            <ul class="pagination justify-content-center mt-5" style="margin: 50px 0 0 0;">
                               <% if(c_num == 1) { %>
                                   <li class="page-item"><a id="prev" class="page-link" style="color: black; display:none;" href="/dash/cropCulture/<%=Number(c_num)-1%>">">이전</a></li>
                               <% } else if (c_num > 1) { %>
