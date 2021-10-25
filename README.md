@@ -30,7 +30,7 @@ AI 기반 농작물 병ㆍ해충 관리 웹 및 애플리케이션 서비스 개
 
 <br><br>
 ## 탐지앗 공식 URL
-탐지앗 공식 홈페이지 : https://tamjiat.hopto.org:3365/<br><br>
+탐지앗 공식 홈페이지 : https://tamjiats.hopto.org/<br><br>
 탐지앗 애플리케이션 : <a href="https://play.google.com/store/apps/details?id=com.deuksoft.tamjiat">앱 다운로드</a>
 
 <br><br>
@@ -40,7 +40,7 @@ AI 기반 농작물 병ㆍ해충 관리 웹 및 애플리케이션 서비스 개
 1. node 14.17.6 LTS 버젼(가장 최신 LTS 버전)과 Visual Studio Code를 설치해줍니다.
 2.  터미널에서 아래 코드를 사용하여 서버 파일을 다운받아줍니다.
    ```bash
-   git clone https://github.com/Tamjiat/tamjiat_web.git 
+   git clone https://github.com/Hackathon-Tamjiat/Tamjiat_Web.git 
    ```
 3.  서버 파일을 다운받은 후 다운받은 경로로 들어간 뒤 아래 코드를 사용하여 모듈을 설치해줍니다.
    ```bash
