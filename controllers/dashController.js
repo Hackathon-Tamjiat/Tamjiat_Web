@@ -269,15 +269,16 @@ function dashinsertDCrop(req, res, next) {
     }
     DashDAO.insert_dcrop(parameters).then((db_data) => {
         
-        console.log(file)
+        console.log("-----------------------")
         var jdata = querystring.stringify({
                     'file_name': file,
                     'cduuid': parameters.cduuid
                 })
+        process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
         var options = {
                     method: 'POST',
-                    hostname: "tamjiat.hopto.org",
-                    port:5000,
+                    hostname: "tamjiats.hopto.org",
+                    port:5002,
                     path:"/ai_post",
                     agent: false,
                     headers : {
@@ -292,8 +293,7 @@ function dashinsertDCrop(req, res, next) {
         var req = https.request(options, (res) => {
                 res.setEncoding('utf-8');
                 res.on('data', (d) => {
-                    var resu = JSON.parse(d)
-                  console.log(resu['result']);
+                    console.log(d);
                 });
         });
         req.on('error', (e) => {
@@ -419,10 +419,11 @@ function requestqwe(iName,iCduuid,callback){
                     'file_name': iName,
                     'cduuid': iCduuid
                 })
+        process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
         var options = {
                     method: 'POST',
-                    hostname: "tamjiat.hopto.org",
-                    port:5000,
+                    hostname: "tamjiats.hopto.org",
+                    port:5002,
                     path:"/ai_post",
                     agent: false,
                     headers : {
@@ -437,8 +438,7 @@ function requestqwe(iName,iCduuid,callback){
         var req = https.request(options, (res) => {
                 res.setEncoding('utf-8');
                 res.on('data', (d) => {
-                    var resu = JSON.parse(d)
-                    callback(resu["result"]);
+                    callback(d);
                 });
         });
         req.on('error', (e) => {
