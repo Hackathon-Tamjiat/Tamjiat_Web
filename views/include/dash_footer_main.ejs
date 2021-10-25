@@ -60,7 +60,7 @@
   </script>
 <script>
     function getRandomColor() {
-        return "#" + Math.floor(Math.random() * (16555115 - 16333015 + 1) + 16333015 ).toString(16);
+        return "#" + Math.floor(Math.random() * (11205250 - 8446250 + 1) + 8446250 ).toString(16);
     }
 
     $(function () {
@@ -168,7 +168,7 @@
         });
         document.getElementById('performance-line-legend').innerHTML = salesTop.generateLegend();
     }
-
+    var colorlist = ["#6ab04c", "#badc58" , "#52E252","70F170","C1FF6B"]
     //재배 종목별 그래프
     if ($("#doughnutChart").length) {
         var doughnutChartCanvas = $("#doughnutChart").get(0).getContext("2d");
@@ -181,12 +181,12 @@
                 ],
                 backgroundColor: [
                     <% if(DonutData.length == 1){ %>
-                        '#6ab04c',
+                        colorlist[0]
                     <% } else if(DonutData.length == 2) { %>
-                        '#6ab04c','#badc58',
+                        colorlist[0],colorlist[1]
                     <% } else { %>
-                        <% for(var i =0; i<DonutData.length; i++) { %>
-                            getRandomColor(),
+                        <% for(var j =0; j<DonutData.length; j++) { %>
+                            colorlist[<%=j%>],
                         <% } %>
                     <% } %>
                 ],
