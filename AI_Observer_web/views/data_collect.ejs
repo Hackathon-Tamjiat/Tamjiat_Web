@@ -1,0 +1,1287 @@
+<% include ./include/header%>
+<!--begin::Content-->
+<div class="content fs-6 d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Toolbar-->
+    <div class="toolbar" id="kt_toolbar">
+        <div class="container-fluid d-flex flex-stack flex-wrap flex-sm-nowrap">
+            <!--begin::Info-->
+            <div class="d-flex flex-column align-items-start justify-content-center flex-wrap me-2">
+                <!--begin::Title-->
+                <h1 class="text-dark fw-bold my-1 fs-2">데이터 수집 현황</h1>
+                <!--end::Title-->                
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb fw-semibold fs-base my-1">
+                    <li class="breadcrumb-item text-muted">
+                        <a href="../dist/index.html" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-muted">AI 옵서버 관리</li>
+                    <li class="breadcrumb-item text-muted">데이터 수집 현황</li>
+                </ul>
+                <!--end::Breadcrumb-->
+            </div>
+            <!--end::Info-->
+        </div>
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Post-->
+    <div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div class="container-xxl">
+            <!--begin::Order details page-->
+            <div class="d-flex flex-column gap-7 gap-lg-10">
+                <!--begin::Order summary-->
+                <div class="d-flex flex-column flex-xl-row gap-7 gap-lg-10">
+                    <!--begin::Order details-->
+                    <div class="card card-flush py-4 flex-row-fluid">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h2>원시 데이터 <span class="badge badge-light-primary fs-6 fw-bolder me-5">전체 영상</span></h2>
+                            </div>
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-0">
+                            <div class="table-responsive">
+                                <!--begin::Table-->
+                                <table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-300px">
+                                    <!--begin::Table body-->
+                                    <tbody class="fw-semibold text-gray-600">
+                                        <!--begin::Date-->
+                                        <tr>
+                                            <td class="text-muted">
+                                                <div class="d-flex align-items-center">
+                                                <!--begin::Svg Icon | path: icons/duotune/files/fil002.svg-->
+                                                <span class="svg-icon svg-icon-2 me-2">
+                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.3" d="M19 3.40002C18.4 3.40002 18 3.80002 18 4.40002V8.40002H14V4.40002C14 3.80002 13.6 3.40002 13 3.40002C12.4 3.40002 12 3.80002 12 4.40002V8.40002H8V4.40002C8 3.80002 7.6 3.40002 7 3.40002C6.4 3.40002 6 3.80002 6 4.40002V8.40002H2V4.40002C2 3.80002 1.6 3.40002 1 3.40002C0.4 3.40002 0 3.80002 0 4.40002V19.4C0 20 0.4 20.4 1 20.4H19C19.6 20.4 20 20 20 19.4V4.40002C20 3.80002 19.6 3.40002 19 3.40002ZM18 10.4V13.4H14V10.4H18ZM12 10.4V13.4H8V10.4H12ZM12 15.4V18.4H8V15.4H12ZM6 10.4V13.4H2V10.4H6ZM2 15.4H6V18.4H2V15.4ZM14 18.4V15.4H18V18.4H14Z" fill="currentColor" />
+                                                        <path d="M19 0.400024H1C0.4 0.400024 0 0.800024 0 1.40002V4.40002C0 5.00002 0.4 5.40002 1 5.40002H19C19.6 5.40002 20 5.00002 20 4.40002V1.40002C20 0.800024 19.6 0.400024 19 0.400024Z" fill="currentColor" />
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->업데이트 날짜</div>
+                                            </td>
+                                            <td class="fw-bold text-end">2022년 11월 1일</td>
+                                        </tr>
+                                        <!--end::Date-->
+                                        <!--begin::Payment method-->
+                                        <tr>
+                                            <td class="text-muted">
+                                                <div class="d-flex align-items-center">
+                                                <!--begin::Svg Icon | path: icons/duotune/finance/fin008.svg-->
+                                                <span class="svg-icon svg-icon-2 me-2">
+                                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.3" d="M22 8.20267V15.7027C22 19.1027 19.2 22.0026 15.7 22.0026H8.2C4.8 22.0026 2 19.2027 2 15.7027V8.20267C2 4.80267 4.8 2.0026 8.2 2.0026H15.7C19.2 1.9026 22 4.70267 22 8.20267ZM12 7.30265C9.5 7.30265 7.39999 9.40262 7.39999 11.9026C7.39999 14.4026 9.5 16.5026 12 16.5026C14.5 16.5026 16.6 14.4026 16.6 11.9026C16.6 9.30262 14.5 7.30265 12 7.30265ZM17.9 5.0026C17.3 5.0026 16.9 5.4026 16.9 6.0026C16.9 6.6026 17.3 7.0026 17.9 7.0026C18.5 7.0026 18.9 6.6026 18.9 6.0026C18.9 5.5026 18.4 5.0026 17.9 5.0026Z" fill="currentColor"/>
+                                                        <path d="M12 17.5026C8.9 17.5026 6.39999 15.0026 6.39999 11.9026C6.39999 8.80259 8.9 6.30261 12 6.30261C15.1 6.30261 17.6 8.80259 17.6 11.9026C17.6 15.0026 15.1 17.5026 12 17.5026ZM12 8.30261C10 8.30261 8.39999 9.90259 8.39999 11.9026C8.39999 13.9026 10 15.5026 12 15.5026C14 15.5026 15.6 13.9026 15.6 11.9026C15.6 9.90259 14 8.30261 12 8.30261Z" fill="currentColor"/>
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->수집 동영상 시간</div>
+                                            </td>
+                                            <td class="fw-bold text-end">1,277,441 (분)</td>
+        
+                                        </tr>
+                                        <!--end::Payment method-->
+                                        <!--begin::Date-->
+                                        <tr>
+                                            <td class="text-muted">
+                                                <div class="d-flex align-items-center">
+                                                <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm006.svg-->
+                                                <span class="svg-icon svg-icon-2 me-2">
+                                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.3" d="M5 15C3.3 15 2 13.7 2 12C2 10.3 3.3 9 5 9H5.10001C5.00001 8.7 5 8.3 5 8C5 5.2 7.2 3 10 3C11.9 3 13.5 4 14.3 5.5C14.8 5.2 15.4 5 16 5C17.7 5 19 6.3 19 8C19 8.4 18.9 8.7 18.8 9C18.9 9 18.9 9 19 9C20.7 9 22 10.3 22 12C22 13.7 20.7 15 19 15H5ZM5 12.6H13L9.7 9.29999C9.3 8.89999 8.7 8.89999 8.3 9.29999L5 12.6Z" fill="currentColor"/>
+                                                        <path d="M17 17.4V12C17 11.4 16.6 11 16 11C15.4 11 15 11.4 15 12V17.4H17Z" fill="currentColor"/>
+                                                        <path opacity="0.3" d="M12 17.4H20L16.7 20.7C16.3 21.1 15.7 21.1 15.3 20.7L12 17.4Z" fill="currentColor"/>
+                                                        <path d="M8 12.6V18C8 18.6 8.4 19 9 19C9.6 19 10 18.6 10 18V12.6H8Z" fill="currentColor"/>
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->수집 동영상 용량</div>
+                                            </td>
+                                            <td class="fw-bold text-end">16,506 (GB)</td>
+                                        </tr>
+                                        <!--end::Date-->
+                                    </tbody>
+                                    <!--end::Table body-->
+                                </table>
+                                <!--end::Table-->
+                            </div>
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Order details-->
+                    <!--begin::Order details-->
+                    <div class="card card-flush py-4 flex-row-fluid">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h2>가공 데이터 <span class="badge badge-light-success fs-6 fw-bold fw-bolder me-5">조업 영상</span></h2>
+                            </div>
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-0">
+                            <div class="table-responsive">
+                                <!--begin::Table-->
+                                <table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-300px">
+                                    <!--begin::Table body-->
+                                    <tbody class="fw-semibold text-gray-600">
+                                        <!--begin::Date-->
+                                        <tr>
+                                            <td class="text-muted">
+                                                <div class="d-flex align-items-center">
+                                                <!--begin::Svg Icon | path: icons/duotune/files/fil002.svg-->
+                                                <span class="svg-icon svg-icon-2 me-2">
+                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.3" d="M19 3.40002C18.4 3.40002 18 3.80002 18 4.40002V8.40002H14V4.40002C14 3.80002 13.6 3.40002 13 3.40002C12.4 3.40002 12 3.80002 12 4.40002V8.40002H8V4.40002C8 3.80002 7.6 3.40002 7 3.40002C6.4 3.40002 6 3.80002 6 4.40002V8.40002H2V4.40002C2 3.80002 1.6 3.40002 1 3.40002C0.4 3.40002 0 3.80002 0 4.40002V19.4C0 20 0.4 20.4 1 20.4H19C19.6 20.4 20 20 20 19.4V4.40002C20 3.80002 19.6 3.40002 19 3.40002ZM18 10.4V13.4H14V10.4H18ZM12 10.4V13.4H8V10.4H12ZM12 15.4V18.4H8V15.4H12ZM6 10.4V13.4H2V10.4H6ZM2 15.4H6V18.4H2V15.4ZM14 18.4V15.4H18V18.4H14Z" fill="currentColor" />
+                                                        <path d="M19 0.400024H1C0.4 0.400024 0 0.800024 0 1.40002V4.40002C0 5.00002 0.4 5.40002 1 5.40002H19C19.6 5.40002 20 5.00002 20 4.40002V1.40002C20 0.800024 19.6 0.400024 19 0.400024Z" fill="currentColor" />
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->업데이트 날짜</div>
+                                            </td>
+                                            <td class="fw-bold text-end">2022년 11월 1일</td>
+                                        </tr>
+                                        <!--end::Date-->
+                                        <!--begin::Payment method-->
+                                        <tr>
+                                            <td class="text-muted">
+                                                <div class="d-flex align-items-center">
+                                                <!--begin::Svg Icon | path: icons/duotune/finance/fin008.svg-->
+                                                <span class="svg-icon svg-icon-2 me-2">
+                                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.3" d="M22 8.20267V15.7027C22 19.1027 19.2 22.0026 15.7 22.0026H8.2C4.8 22.0026 2 19.2027 2 15.7027V8.20267C2 4.80267 4.8 2.0026 8.2 2.0026H15.7C19.2 1.9026 22 4.70267 22 8.20267ZM12 7.30265C9.5 7.30265 7.39999 9.40262 7.39999 11.9026C7.39999 14.4026 9.5 16.5026 12 16.5026C14.5 16.5026 16.6 14.4026 16.6 11.9026C16.6 9.30262 14.5 7.30265 12 7.30265ZM17.9 5.0026C17.3 5.0026 16.9 5.4026 16.9 6.0026C16.9 6.6026 17.3 7.0026 17.9 7.0026C18.5 7.0026 18.9 6.6026 18.9 6.0026C18.9 5.5026 18.4 5.0026 17.9 5.0026Z" fill="currentColor"/>
+                                                        <path d="M12 17.5026C8.9 17.5026 6.39999 15.0026 6.39999 11.9026C6.39999 8.80259 8.9 6.30261 12 6.30261C15.1 6.30261 17.6 8.80259 17.6 11.9026C17.6 15.0026 15.1 17.5026 12 17.5026ZM12 8.30261C10 8.30261 8.39999 9.90259 8.39999 11.9026C8.39999 13.9026 10 15.5026 12 15.5026C14 15.5026 15.6 13.9026 15.6 11.9026C15.6 9.90259 14 8.30261 12 8.30261Z" fill="currentColor"/>
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->수집 동영상 시간</div>
+                                            </td>
+                                            <td class="fw-bold text-end">386,039 (분)</td>
+        
+                                        </tr>
+                                        <!--end::Payment method-->
+                                        <!--begin::Date-->
+                                        <tr>
+                                            <td class="text-muted">
+                                                <div class="d-flex align-items-center">
+                                                <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm006.svg-->
+                                                <span class="svg-icon svg-icon-2 me-2">
+                                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.3" d="M5 15C3.3 15 2 13.7 2 12C2 10.3 3.3 9 5 9H5.10001C5.00001 8.7 5 8.3 5 8C5 5.2 7.2 3 10 3C11.9 3 13.5 4 14.3 5.5C14.8 5.2 15.4 5 16 5C17.7 5 19 6.3 19 8C19 8.4 18.9 8.7 18.8 9C18.9 9 18.9 9 19 9C20.7 9 22 10.3 22 12C22 13.7 20.7 15 19 15H5ZM5 12.6H13L9.7 9.29999C9.3 8.89999 8.7 8.89999 8.3 9.29999L5 12.6Z" fill="currentColor"/>
+                                                        <path d="M17 17.4V12C17 11.4 16.6 11 16 11C15.4 11 15 11.4 15 12V17.4H17Z" fill="currentColor"/>
+                                                        <path opacity="0.3" d="M12 17.4H20L16.7 20.7C16.3 21.1 15.7 21.1 15.3 20.7L12 17.4Z" fill="currentColor"/>
+                                                        <path d="M8 12.6V18C8 18.6 8.4 19 9 19C9.6 19 10 18.6 10 18V12.6H8Z" fill="currentColor"/>
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->수집 동영상 용량</div>
+                                            </td>
+                                            <td class="fw-bold text-end">3,586 (GB)</td>
+                                        </tr>
+                                        <!--end::Date-->
+                                    </tbody>
+                                    <!--end::Table body-->
+                                </table>
+                                <!--end::Table-->
+                            </div>
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Order details-->
+					<!--begin::Order details-->
+                    <div class="card card-flush py-4 flex-row-fluid">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h2>학습 데이터 <span class="badge badge-light-warning fs-6 fw-bold fw-bolder me-5">이미지 / 텍스트</span></h2>
+                            </div>
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-0">
+                            <div class="table-responsive">
+                                <!--begin::Table-->
+                                <table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-300px">
+                                    <!--begin::Table body-->
+                                    <tbody class="fw-semibold text-gray-600">
+                                        <!--begin::Date-->
+                                        <tr>
+                                            <td class="text-muted">
+                                                <div class="d-flex align-items-center">
+                                                <!--begin::Svg Icon | path: icons/duotune/files/fil002.svg-->
+                                                <span class="svg-icon svg-icon-2 me-2">
+                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.3" d="M19 3.40002C18.4 3.40002 18 3.80002 18 4.40002V8.40002H14V4.40002C14 3.80002 13.6 3.40002 13 3.40002C12.4 3.40002 12 3.80002 12 4.40002V8.40002H8V4.40002C8 3.80002 7.6 3.40002 7 3.40002C6.4 3.40002 6 3.80002 6 4.40002V8.40002H2V4.40002C2 3.80002 1.6 3.40002 1 3.40002C0.4 3.40002 0 3.80002 0 4.40002V19.4C0 20 0.4 20.4 1 20.4H19C19.6 20.4 20 20 20 19.4V4.40002C20 3.80002 19.6 3.40002 19 3.40002ZM18 10.4V13.4H14V10.4H18ZM12 10.4V13.4H8V10.4H12ZM12 15.4V18.4H8V15.4H12ZM6 10.4V13.4H2V10.4H6ZM2 15.4H6V18.4H2V15.4ZM14 18.4V15.4H18V18.4H14Z" fill="currentColor" />
+                                                        <path d="M19 0.400024H1C0.4 0.400024 0 0.800024 0 1.40002V4.40002C0 5.00002 0.4 5.40002 1 5.40002H19C19.6 5.40002 20 5.00002 20 4.40002V1.40002C20 0.800024 19.6 0.400024 19 0.400024Z" fill="currentColor" />
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->업데이트 날짜</div>
+                                            </td>
+                                            <td class="fw-bold text-end">2022년 11월 1일</td>
+                                        </tr>
+                                        <!--end::Date-->
+                                        <!--begin::Payment method-->
+                                        <tr>
+                                            <td class="text-muted">
+                                                <div class="d-flex align-items-center">
+                                                <!--begin::Svg Icon | path: icons/duotune/finance/fin008.svg-->
+                                                <span class="svg-icon svg-icon-2 me-2">
+                                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.3" d="M22 8.20267V15.7027C22 19.1027 19.2 22.0026 15.7 22.0026H8.2C4.8 22.0026 2 19.2027 2 15.7027V8.20267C2 4.80267 4.8 2.0026 8.2 2.0026H15.7C19.2 1.9026 22 4.70267 22 8.20267ZM12 7.30265C9.5 7.30265 7.39999 9.40262 7.39999 11.9026C7.39999 14.4026 9.5 16.5026 12 16.5026C14.5 16.5026 16.6 14.4026 16.6 11.9026C16.6 9.30262 14.5 7.30265 12 7.30265ZM17.9 5.0026C17.3 5.0026 16.9 5.4026 16.9 6.0026C16.9 6.6026 17.3 7.0026 17.9 7.0026C18.5 7.0026 18.9 6.6026 18.9 6.0026C18.9 5.5026 18.4 5.0026 17.9 5.0026Z" fill="currentColor"/>
+                                                        <path d="M12 17.5026C8.9 17.5026 6.39999 15.0026 6.39999 11.9026C6.39999 8.80259 8.9 6.30261 12 6.30261C15.1 6.30261 17.6 8.80259 17.6 11.9026C17.6 15.0026 15.1 17.5026 12 17.5026ZM12 8.30261C10 8.30261 8.39999 9.90259 8.39999 11.9026C8.39999 13.9026 10 15.5026 12 15.5026C14 15.5026 15.6 13.9026 15.6 11.9026C15.6 9.90259 14 8.30261 12 8.30261Z" fill="currentColor"/>
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->학습 이미지</div>
+                                            </td>
+                                            <td class="fw-bold text-end">386,039 (장)</td>
+        
+                                        </tr>
+                                        <!--end::Payment method-->
+                                        <!--begin::Date-->
+                                        <tr>
+                                            <td class="text-muted">
+                                                <div class="d-flex align-items-center">
+                                                <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm006.svg-->
+                                                <span class="svg-icon svg-icon-2 me-2">
+                                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.3" d="M5 15C3.3 15 2 13.7 2 12C2 10.3 3.3 9 5 9H5.10001C5.00001 8.7 5 8.3 5 8C5 5.2 7.2 3 10 3C11.9 3 13.5 4 14.3 5.5C14.8 5.2 15.4 5 16 5C17.7 5 19 6.3 19 8C19 8.4 18.9 8.7 18.8 9C18.9 9 18.9 9 19 9C20.7 9 22 10.3 22 12C22 13.7 20.7 15 19 15H5ZM5 12.6H13L9.7 9.29999C9.3 8.89999 8.7 8.89999 8.3 9.29999L5 12.6Z" fill="currentColor"/>
+                                                        <path d="M17 17.4V12C17 11.4 16.6 11 16 11C15.4 11 15 11.4 15 12V17.4H17Z" fill="currentColor"/>
+                                                        <path opacity="0.3" d="M12 17.4H20L16.7 20.7C16.3 21.1 15.7 21.1 15.3 20.7L12 17.4Z" fill="currentColor"/>
+                                                        <path d="M8 12.6V18C8 18.6 8.4 19 9 19C9.6 19 10 18.6 10 18V12.6H8Z" fill="currentColor"/>
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->학습 텍스트</div>
+                                            </td>
+                                            <td class="fw-bold text-end">386,039 (개)</td>
+                                        </tr>
+                                        <!--end::Date-->
+                                    </tbody>
+                                    <!--end::Table body-->
+                                </table>
+                                <!--end::Table-->
+                            </div>
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Order details-->
+                </div>
+                <!--end::Order summary--><!--begin::Timeline-->
+								<div class="card">
+									<!--begin::Card head-->
+									<div class="card-header card-header-stretch">
+										<!--begin::Title-->
+										<div class="card-title d-flex align-items-center">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+											<span class="svg-icon svg-icon-1 svg-icon-primary me-3 lh-0">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path opacity="0.3" d="M14.1 15.013C14.6 16.313 14.5 17.813 13.7 19.113C12.3 21.513 9.29999 22.313 6.89999 20.913C5.29999 20.013 4.39999 18.313 4.39999 16.613C5.09999 17.013 5.99999 17.313 6.89999 17.313C8.39999 17.313 9.69998 16.613 10.7 15.613C11.1 15.713 11.5 15.813 11.9 15.813C12.7 15.813 13.5 15.513 14.1 15.013ZM8.5 12.913C8.5 12.713 8.39999 12.513 8.39999 12.313C8.39999 11.213 8.89998 10.213 9.69998 9.613C9.19998 8.313 9.30001 6.813 10.1 5.513C10.6 4.713 11.2 4.11299 11.9 3.71299C10.4 2.81299 8.49999 2.71299 6.89999 3.71299C4.49999 5.11299 3.70001 8.113 5.10001 10.513C5.80001 11.813 7.1 12.613 8.5 12.913ZM16.9 7.313C15.4 7.313 14.1 8.013 13.1 9.013C14.3 9.413 15.1 10.513 15.3 11.713C16.7 12.013 17.9 12.813 18.7 14.113C19.2 14.913 19.3 15.713 19.3 16.613C20.8 15.713 21.8 14.113 21.8 12.313C21.9 9.513 19.7 7.313 16.9 7.313Z" fill="currentColor"/>
+                                                    <path d="M9.69998 9.61307C9.19998 8.31307 9.30001 6.81306 10.1 5.51306C11.5 3.11306 14.5 2.31306 16.9 3.71306C18.5 4.61306 19.4 6.31306 19.4 8.01306C18.7 7.61306 17.8 7.31306 16.9 7.31306C15.4 7.31306 14.1 8.01306 13.1 9.01306C12.7 8.91306 12.3 8.81306 11.9 8.81306C11.1 8.81306 10.3 9.11307 9.69998 9.61307ZM8.5 12.9131C7.1 12.6131 5.90001 11.8131 5.10001 10.5131C4.60001 9.71306 4.5 8.91306 4.5 8.01306C3 8.91306 2 10.5131 2 12.3131C2 15.1131 4.2 17.3131 7 17.3131C8.5 17.3131 9.79999 16.6131 10.8 15.6131C9.49999 15.1131 8.7 14.1131 8.5 12.9131ZM18.7 14.1131C17.9 12.8131 16.7 12.0131 15.3 11.7131C15.3 11.9131 15.4 12.1131 15.4 12.3131C15.4 13.4131 14.9 14.4131 14.1 15.0131C14.6 16.3131 14.5 17.8131 13.7 19.1131C13.2 19.9131 12.6 20.5131 11.9 20.9131C13.4 21.8131 15.3 21.9131 16.9 20.9131C19.3 19.6131 20.1 16.5131 18.7 14.1131Z" fill="currentColor"/>
+                                                </svg>
+											</span>
+											<!--end::Svg Icon-->
+											<h3 class="fw-bold m-0 text-gray-800">TAC 데이터 수집</h3>
+										</div>
+										<!--end::Title-->
+										<!--begin::Toolbar-->
+										<div class="card-toolbar m-0">
+											<!--begin::Tab nav-->
+											<ul class="nav nav-tabs nav-line-tabs nav-stretch fs-6 border-0 fw-bold" role="tablist">
+												<li class="nav-item" role="presentation">
+													<a id="kt_activity_collect_tab" class="nav-link justify-content-center text-active-gray-800 active" data-bs-toggle="tab" role="tab" href="#kt_activity_collect">수집 현황</a>
+												</li>
+												<li class="nav-item" role="presentation">
+													<a id="kt_activity_fishspecies_tab" class="nav-link justify-content-center text-active-gray-800" data-bs-toggle="tab" role="tab" href="#kt_activity_fishspecies">영상 데이터</a>
+												</li>
+												<li class="nav-item" role="presentation">
+													<a id="kt_activity_fishspecies_tab" class="nav-link justify-content-center text-active-gray-800" data-bs-toggle="tab" role="tab" href="#kt_activity_label">학습 데이터</a>
+												</li>
+											</ul>
+											<!--end::Tab nav-->
+										</div>
+										<!--end::Toolbar-->
+									</div>
+									<!--end::Card head-->
+									<!--begin::Card body-->
+									<div class="card-body">
+										<!--begin::Tab Content-->
+										<div class="tab-content">
+											<!--begin::Tab panel-->
+											<div id="kt_activity_collect" class="card-body p-0 tab-pane fade show active" role="tabpanel" aria-labelledby="kt_activity_collect_tab"><!--begin::Post-->
+                                                <!--begin::Card-->
+                                                <div class="card"><!--begin::Card header-->
+													<div class="card-header border-0 pe-6 pb-3 ">
+														<!--begin::Card title-->
+														<div class="card-title">
+															<!--begin::Search-->
+															<div class="d-flex align-items-center position-relative my-1">
+																<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+																<span class="svg-icon svg-icon-1 position-absolute ms-6">
+																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+																		<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->
+																<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="검색" />
+															</div>
+															<!--end::Search-->
+														</div>
+														<!--begin::Card title-->
+														<!--begin::Card toolbar-->
+														<div class="card-toolbar">
+															<div class="d-flex justify-content-end" data-kt-user-table-toolbar="base">
+																<!--begin::Filter-->
+																<button type="button" class="btn btn-light-success me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+																<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
+																<span class="svg-icon svg-icon-2">
+																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="currentColor" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->Filter</button>
+																<!--begin::Menu 1-->
+																<div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true">
+																	<!--begin::Header-->
+																	<div class="px-7 py-5">
+																		<div class="fs-5 text-dark fw-bold">Filter Options</div>
+																	</div>
+																	<!--end::Header-->
+																	<!--begin::Separator-->
+																	<div class="separator border-gray-200"></div>
+																	<!--end::Separator-->
+																	<!--begin::Content-->
+																	<div class="px-7 py-5" data-kt-ecommerce-order-filter="status">
+																		<!--begin::Input group-->
+																		<div class="mb-10">
+																			<label class="form-label fs-6 fw-semibold">경과일 상태 :</label>
+																			<select class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="모든 경과일" data-allow-clear="true" data-kt-user-table-filter="status" data-hide-search="true">
+																				<option></option>
+																				<option value="all">모든 경과일</option>
+																				<option value="회수요청">회수요청</option>
+																				<option value="진행중">진행중</option>
+																			</select>
+																		</div>
+																		<!--end::Input group-->
+																		<!--begin::Actions-->
+																		<div class="d-flex justify-content-end">
+																			<button type="reset" class="btn btn-light btn-active-light-primary fw-semibold me-2 px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="reset">초기화</button>
+																			<button type="submit" class="btn btn-primary fw-semibold px-6" data-kt-menu-dismiss="true" data-kt-user-table-filter="filter">적용</button>
+																		</div>
+																		<!--end::Actions-->
+																	</div>
+																	<!--end::Content-->
+																</div>
+																<!--end::Menu 1-->
+																<!--end::Filter-->
+															</div>
+															<!--begin::Group actions-->
+															<div class="d-flex justify-content-end align-items-center d-none" data-kt-customer-table-toolbar="selected">
+																<div class="fw-bold me-5">
+																<span class="me-2" data-kt-customer-table-select="selected_count"></span>Selected</div>
+																<button type="button" class="btn btn-danger" data-kt-customer-table-select="delete_selected">Delete Selected</button>
+															</div>
+															<!--end::Group actions-->
+														</div>
+														<!--end::Card toolbar-->
+													</div>
+													<!--end::Card header-->
+                                                    <!--begin::Card body-->
+                                                    <div class="card-body pt-0">
+                                                        <!--begin::Table-->
+                                                        <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+                                                            <!--begin::Table head-->
+                                                            <thead>
+                                                                <!--begin::Table row-->
+                                                                <tr class="text-start text-gray-700 fw-bold fs-6 text-uppercase gs-0">
+                                                                    <th class="min-w-50px text-center">연번</th>
+                                                                    <th class="min-w-100px text-center">선박명</th>
+                                                                    <th class="min-w-100px text-center">대상어종</th>
+                                                                    <th class="min-w-125px text-center">지역</th>
+                                                                    <th class="min-w-125px text-center">설치 날짜</th>
+                                                                    <th class="min-w-125px text-center">회수 순차</th>
+                                                                    <th class="min-w-125px text-center">&nbsp;&nbsp;마지막 회수일</th>
+                                                                    <th class="min-w-125px text-center">경과일</th>
+                                                                    <th class="text-end min-w-70px">기능</th>
+                                                                </tr>
+                                                                <!--end::Table row-->
+                                                            </thead>
+                                                            <!--end::Table head-->
+                                                            <!--begin::Table body-->
+                                                            <tbody class="fw-semibold text-gray-600">
+																<% for(var i=0;i<no.length;i++){%>
+                                                                <tr>
+                                                                    <!--begin::Checkbox-->
+                                                                    <td class="min-w-50px text-center">&nbsp;<%=no[i]%></td>
+                                                                    <td class="min-w-100px text-center">&nbsp;<%=ship_name[i]%></td>
+                                                                    <td class="min-w-100px text-center">&nbsp;<%=ship_fish[i]%></td>
+                                                                    <td class="min-w-125px text-center">&nbsp;<%=ship_location[i]%></td>
+                                                                    <td class="min-w-125px text-center">&nbsp;&nbsp;<%=install_date[i]%></td>
+																	<%if(collect_num[i]!=null){%>
+                                                                    <td class="min-w-125px text-center">&nbsp;<%=collect_num[i]%>차</td>
+																	<%}else{%>
+																		<td class="min-w-125px text-center">&nbsp;</td>
+																		<%}%>
+                                                                    <td class="min-w-125px text-center"><%=collect_last[i]%></td>
+																	<%if(duration[i]!=null){%>
+                                                                    <td class="min-w-125px text-center">&nbsp;&nbsp;<%=duration[i]%> 일<br>
+																		<%if(duration[i] > 40){%>
+																			<div class="badge badge-light-danger">회수요청</div></td>
+																		<%}else{%>
+																			<div class="badge badge-light-success">진행중</div></td>
+																		<%}%>
+																	<%}else{%>
+																		<td class="min-w-125px text-center"></td>
+																	<%}%>
+                                                                    <td class="text-end">
+                                                                        <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">기능
+                                                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                                                        <span class="svg-icon svg-icon-5 m-0">
+                                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+                                                                            </svg>
+                                                                        </span>
+                                                                        <!--end::Svg Icon--></a>
+                                                                        <!--begin::Menu-->
+                                                                        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+                                                                            <!--begin::Menu item-->
+                                                                            <div class="menu-item px-3">
+                                                                                <a href="ship/detail" class="menu-link px-3">보기</a>
+                                                                            </div>
+                                                                            <!--end::Menu item-->
+                                                                            <!--begin::Menu item-->
+                                                                            <div class="menu-item px-3">
+                                                                                <a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">삭제</a>
+                                                                            </div>
+                                                                            <!--end::Menu item-->
+                                                                        </div>
+                                                                        <!--end::Menu-->
+                                                                    </td>
+                                                                </tr>
+																<%}%>
+                                                            </tbody>
+                                                            <!--end::Table body-->
+                                                        </table>
+                                                        <!--end::Table-->
+                                                    </div>
+                                                    <!--end::Card body-->
+                                                </div>
+                                                <!--end::Card-->
+                                                <!--begin::Modals-->
+                                    
+                                                <!--begin::Modal - Adjust Balance-->
+                                                <div class="modal fade" id="kt_customers_export_modal" tabindex="-1" aria-hidden="true">
+                                                    <!--begin::Modal dialog-->
+                                                    <div class="modal-dialog modal-dialog-centered mw-650px">
+                                                        <!--begin::Modal content-->
+                                                        <div class="modal-content">
+                                                            <!--begin::Modal header-->
+                                                            <div class="modal-header">
+                                                                <!--begin::Modal title-->
+                                                                <h2 class="fw-bold">Export Customers</h2>
+                                                                <!--end::Modal title-->
+                                                                <!--begin::Close-->
+                                                                <div id="kt_customers_export_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+                                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                                                    <span class="svg-icon svg-icon-1">
+                                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                                                                            <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+                                                                        </svg>
+                                                                    </span>
+                                                                    <!--end::Svg Icon-->
+                                                                </div>
+                                                                <!--end::Close-->
+                                                            </div>
+                                                            <!--end::Modal header-->
+                                                            <!--begin::Modal body-->
+                                                            <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                                                                <!--begin::Form-->
+                                                                <form id="kt_customers_export_form" class="form" action="#">
+                                                                    <!--begin::Input group-->
+                                                                    <div class="fv-row mb-10">
+                                                                        <!--begin::Label-->
+                                                                        <label class="fs-5 fw-semibold form-label mb-5">Select Export Format:</label>
+                                                                        <!--end::Label-->
+                                                                        <!--begin::Input-->
+                                                                        <select data-control="select2" data-placeholder="Select a format" data-hide-search="true" name="format" class="form-select form-select-solid">
+                                                                            <option value="excell">Excel</option>
+                                                                            <option value="pdf">PDF</option>
+                                                                            <option value="cvs">CVS</option>
+                                                                            <option value="zip">ZIP</option>
+                                                                        </select>
+                                                                        <!--end::Input-->
+                                                                    </div>
+                                                                    <!--end::Input group-->
+                                                                    <!--begin::Input group-->
+                                                                    <div class="fv-row mb-10">
+                                                                        <!--begin::Label-->
+                                                                        <label class="fs-5 fw-semibold form-label mb-5">Select Date Range:</label>
+                                                                        <!--end::Label-->
+                                                                        <!--begin::Input-->
+                                                                        <input class="form-control form-control-solid" placeholder="Pick a date" name="date" />
+                                                                        <!--end::Input-->
+                                                                    </div>
+                                                                    <!--end::Input group-->
+                                                                    <!--begin::Row-->
+                                                                    <div class="row fv-row mb-15">
+                                                                        <!--begin::Label-->
+                                                                        <label class="fs-5 fw-semibold form-label mb-5">Payment Type:</label>
+                                                                        <!--end::Label-->
+                                                                        <!--begin::Radio group-->
+                                                                        <div class="d-flex flex-column">
+                                                                            <!--begin::Radio button-->
+                                                                            <label class="form-check form-check-custom form-check-sm form-check-solid mb-3">
+                                                                                <input class="form-check-input" type="checkbox" value="1" checked="checked" name="payment_type" />
+                                                                                <span class="form-check-label text-gray-600 fw-semibold">All</span>
+                                                                            </label>
+                                                                            <!--end::Radio button-->
+                                                                            <!--begin::Radio button-->
+                                                                            <label class="form-check form-check-custom form-check-sm form-check-solid mb-3">
+                                                                                <input class="form-check-input" type="checkbox" value="2" checked="checked" name="payment_type" />
+                                                                                <span class="form-check-label text-gray-600 fw-semibold">Visa</span>
+                                                                            </label>
+                                                                            <!--end::Radio button-->
+                                                                            <!--begin::Radio button-->
+                                                                            <label class="form-check form-check-custom form-check-sm form-check-solid mb-3">
+                                                                                <input class="form-check-input" type="checkbox" value="3" name="payment_type" />
+                                                                                <span class="form-check-label text-gray-600 fw-semibold">Mastercard</span>
+                                                                            </label>
+                                                                            <!--end::Radio button-->
+                                                                            <!--begin::Radio button-->
+                                                                            <label class="form-check form-check-custom form-check-sm form-check-solid">
+                                                                                <input class="form-check-input" type="checkbox" value="4" name="payment_type" />
+                                                                                <span class="form-check-label text-gray-600 fw-semibold">American Express</span>
+                                                                            </label>
+                                                                            <!--end::Radio button-->
+                                                                        </div>
+                                                                        <!--end::Input group-->
+                                                                    </div>
+                                                                    <!--end::Row-->
+                                                                    <!--begin::Actions-->
+                                                                    <div class="text-center">
+                                                                        <button type="reset" id="kt_customers_export_cancel" class="btn btn-light me-3">Discard</button>
+                                                                        <button type="submit" id="kt_customers_export_submit" class="btn btn-primary">
+                                                                            <span class="indicator-label">Submit</span>
+                                                                            <span class="indicator-progress">Please wait...
+                                                                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <!--end::Actions-->
+                                                                </form>
+                                                                <!--end::Form-->
+                                                            </div>
+                                                            <!--end::Modal body-->
+                                                        </div>
+                                                        <!--end::Modal content-->
+                                                    </div>
+                                                    <!--end::Modal dialog-->
+                                                </div>
+                                                <!--end::Modal - New Card-->
+                                                <!--end::Modals-->
+											</div>
+											<!--end::Tab panel-->
+											<!--begin::Tab panel-->
+											<div id="kt_activity_fishspecies" class="card-body tab-pane fade show" role="tabpanel" aria-labelledby="kt_activity_fishspecies_tab" style="padding: 0;">
+												<!--begin::Col-->
+												<div class="col-xl-12">
+													<!--begin::Chart widget 3-->
+													<div class="card p-0">
+														<!--begin::Body-->
+														<div class="card-body" style="padding: 0;">
+															<!--begin::Header-->
+															<div class="d-flex flex-stack px-9">
+																<!--begin::Info-->
+																<div class="d-flex flex-column">
+																	<h2 class="text-dark mb-1 fs-2 fw-bolder">어종별 데이터표</h2>
+																	<span class="text-gray-400 fw-semibold fs-6">수집기간 : 2021년도 ~ 2022년도</span>
+																</div>
+																<!--end::Info-->
+																<!--begin::Tabs-->
+																<ul class="nav nav-pills nav-line-pills nav-group nav-group-outline">
+																	<li class="nav-item me-2">
+																		<a class="nav-link btn btn-active-light btn-active-color-gray-700 btn-color-gray-400 py-2 px-5 fs-6 fw-bold active" data-bs-toggle="tab" href="#kt_datatable_widget_3_tab_pane_1" id="kt_charts_widget_3_tab_1">RAW 데이터</a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link btn btn-active-light btn-active-color-gray-700 btn-color-gray-400 py-2 px-5 fs-6 fw-bold " data-bs-toggle="tab" href="#kt_datatable_widget_3_tab_pane_2" id="kt_charts_widget_3_tab_2">가공 데이터</a>
+																	</li>
+																</ul>
+																<!--end::Tabs-->
+															</div>
+															<!--end::Header-->
+															<!--begin::Tab content-->
+															<div class="tab-content pt-3">
+																<!--begin::Tab pane-->
+																<div class="tab-pane fade active show" id="kt_datatable_widget_3_tab_pane_1">
+																	<div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+																		<!--begin::Container-->
+																		<div class="container-xxl" style="padding: 0;">
+																			<!--begin::Products-->
+																			<div class="card card-flush">
+																				<!--begin::Card header-->
+																				<div class="card-header align-items-center py-5 gap-2 gap-md-5">
+																					<!--begin::Card title-->
+																					<div class="card-title">
+																						<!--begin::Search-->
+																						<div class="d-flex align-items-center position-relative my-1">
+																							<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+																							<span class="svg-icon svg-icon-1 position-absolute ms-4">
+																								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																									<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+																									<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+																								</svg>
+																							</span>
+																							<!--end::Svg Icon-->
+																							<input type="text" rawdata-kt-fish-species-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="검색" />
+																						</div>
+																						<!--end::Search-->
+																						<!--begin::Export buttons-->
+																						<div id="kt_ecommerce_report_customer_orders_export" class="d-none"></div>
+																						<!--end::Export buttons-->
+																					</div>
+																					<!--end::Card title-->
+																					<!--begin::Card toolbar-->
+																					<div class="card-toolbar flex-row-fluid justify-content-end gap-5">
+																						<!--begin::Export dropdown-->
+																						<button type="button" class="btn btn-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+																						<!--begin::Svg Icon | path: icons/duotune/arrows/arr078.svg-->
+																						<span class="svg-icon svg-icon-2">
+																							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																								<rect opacity="0.3" x="12.75" y="4.25" width="12" height="2" rx="1" transform="rotate(90 12.75 4.25)" fill="currentColor" />
+																								<path d="M12.0573 6.11875L13.5203 7.87435C13.9121 8.34457 14.6232 8.37683 15.056 7.94401C15.4457 7.5543 15.4641 6.92836 15.0979 6.51643L12.4974 3.59084C12.0996 3.14332 11.4004 3.14332 11.0026 3.59084L8.40206 6.51643C8.0359 6.92836 8.0543 7.5543 8.44401 7.94401C8.87683 8.37683 9.58785 8.34458 9.9797 7.87435L11.4427 6.11875C11.6026 5.92684 11.8974 5.92684 12.0573 6.11875Z" fill="currentColor" />
+																								<path opacity="0.3" d="M18.75 8.25H17.75C17.1977 8.25 16.75 8.69772 16.75 9.25C16.75 9.80228 17.1977 10.25 17.75 10.25C18.3023 10.25 18.75 10.6977 18.75 11.25V18.25C18.75 18.8023 18.3023 19.25 17.75 19.25H5.75C5.19772 19.25 4.75 18.8023 4.75 18.25V11.25C4.75 10.6977 5.19771 10.25 5.75 10.25C6.30229 10.25 6.75 9.80228 6.75 9.25C6.75 8.69772 6.30229 8.25 5.75 8.25H4.75C3.64543 8.25 2.75 9.14543 2.75 10.25V19.25C2.75 20.3546 3.64543 21.25 4.75 21.25H18.75C19.8546 21.25 20.75 20.3546 20.75 19.25V10.25C20.75 9.14543 19.8546 8.25 18.75 8.25Z" fill="currentColor" />
+																							</svg>
+																						</span>
+																						<!--end::Svg Icon-->Export Report</button>
+																						<!--begin::Menu-->
+																						<div id="kt_ecommerce_report_customer_orders_export_menu" class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-200px py-4" data-kt-menu="true">
+																							<!--begin::Menu item-->
+																							<div class="menu-item px-3">
+																								<a href="#" class="menu-link px-3" data-kt-ecommerce-export="copy">Copy to clipboard</a>
+																							</div>
+																							<!--end::Menu item-->
+																							<!--begin::Menu item-->
+																							<div class="menu-item px-3">
+																								<a href="#" class="menu-link px-3" data-kt-ecommerce-export="excel">Export as Excel</a>
+																							</div>
+																							<!--end::Menu item-->
+																							<!--begin::Menu item-->
+																							<div class="menu-item px-3">
+																								<a href="#" class="menu-link px-3" data-kt-ecommerce-export="csv">Export as CSV</a>
+																							</div>
+																							<!--end::Menu item-->
+																							<!--begin::Menu item-->
+																							<div class="menu-item px-3">
+																								<a href="#" class="menu-link px-3" data-kt-ecommerce-export="pdf">Export as PDF</a>
+																							</div>
+																							<!--end::Menu item-->
+																						</div>
+																						<!--end::Menu-->
+																						<!--end::Export dropdown-->
+																					</div>
+																					<!--end::Card toolbar-->
+																				</div>
+																				<!--end::Card header-->
+																				<!--begin::Card body-->
+																				<div class="card-body pt-0">
+																					<!--begin::Table-->
+																					<table class="table align-middle table-row-dashed fs-6 gy-5" id="KT_Fish_Species_RawData">
+																						<!--begin::Table head-->
+																						<thead>
+																							<!--begin::Table row--> 
+																							<tr class="text-start text-gray-600 fw-bold fs-6 text-uppercase gs-0">
+																								<th class="min-w-50px text-center" style="padding-right: 2px;">TAC 대상어종</th>
+																								<th class="min-w-50px text-center" style="padding-right: 2px;">어법</th>
+																								<th class="min-w-60px text-center" style="padding-right: 5px;">시간(분)</th>
+																								<th class="min-w-50px text-center" style="padding-right: 5px;">용량(Bytes)</th>
+																								<th class="min-w-20px text-center" style="padding-right: 5px;">용량(GB)</th>
+																							</tr>
+																							<!--end::Table row-->
+																						</thead>
+																						<!--end::Table head-->
+																						<!--begin::Table body-->
+																						<tbody class="fw-semibold text-gray-600 text-center">
+																							<!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									갈치
+																								</td>
+																								<!--end::Customer name=-->
+																								<td>
+																									연안채낚기
+																								</td>
+																								<!--begin::Email=-->
+																								<td>
+																									7,383 
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td> 370,039,040,212 </td>
+																								<!--begin::Status=-->
+																								<!--begin::Status=-->
+																								<td> 
+																									344.63
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row--><!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									갈치
+																								</td>
+																								<!--end::Customer name=-->
+																								<td>
+																									근해연승
+																								</td>
+																								<!--begin::Email=-->
+																								<td>
+																									665,509 
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td>  
+																									7,761,625,194,030 
+																								</td>
+																								<!--begin::Status=-->
+																								<!--begin::Status=-->
+																								<td>
+																									7,228.58 
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row--><!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									참홍어
+																								</td>
+																								<!--end::Customer name=-->
+																								<td>
+																									근해연승
+																								</td>
+																								<!--begin::Email=-->
+																								<td>
+																									104,165  
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td>
+																									1,566,554,222,680 
+																								</td>
+																								<!--begin::Status=-->
+																								<!--begin::Status=-->
+																								<td>
+																									1,458.97 
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row--><!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									참조기
+																								</td>
+																								<!--end::Customer name=-->
+																								<td>
+																									근해자망
+																								</td>
+																								<!--begin::Email=-->
+																								<td>
+																									364,563  
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td> 
+																									5,375,696,759,722 
+																								</td>
+																								<!--begin::Status=-->
+																								<!--begin::Status=-->
+																								<td>
+																									5,006.51
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row--><!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									붉은대게
+																								</td>
+																								<!--end::Customer name=-->
+																								<!--begin::Email=-->
+																								<td>
+																									연안자망
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td>
+																									135,016 
+																								</td>
+																								<!--begin::Status=-->
+																								<td>
+																									2,558,413,387,807 
+																								</td>
+																								<!--begin::Status=-->
+																								<td> 
+																									2,382
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row--><!--end::Table row-->
+																							<!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									꽃게
+																								</td>
+																								<!--end::Customer name=-->
+																								<!--begin::Email=-->
+																								<td>
+																									연안자망
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td>
+																									805 
+																								</td>
+																								<!--begin::Status=-->
+																								<td>
+																									91,194,744,219 
+																								</td>
+																								<!--begin::Status=-->
+																								<td> 
+																									84.93 
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row-->
+																						</tbody>
+																						<!--end::Table body-->
+																					</table>
+																					<!--end::Table-->
+																				</div>
+																				<!--end::Card body-->
+																			</div>
+																			<!--end::Products-->
+																		</div>
+																		<!--end::Container-->
+																	</div>
+																	<!--end::Post-->
+																</div>
+																<!--end::Tab pane-->
+																<!--begin::Tab pane-->
+																<div class="tab-pane fade" id="kt_datatable_widget_3_tab_pane_2">
+																	<div class="post fs-6 d-flex flex-column-fluid" id="kt_post_2">
+																		<!--begin::Container-->
+																		<div class="container-xxl" style="padding: 0;">
+																			<!--begin::Products-->
+																			<div class="card card-flush">
+																				<!--begin::Card header-->
+																				<div class="card-header align-items-center py-5 gap-2 gap-md-5">
+																					<!--begin::Card title-->
+																					<div class="card-title">
+																						<!--begin::Search-->
+																						<div class="d-flex align-items-center position-relative my-1">
+																							<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+																							<span class="svg-icon svg-icon-1 position-absolute ms-4">
+																								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																									<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+																									<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+																								</svg>
+																							</span>
+																							<!--end::Svg Icon-->
+																							<input type="text" data-kt-fish-species-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="검색" />
+																						</div>
+																						<!--end::Search-->
+																						<!--begin::Export buttons-->
+																						<div id="kt_ecommerce_report_customer_orders_export" class="d-none"></div>
+																						<!--end::Export buttons-->
+																					</div>
+																					<!--end::Card title-->
+																					<!--begin::Card toolbar-->
+																					<div class="card-toolbar flex-row-fluid justify-content-end gap-5">
+																						<!--begin::Export dropdown-->
+																						<button type="button" class="btn btn-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+																						<!--begin::Svg Icon | path: icons/duotune/arrows/arr078.svg-->
+																						<span class="svg-icon svg-icon-2">
+																							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																								<rect opacity="0.3" x="12.75" y="4.25" width="12" height="2" rx="1" transform="rotate(90 12.75 4.25)" fill="currentColor" />
+																								<path d="M12.0573 6.11875L13.5203 7.87435C13.9121 8.34457 14.6232 8.37683 15.056 7.94401C15.4457 7.5543 15.4641 6.92836 15.0979 6.51643L12.4974 3.59084C12.0996 3.14332 11.4004 3.14332 11.0026 3.59084L8.40206 6.51643C8.0359 6.92836 8.0543 7.5543 8.44401 7.94401C8.87683 8.37683 9.58785 8.34458 9.9797 7.87435L11.4427 6.11875C11.6026 5.92684 11.8974 5.92684 12.0573 6.11875Z" fill="currentColor" />
+																								<path opacity="0.3" d="M18.75 8.25H17.75C17.1977 8.25 16.75 8.69772 16.75 9.25C16.75 9.80228 17.1977 10.25 17.75 10.25C18.3023 10.25 18.75 10.6977 18.75 11.25V18.25C18.75 18.8023 18.3023 19.25 17.75 19.25H5.75C5.19772 19.25 4.75 18.8023 4.75 18.25V11.25C4.75 10.6977 5.19771 10.25 5.75 10.25C6.30229 10.25 6.75 9.80228 6.75 9.25C6.75 8.69772 6.30229 8.25 5.75 8.25H4.75C3.64543 8.25 2.75 9.14543 2.75 10.25V19.25C2.75 20.3546 3.64543 21.25 4.75 21.25H18.75C19.8546 21.25 20.75 20.3546 20.75 19.25V10.25C20.75 9.14543 19.8546 8.25 18.75 8.25Z" fill="currentColor" />
+																							</svg>
+																						</span>
+																						<!--end::Svg Icon-->Export Report</button>
+																						<!--begin::Menu-->
+																						<div id="kt_ecommerce_report_customer_orders_export_menu" class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-200px py-4" data-kt-menu="true">
+																							<!--begin::Menu item-->
+																							<div class="menu-item px-3">
+																								<a href="#" class="menu-link px-3" data-kt-ecommerce-export="copy">Copy to clipboard</a>
+																							</div>
+																							<!--end::Menu item-->
+																							<!--begin::Menu item-->
+																							<div class="menu-item px-3">
+																								<a href="#" class="menu-link px-3" data-kt-ecommerce-export="excel">Export as Excel</a>
+																							</div>
+																							<!--end::Menu item-->
+																							<!--begin::Menu item-->
+																							<div class="menu-item px-3">
+																								<a href="#" class="menu-link px-3" data-kt-ecommerce-export="csv">Export as CSV</a>
+																							</div>
+																							<!--end::Menu item-->
+																							<!--begin::Menu item-->
+																							<div class="menu-item px-3">
+																								<a href="#" class="menu-link px-3" data-kt-ecommerce-export="pdf">Export as PDF</a>
+																							</div>
+																							<!--end::Menu item-->
+																						</div>
+																						<!--end::Menu-->
+																						<!--end::Export dropdown-->
+																					</div>
+																					<!--end::Card toolbar-->
+																				</div>
+																				<!--end::Card header-->
+																				<!--begin::Card body-->
+																				<div class="card-body pt-0">
+																					<!--begin::Table-->
+																					<table class="table align-middle table-row-dashed fs-6 gy-5" id="KT_Fish_Species_Data">
+																						<!--begin::Table head-->
+																						<thead>
+																							<!--begin::Table row--> 
+																							<tr class="text-start text-gray-600 fw-bold fs-6 text-uppercase gs-0">
+																								<th class="min-w-50px text-center" style="padding-right: 2px;">TAC 대상어종</th>
+																								<th class="min-w-50px text-center" style="padding-right: 2px;">어법</th>
+																								<th class="min-w-60px text-center" style="padding-right: 5px;">시간(분)</th>
+																								<th class="min-w-50px text-center" style="padding-right: 5px;">용량(Bytes)</th>
+																								<th class="min-w-20px text-center" style="padding-right: 5px;">용량(GB)</th>
+																							</tr>
+																							<!--end::Table row-->
+																						</thead>
+																						<!--end::Table head-->
+																						<!--begin::Table body-->
+																						<tbody class="fw-semibold text-gray-600 text-center">
+																							<!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									갈치
+																								</td>
+																								<!--end::Customer name=-->
+																								<td>
+																									연안채낚기
+																								</td>
+																								<!--begin::Email=-->
+																								<td>
+																									7,371 
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td> 
+																									370,039,040,212 
+																								</td>
+																								<!--begin::Status=-->
+																								<!--begin::Status=-->
+																								<td> 
+																									344.63
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row--><!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									갈치
+																								</td>
+																								<!--end::Customer name=-->
+																								<td>
+																									근해연승
+																								</td>
+																								<!--begin::Email=-->
+																								<td>
+																									201,666  
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td>  
+																									2,449,781,220,107 
+																								</td>
+																								<!--begin::Status=-->
+																								<!--begin::Status=-->
+																								<td>
+																									2,281
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row--><!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									참홍어
+																								</td>
+																								<!--end::Customer name=-->
+																								<td>
+																									근해연승
+																								</td>
+																								<!--begin::Email=-->
+																								<td>
+																									20,106 
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td>
+																									300,220,490,163 
+																								</td>
+																								<!--begin::Status=-->
+																								<!--begin::Status=-->
+																								<td>
+																									279
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row--><!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									참조기
+																								</td>
+																								<!--end::Customer name=-->
+																								<td>
+																									근해자망
+																								</td>
+																								<!--begin::Email=-->
+																								<td>
+																									91,343   
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td> 
+																									375,827,615,754 
+																								</td>
+																								<!--begin::Status=-->
+																								<!--begin::Status=-->
+																								<td>
+																									350
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row--><!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									붉은대게
+																								</td>
+																								<!--end::Customer name=-->
+																								<!--begin::Email=-->
+																								<td>
+																									연안자망
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td>
+																									65,365 
+																								</td>
+																								<!--begin::Status=-->
+																								<td>
+																									351,231,929,539  
+																								</td>
+																								<!--begin::Status=-->
+																								<td> 
+																									327
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row--><!--end::Table row-->
+																							<!--begin::Table row-->
+																							<tr>
+																								<!--begin::Customer name=-->
+																								<td>
+																									꽃게
+																								</td>
+																								<!--end::Customer name=-->
+																								<!--begin::Email=-->
+																								<td>
+																									연안자망
+																								</td>
+																								<!--end::Email=-->
+																								<!--begin::Status=-->
+																								<td>
+																									188 
+																								</td>
+																								<!--begin::Status=-->
+																								<td>
+																									3,745,474,885 
+																								</td>
+																								<!--begin::Status=-->
+																								<td> 
+																									3
+																								</td>
+																								<!--begin::Status=-->
+																							</tr>
+																							<!--end::Table row-->
+																						</tbody>
+																						<!--end::Table body-->
+																					</table>
+																					<!--end::Table-->
+																				</div>
+																				<!--end::Card body-->
+																			</div>
+																			<!--end::Products-->
+																		</div>
+																		<!--end::Container-->
+																	</div>
+																	<!--end::Post-->
+																</div>
+																<!--end::Tab pane-->
+															</div>
+															<!--end::Tab content-->
+														</div>
+														<!--end::Body-->
+													</div>
+													<!--end::Chart widget 3-->
+												</div>
+												<!--end::Col-->
+											</div>
+											<!--end::Tab panel-->
+											<div id="kt_activity_label" class="card-body tab-pane fade show" role="tabpanel" aria-labelledby="kt_activity_label_tab" style="padding: 0;">
+												<!--begin::Container-->
+												<div class="container-xxl" style="padding: 0;">
+													<!--begin::Products-->
+													<div class="card card-flush">
+														<!--begin::Card header-->
+														<div class="card-header align-items-center gap-2 gap-md-5">
+															<!--begin::Card title-->
+															<div class="card-title">
+																<!--begin::Search-->
+																<div class="d-flex align-items-center position-relative my-1">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+																	<span class="svg-icon svg-icon-1 position-absolute ms-4">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+																			<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																	<input type="text" data-kt-fish-species-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="검색" />
+																</div>
+																<!--end::Search-->
+																<!--begin::Export buttons-->
+																<div id="kt_ecommerce_report_customer_orders_export" class="d-none"></div>
+																<!--end::Export buttons-->
+															</div>
+															<!--end::Card title-->
+															<!--begin::Card toolbar-->
+															<div class="card-toolbar flex-row-fluid justify-content-end gap-5">
+																<!--begin::Export dropdown-->
+																<button type="button" class="btn btn-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+																<!--begin::Svg Icon | path: icons/duotune/arrows/arr078.svg-->
+																<span class="svg-icon svg-icon-2">
+																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<rect opacity="0.3" x="12.75" y="4.25" width="12" height="2" rx="1" transform="rotate(90 12.75 4.25)" fill="currentColor" />
+																		<path d="M12.0573 6.11875L13.5203 7.87435C13.9121 8.34457 14.6232 8.37683 15.056 7.94401C15.4457 7.5543 15.4641 6.92836 15.0979 6.51643L12.4974 3.59084C12.0996 3.14332 11.4004 3.14332 11.0026 3.59084L8.40206 6.51643C8.0359 6.92836 8.0543 7.5543 8.44401 7.94401C8.87683 8.37683 9.58785 8.34458 9.9797 7.87435L11.4427 6.11875C11.6026 5.92684 11.8974 5.92684 12.0573 6.11875Z" fill="currentColor" />
+																		<path opacity="0.3" d="M18.75 8.25H17.75C17.1977 8.25 16.75 8.69772 16.75 9.25C16.75 9.80228 17.1977 10.25 17.75 10.25C18.3023 10.25 18.75 10.6977 18.75 11.25V18.25C18.75 18.8023 18.3023 19.25 17.75 19.25H5.75C5.19772 19.25 4.75 18.8023 4.75 18.25V11.25C4.75 10.6977 5.19771 10.25 5.75 10.25C6.30229 10.25 6.75 9.80228 6.75 9.25C6.75 8.69772 6.30229 8.25 5.75 8.25H4.75C3.64543 8.25 2.75 9.14543 2.75 10.25V19.25C2.75 20.3546 3.64543 21.25 4.75 21.25H18.75C19.8546 21.25 20.75 20.3546 20.75 19.25V10.25C20.75 9.14543 19.8546 8.25 18.75 8.25Z" fill="currentColor" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->Export Report</button>
+																<!--begin::Menu-->
+																<div id="kt_ecommerce_report_customer_orders_export_menu" class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-200px py-4" data-kt-menu="true">
+																	<!--begin::Menu item-->
+																	<div class="menu-item px-3">
+																		<a href="#" class="menu-link px-3" data-kt-ecommerce-export="copy">Copy to clipboard</a>
+																	</div>
+																	<!--end::Menu item-->
+																	<!--begin::Menu item-->
+																	<div class="menu-item px-3">
+																		<a href="#" class="menu-link px-3" data-kt-ecommerce-export="excel">Export as Excel</a>
+																	</div>
+																	<!--end::Menu item-->
+																	<!--begin::Menu item-->
+																	<div class="menu-item px-3">
+																		<a href="#" class="menu-link px-3" data-kt-ecommerce-export="csv">Export as CSV</a>
+																	</div>
+																	<!--end::Menu item-->
+																	<!--begin::Menu item-->
+																	<div class="menu-item px-3">
+																		<a href="#" class="menu-link px-3" data-kt-ecommerce-export="pdf">Export as PDF</a>
+																	</div>
+																	<!--end::Menu item-->
+																</div>
+																<!--end::Menu-->
+																<!--end::Export dropdown-->
+															</div>
+															<!--end::Card toolbar-->
+														</div>
+														<!--end::Card header-->
+														<!--begin::Card body-->
+														<div class="card-body" style="padding-top: 0;">
+															<!--begin::Table-->
+															<table class="table align-middle table-row-dashed fs-6 gy-5" id="KT_Label_Data">
+																<!--begin::Table head-->
+																<thead>
+																	<!--begin::Table row--> 
+																	<tr class="text-start text-gray-600 fw-bold fs-6 text-uppercase gs-0">
+																		<th class="min-w-30px text-center" style="padding-right: 2px;">순번</th>
+																		<th class="min-w-40px text-center" style="padding-right: 2px;">TAC 대상어종</th>
+																		<th class="min-w-50px text-center" style="padding-right: 5px;">학습 이미지(장)</th>
+																		<th class="min-w-50px text-center" style="padding-right: 5px;">학습 이미지(용량 / GB)</th>
+																		<th class="min-w-50px text-center" style="padding-right: 5px;">학습 텍스트(개)</th>
+																		<th class="min-w-50px text-center" style="padding-right: 5px;">학습 텍스트(용량 / MB)</th>
+																	</tr>
+																	<!--end::Table row-->
+																</thead>
+																<!--end::Table head-->
+																<!--begin::Table body-->
+																<tbody class="fw-semibold text-gray-600 text-center">
+																	<!--begin::Table row-->
+																	<tr>
+																		<!--begin::Customer name=-->
+																		<td>
+																			1
+																		</td>
+																		<!--end::Customer name=-->
+																		<td>
+																			갈치
+																		</td>
+																		<!--begin::Email=-->
+																		<td>
+																			7,371 
+																		</td>
+																		<!--end::Email=-->
+																		<!--begin::Status=-->
+																		<td> 
+																			370
+																		</td>
+																		<!--begin::Status=-->
+																		<!--begin::Status=-->
+																		<td> 
+																			7,371 
+																		</td>
+																		<td> 
+																			371 
+																		</td>
+																		<!--begin::Status=-->
+																	</tr>
+																	<!--end::Table row-->
+
+																</tbody>
+																<!--end::Table body-->
+															</table>
+															<!--end::Table-->
+														</div>
+														<!--end::Card body-->
+													</div>
+													<!--end::Products-->
+												</div>
+												<!--end::Container-->
+											
+											</div>
+										</div>
+										<!--end::Tab Content-->
+									</div>
+									<!--end::Card body-->
+								</div>
+								<!--end::Timelinasdasde-->
+            </div>
+            <!--end::Order details page-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+</div>
+<!--end::Content-->
+
+<% include ./include/footer%>

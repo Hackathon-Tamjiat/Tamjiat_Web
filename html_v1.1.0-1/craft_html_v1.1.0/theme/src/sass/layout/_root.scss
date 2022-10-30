@@ -1,0 +1,41 @@
+//
+// Root
+//
+
+// Light mode
+@include theme-light() {
+    // Page
+    --kt-page-bg: #{$page-bg};
+    --kt-content-bg-color: #{$content-bg-color};
+    --kt-content-auth-bg-color: #{$content-auth-bg-color};
+
+    // Header
+    --kt-header-desktop-fixed-bg-color: #{get($header-config, desktop, fixed, bg-color)};
+    --kt-header-desktop-fixed-box-shadow: #{get($header-config, desktop, fixed, box-shadow)};
+
+    --kt-header-tablet-and-mobile-fixed-bg-color: #{get($header-config, tablet-and-mobile, fixed, bg-color)};
+    --kt-header-tablet-and-mobile-fixed-box-shadow: #{get($header-config, tablet-and-mobile, fixed, box-shadow)};
+
+    // Aside
+    --kt-aside-general-bg-color: #{get($aside-config, general, bg-color)};
+    --kt-aside-default-minimized-hover-box-shadow: #{get($aside-config, default, minimized-hover-box-shadow)};    
+}
+
+// Dark mode
+@include theme-dark() {
+    // Page
+    --kt-page-bg: #{$page-bg-dark};
+    --kt-content-bg-color: #{$content-bg-color-dark};
+    --kt-content-auth-bg-color: #{$content-auth-bg-color-dark};
+
+    // Header
+    --kt-header-desktop-fixed-bg-color: #{get($header-config, desktop, fixed, bg-color-dark)};
+    --kt-header-desktop-fixed-box-shadow: #{get($header-config, desktop, fixed, box-shadow-dark)};
+
+    --kt-header-tablet-and-mobile-fixed-bg-color: #{get($header-config, tablet-and-mobile, fixed, bg-color-dark)};
+    --kt-header-tablet-and-mobile-fixed-box-shadow: #{get($header-config, tablet-and-mobile, fixed, box-shadow-dark)};
+
+    // Aside
+    --kt-aside-general-bg-color: #{get($aside-config, general, bg-color-dark)};
+    --kt-aside-default-minimized-hover-box-shadow: #{get($aside-config, default, minimized-hover-box-shadow-dark)}; 
+}

@@ -1,0 +1,132 @@
+<% include ./include/header%>					
+<!--begin::Content-->
+<div class="content fs-6 d-flex flex-column flex-column-fluid" id="kt_content">
+	<!--begin::Toolbar-->
+	<div class="toolbar" id="kt_toolbar">
+		<div class="container-fluid d-flex flex-stack flex-wrap flex-sm-nowrap">
+			<!--begin::Info-->
+			<div class="d-flex flex-column align-items-start justify-content-center flex-wrap me-2">
+				<!--begin::Title-->
+				<h1 class="text-dark fw-bold my-1 fs-2">총 현황판
+				<small class="text-muted fs-6 fw-normal ms-1"></small></h1>
+				<!--end::Title-->
+				<!--begin::Breadcrumb-->
+				<ul class="breadcrumb fw-semibold fs-base my-1">
+					<li class="breadcrumb-item text-muted">
+						<a href="../dist/index.html" class="text-muted text-hover-primary">Home&nbsp;</a>
+					</li>
+					<li class="breadcrumb-item text-muted">AI 옵서버 현황&nbsp;</li>
+					<li class="breadcrumb-item text-muted">총 현황판&nbsp;</li>
+				</ul>
+				<!--end::Breadcrumb-->
+			</div>
+			<!--end::Info-->
+		</div>
+	</div>
+	<!--end::Toolbar-->
+	<!--begin::Post-->
+	<div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+		<!--begin::Container-->
+		<div class="container-xxl">
+			<!--begin::Row-->
+			<div class="row g-xl-8">
+				<!--begin::Col-->
+				<div class="col-xxl-8">
+					<!--begin::Row-->
+					<div class="row g-xl-8">
+						<!--begin::Col-->
+						<div class="col-xl-6">
+							<!--begin::Chart Widget 1-->
+							<div class="card card-xl-stretch mb-5 mb-xl-8">
+								<!--begin::Body-->
+								<div class="card-body p-0 d-flex justify-content-between flex-column">
+									<div class="d-flex flex-stack card-p flex-grow-1">
+										<!--begin::Icon-->
+										<div class="symbol symbol-45px">
+											<div class="symbol-label">
+												<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+												<span class="svg-icon svg-icon-2x">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M19.0963 4.92704C20.0963 5.92704 20.8963 7.12705 21.2963 8.32705L17.6963 11.927L8.39633 2.62705C11.8963 1.32705 16.1963 2.02704 19.0963 4.92704ZM2.69633 15.627C3.19633 16.827 3.89634 18.027 4.89634 19.027C7.79634 21.927 11.9963 22.627 15.5963 21.227L6.29634 11.927L2.69633 15.627Z" fill="currentColor"/>
+														<path opacity="0.3" d="M8.39634 2.72705L11.9963 6.32706L2.69634 15.6271C1.29634 12.0271 1.99634 7.82705 4.89634 4.92705C5.89634 3.92705 7.09634 3.22705 8.39634 2.72705ZM11.9963 17.7271L15.5963 21.3271C16.7963 20.8271 17.9963 20.1271 18.9963 19.1271C21.8963 16.2271 22.5963 12.027 21.1963 8.42705L11.9963 17.7271Z" fill="currentColor"/>
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+											</div>
+										</div>
+										<!--end::Icon-->
+										<!--begin::Text-->
+										<div class="d-flex flex-column text-end">
+											<span class="fw-bolder text-gray-800 fs-2">TAC 등록 어선</span>
+											<span class="text-gray-400 fw-semibold fs-6">21.01 - 22.09</span>
+										</div>
+										<!--end::Text-->
+									</div>
+									<!--begin::Chart-->
+									<div class="pt-1">
+										<div id="kt_chart_widget_1_chart" class="card-rounded-bottom h-125px"></div>
+									</div>
+									<!--end::Chart-->
+								</div>
+							</div>
+							<!--end::Chart Widget 1-->
+						</div>
+						<!--end::Col-->
+
+					</div>
+					<!--end::Row-->
+					<!--begin::Row-->
+					<div class="row g-xl-8">
+						<!--begin::Col-->
+						<div class="col-xl-6">
+							<!--begin::Chart Widget 2-->
+							<div class="card card-xl-stretch mb-5 mb-xl-8">
+								<!--begin::Body-->
+								<div class="card-body p-0 d-flex justify-content-between flex-column overflow-hidden">
+									<div class="d-flex flex-stack flex-grow-1 px-9 pt-9 pb-3">
+										<!--begin::Icon-->
+										<div class="symbol symbol-45px">
+											<div class="symbol-label">
+												<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
+												<span class="svg-icon svg-icon-2x">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M18 21.6C16.6 20.4 9.1 20.3 6.3 21.2C5.7 21.4 5.1 21.2 4.7 20.8L2 18C4.2 15.8 10.8 15.1 15.8 15.8C16.2 18.3 17 20.5 18 21.6ZM18.8 2.8C18.4 2.4 17.8 2.20001 17.2 2.40001C14.4 3.30001 6.9 3.2 5.5 2C6.8 3.3 7.4 5.5 7.7 7.7C9 7.9 10.3 8 11.7 8C15.8 8 19.8 7.2 21.5 5.5L18.8 2.8Z" fill="currentColor"/>
+														<path opacity="0.3" d="M21.2 17.3C21.4 17.9 21.2 18.5 20.8 18.9L18 21.6C15.8 19.4 15.1 12.8 15.8 7.8C18.3 7.4 20.4 6.70001 21.5 5.60001C20.4 7.00001 20.2 14.5 21.2 17.3ZM8 11.7C8 9 7.7 4.2 5.5 2L2.8 4.8C2.4 5.2 2.2 5.80001 2.4 6.40001C2.7 7.40001 3.00001 9.2 3.10001 11.7C3.10001 15.5 2.40001 17.6 2.10001 18C3.20001 16.9 5.3 16.2 7.8 15.8C8 14.2 8 12.7 8 11.7Z" fill="currentColor"/>
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+											</div>
+										</div>
+										<!--end::Icon-->
+										<!--begin::Text-->
+										<div class="d-flex flex-column text-end">
+											<span class="fw-bolder text-gray-800 fs-2">어종별 총 어획량</span>
+											<span class="text-gray-400 fw-semibold fs-6">21.01 - 22.09</span>
+										</div>
+										<!--end::Text-->
+									</div>
+									<!--begin::Chart-->
+									<div id="kt_charts_widget_2_chart" class="mb-n10" style="height: 165px"></div>
+									<!--end::Chart-->
+								</div>
+							</div>
+							<!--end::Chart Widget 2-->
+						</div>
+						<!--end::Col-->
+
+					</div>
+					<!--end::Row-->
+				</div>
+				<!--end::Col-->
+
+			</div>
+			<!--end::Row-->
+
+
+		</div>
+		<!--end::Container-->
+	</div>
+	<!--end::Post-->
+</div>
+<!--end::Content-->
+<% include ./include/footer%>

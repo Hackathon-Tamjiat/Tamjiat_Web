@@ -1,0 +1,94 @@
+<% include ./include/header_i %>					<!--begin::Content-->
+<div class="content fs-6 d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Post-->
+    <div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div class="container-xxl">
+            <form id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row" data-kt-redirect="../dist/apps/ecommerce/catalog/categories.html">
+                <!--begin::Main column-->
+                <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
+                    <!--begin::Meta options-->
+                    <div class="card card-flush py-4">
+                        <!--begin::Card header-->
+                        <div class="card-header mb-2">
+                            <div class="card-title">
+                                <div class="symbol symbol-circle me-5">
+                                    <div class="symbol-label bg-transparent text-primary border border-secondary border-dashed">
+                                        <!--begin::Svg Icon | path: icons/duotune/abstract/abs020.svg-->
+                                        <span class="svg-icon svg-icon-2x svg-icon-primary">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.925 3.90078V8.00077L12.025 10.8008V5.10078L15.525 3.10078C16.125 2.80078 16.925 3.20078 16.925 3.90078ZM2.525 13.5008L6.025 15.5008L10.925 12.7008L6.025 9.90078L2.525 11.9008C1.825 12.3008 1.825 13.2008 2.525 13.5008ZM18.025 19.7008V15.6008L13.125 12.8008V18.5008L16.625 20.5008C17.225 20.8008 18.025 20.4008 18.025 19.7008Z" fill="currentColor"/>
+                                                <path opacity="0.3" d="M8.52499 3.10078L12.025 5.10078V10.8008L7.125 8.00077V3.90078C7.125 3.20078 7.92499 2.80078 8.52499 3.10078ZM7.42499 20.5008L10.925 18.5008V12.8008L6.02499 15.6008V19.7008C6.02499 20.4008 6.82499 20.8008 7.42499 20.5008ZM21.525 11.9008L18.025 9.90078L13.125 12.7008L18.025 15.5008L21.525 13.5008C22.225 13.2008 22.225 12.3008 21.525 11.9008Z" fill="currentColor"/>
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                </div>
+                                <h1>공지사항 신규 등록</h1>                              
+                            </div>
+                        </div>
+                        <div class="separator separator-solid mb-16"></div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-0">
+                            <!--begin::Input group-->
+                            <div class="mb-12">
+                                <!--begin::Label-->
+                                <label class="form-label fw-bold">제목 ( Title )</label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <input type="text" class="form-control mb-2" name="meta_title" placeholder="제목.." />
+                                <!--end::Input-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="mb-10">
+                                <!--begin::Label-->
+                                <label class="form-label fw-bold">내용 ( Subject )</label>
+                                <!--end::Label-->
+                                <!--begin::Editor-->
+                                <div id="kt_ecommerce_add_category_meta_description" name="kt_ecommerce_add_category_meta_description" class="min-h-500px mb-2"></div>
+                                <!--end::Editor-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div>
+                                <!--begin::Label-->
+                                <label class="form-label fw-bold">키워드 ( Keyword )</label>
+                                <!--end::Label-->
+                                <!--begin::Editor-->
+                                <input id="kt_ecommerce_add_category_meta_keywords" name="kt_ecommerce_add_category_meta_keywords" class="form-control mb-2" />
+                                <!--end::Editor-->
+                                <!--begin::Description-->
+                                <div class="text-muted fs-7">키워드 구분 시
+                                <code>,</code>로 구분해 주세요.</div>
+                                <!--end::Description-->
+                            </div>
+                            <!--end::Input group-->
+                        </div>
+                        <!--end::Card header-->
+                    </div>
+                    <!--end::Meta options-->
+                    <div class="d-flex justify-content-end">
+                        <!--begin::Button-->
+                        <a href="../dist/apps/ecommerce/catalog/products.html" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">취소</a>
+                        <!--end::Button-->
+                        <!--begin::Button-->
+                        <button type="submit" id="kt_ecommerce_add_category_submit" class="btn btn-primary">
+                            <span class="indicator-label">등록</span>
+                            <span class="indicator-progress">등록 중 입니다...
+                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                        <!--end::Button-->
+                    </div>
+                </div>
+                <!--end::Main column-->
+            </form>
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+</div>
+<!--end::Content-->
+
+<% include ./include/footer_i %>

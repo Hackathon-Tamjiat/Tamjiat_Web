@@ -1,0 +1,635 @@
+<% include ./include/header_i%>
+<!--begin::Content-->
+<div class="content fs-6 d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Post-->
+    <div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div class="container-xxl">
+            <!--begin::Hero card-->
+            <div class="card mb-8">
+                <!--begin::Hero body-->
+                <div class="card-body flex-column p-5">
+                    <!--begin::Hero content-->
+                    <div class="d-flex align-items-center h-lg-300px p-5 p-lg-15">
+                        <!--begin::Wrapper-->
+                        <div class="d-flex flex-column align-items-start justift-content-center flex-equal me-5">
+                            <!--begin::Title-->
+                            <h1 class="fw-bold fs-3x text-gray-800 mb-3 mb-lg-6">TAC ( Total Allowable Catch )</h1>
+                            <div class="fw-bold fs-2x text-gray-400 text-center ps-4">총허용 어획량제도</div>
+                            <!--end::Title-->
+                            
+                        </div>
+                        <!--end::Wrapper-->
+                        <!--begin::Wrapper-->
+                        <div class="flex-equal d-flex justify-content-center align-items-end ms-5">
+                            <!--begin::Illustration-->
+                            <img src="../assets/media/illustrations/tac/fisherman.png" alt="" class="mw-100 mh-125px mh-lg-275px mb-lg-n12" style="padding-left: 120px;" />
+                            <!--end::Illustration-->
+                        </div>
+                        <!--end::Wrapper-->
+                    </div>
+                    <!--end::Hero content-->
+                    <!--begin::Hero nav-->
+                    <div class="card-rounded bg-light d-flex flex-stack flex-wrap p-5">
+                        <!--begin::Nav-->
+                        <ul class="nav flex-wrap border-transparent fw-bold">
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="/tacinfo">TAC 소개</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="/tacinfo/policy">TAC 제도</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item my-1">
+                                <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase active" href="/tacinfo/person">TAC 수산자원조사원 배치현황</a>
+                            </li>
+                            <!--end::Nav item-->
+                        </ul>
+                        <!--end::Nav-->
+                    </div>
+                    <!--end::Hero nav-->
+                </div>
+                <!--end::Hero body-->
+            </div>
+            <!--end::Hero card-->
+            <!--begin::Products Documentations-->
+            <div class="card mb-2">
+                <!--begin::Wrapper-->
+                <div class="col-xxl-12">
+                    <!--begin::Security summary-->
+                    <div class="card card-xxl-stretch mb-5 mb-xl-10">
+                        <!--begin::Header-->
+                        <div class="card-header card-header-stretch">
+                            <!--begin::Title-->
+                            <div class="card-title">
+                                <h3 class="m-0 text-gray-900">수산자원조사원 배치현황</h3>
+                            </div>
+                            <!--end::Title-->
+                            <!--begin::Toolbar-->
+                            <div class="card-toolbar">
+                                <ul class="nav nav-tabs nav-line-tabs nav-stretch border-transparent fs-5 fw-bold" id="kt_security_summary_tabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link text-active-primary active" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_security_summary_tab_pane_1" data-kt-initialized="1" aria-selected="true" role="tab">자원사업본부(20)</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link text-active-primary" data-kt-countup-tabs="true" data-bs-toggle="tab" id="kt_security_summary_tab_2" href="#kt_security_summary_tab_pane_2" data-kt-initialized="1" aria-selected="false" role="tab" tabindex="-1">남해본부(35)</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link text-active-primary" data-kt-countup-tabs="true" data-bs-toggle="tab" id="kt_security_summary_tab_3" href="#kt_security_summary_tab_pane_3" data-kt-initialized="1" aria-selected="false" role="tab" tabindex="-1">동해본부(29)</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link text-active-primary" data-kt-countup-tabs="true" data-bs-toggle="tab" id="kt_security_summary_tab_4" href="#kt_security_summary_tab_pane_4" data-kt-initialized="1" aria-selected="false" role="tab" tabindex="-1">서해본부(22)</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link text-active-primary" data-kt-countup-tabs="true" data-bs-toggle="tab" id="kt_security_summary_tab_5" href="#kt_security_summary_tab_pane_5" data-kt-initialized="1" aria-selected="false" role="tab" tabindex="-1">제주본부(14)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--end::Toolbar-->
+                        </div>
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body pt-7 pb-0 px-0">
+                            <!--begin::Tab content-->
+                            <div class="tab-content">
+                                <!--begin::Tab panel-->
+                                <div class="tab-pane fade active show" id="kt_security_summary_tab_pane_1" role="tabpanel">
+                                    <!--begin::Container-->
+                                    <div class="pt-2">
+                                        <!--begin::Tabs-->
+                                        <div class="d-flex align-items-center pb-6 px-9">
+                                            <!--begin::Title-->
+                                            <h3 class="m-0 text-gray-900 flex-grow-1">자원사업본부 TAC 관리실</h3>
+                                            <!--end::Title-->
+                                            <!--begin::Nav pills-->
+                                            <ul class="nav nav-pills nav-line-pills border rounded p-1" role="tablist">
+                                                <li class="nav-item me-2" role="presentation">
+                                                    <a class="nav-link btn btn-active-light btn-active-color-gray-700 btn-color-gray-400 py-2 px-5 fs-6 fw-semibold active" data-bs-toggle="tab" id="kt_security_summary_1" href="#kt_security_summary_tab_1" aria-selected="true" role="tab">본부</a>
+                                                </li>
+                                            </ul>
+                                            <!--end::Nav pills-->
+                                        </div>
+                                        <!--end::Tabs-->
+                                        <!--begin::Tab content-->
+                                        <div class="tab-content px-3">
+                                            <!--begin::Tab pane-->
+                                            <div class="tab-pane fade active show" id="kt_security_summary_tab_pane_1" role="tabpanel" aria-labelledby="#kt_security_summary_1">
+                                                <!--begin::Row-->
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 부산</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">자원사업본부 TAC 관리실</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 부산</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">부산 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 부산</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">감천 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 부산</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">다대포 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                               
+                                                
+                                                
+                                            </div>
+                                            <!--end::Tab pane-->
+                                            <!--begin::Tab pane-->
+                                            <div class="tab-pane fade" id="kt_security_summary_tab_pane_hours_clients" role="tabpanel" aria-labelledby="#kt_security_summary_tab_hours_clients">
+                                                <!--begin::Chart-->
+                                                <div id="kt_security_summary_chart_hours_clients" style="height: 300px; min-height: 315px;"><div id="apexchartsb4ipvokf" class="apexcharts-canvas apexchartsb4ipvokf apexcharts-theme-light" style="width: 811px; height: 300px;"><svg id="SvgjsSvg1558" width="811" height="300" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG1560" class="apexcharts-inner apexcharts-graphical" transform="translate(47.835205078125, 30)"><defs id="SvgjsDefs1559"><linearGradient id="SvgjsLinearGradient1564" x1="0" y1="0" x2="0" y2="1"><stop id="SvgjsStop1565" stop-opacity="0.4" stop-color="rgba(216,227,240,0.4)" offset="0"></stop><stop id="SvgjsStop1566" stop-opacity="0.5" stop-color="rgba(190,209,230,0.5)" offset="1"></stop><stop id="SvgjsStop1567" stop-opacity="0.5" stop-color="rgba(190,209,230,0.5)" offset="1"></stop></linearGradient><clipPath id="gridRectMaskb4ipvokf"><rect id="SvgjsRect1569" width="759.164794921875" height="232.73000000000002" x="-3" y="-1" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath><clipPath id="forecastMaskb4ipvokf"></clipPath><clipPath id="nonForecastMaskb4ipvokf"></clipPath><clipPath id="gridRectMarkerMaskb4ipvokf"><rect id="SvgjsRect1570" width="757.164794921875" height="234.73000000000002" x="-2" y="-2" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath></defs><rect id="SvgjsRect1568" width="10.983653259277343" height="230.73000000000002" x="0" y="0" rx="0" ry="0" opacity="1" stroke-width="0" stroke-dasharray="3" fill="url(#SvgjsLinearGradient1564)" class="apexcharts-xcrosshairs" y2="230.73000000000002" filter="none" fill-opacity="0.9"></rect><g id="SvgjsG1626" class="apexcharts-xaxis" transform="translate(0, 0)"><g id="SvgjsG1627" class="apexcharts-xaxis-texts-g" transform="translate(0, -4)"><text id="SvgjsText1629" font-family="inherit" x="31.381866455078125" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1630">Jan</tspan><title>Jan</title></text><text id="SvgjsText1632" font-family="inherit" x="94.14559936523438" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1633">Feb</tspan><title>Feb</title></text><text id="SvgjsText1635" font-family="inherit" x="156.90933227539062" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1636">Mar</tspan><title>Mar</title></text><text id="SvgjsText1638" font-family="inherit" x="219.67306518554688" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1639">Apr</tspan><title>Apr</title></text><text id="SvgjsText1641" font-family="inherit" x="282.4367980957031" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1642">May</tspan><title>May</title></text><text id="SvgjsText1644" font-family="inherit" x="345.2005310058594" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1645">Jun</tspan><title>Jun</title></text><text id="SvgjsText1647" font-family="inherit" x="407.9642639160156" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1648">Jul</tspan><title>Jul</title></text><text id="SvgjsText1650" font-family="inherit" x="470.7279968261719" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1651">Aug</tspan><title>Aug</title></text><text id="SvgjsText1653" font-family="inherit" x="533.4917297363281" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1654">Sep</tspan><title>Sep</title></text><text id="SvgjsText1656" font-family="inherit" x="596.2554626464844" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1657">Oct</tspan><title>Oct</title></text><text id="SvgjsText1659" font-family="inherit" x="659.0191955566406" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1660">Nov</tspan><title>Nov</title></text><text id="SvgjsText1662" font-family="inherit" x="721.7829284667969" y="259.73" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-xaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1663">Dec</tspan><title>Dec</title></text></g></g><g id="SvgjsG1681" class="apexcharts-grid"><g id="SvgjsG1682" class="apexcharts-gridlines-horizontal"><line id="SvgjsLine1684" x1="0" y1="0" x2="753.164794921875" y2="0" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1685" x1="0" y1="57.682500000000005" x2="753.164794921875" y2="57.682500000000005" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1686" x1="0" y1="115.36500000000001" x2="753.164794921875" y2="115.36500000000001" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1687" x1="0" y1="173.0475" x2="753.164794921875" y2="173.0475" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line><line id="SvgjsLine1688" x1="0" y1="230.73000000000002" x2="753.164794921875" y2="230.73000000000002" stroke="#eff2f5" stroke-dasharray="4" stroke-linecap="butt" class="apexcharts-gridline"></line></g><g id="SvgjsG1683" class="apexcharts-gridlines-vertical"></g><line id="SvgjsLine1690" x1="0" y1="230.73000000000002" x2="753.164794921875" y2="230.73000000000002" stroke="transparent" stroke-dasharray="0" stroke-linecap="butt"></line><line id="SvgjsLine1689" x1="0" y1="1" x2="0" y2="230.73000000000002" stroke="transparent" stroke-dasharray="0" stroke-linecap="butt"></line></g><g id="SvgjsG1571" class="apexcharts-bar-series apexcharts-plot-series"><g id="SvgjsG1572" class="apexcharts-series" rel="1" seriesName="NetxProfit" data:realIndex="0"><path id="SvgjsPath1576" d="M20.398213195800782 230.73000000000002L20.398213195800782 140.5925C20.398213195800782 136.5925 22.398213195800782 134.5925 26.398213195800782 134.5925L23.381866455078125 134.5925C27.381866455078125 134.5925 29.381866455078125 136.5925 29.381866455078125 140.5925L29.381866455078125 140.5925L29.381866455078125 230.73000000000002L29.381866455078125 230.73000000000002C29.381866455078125 230.73000000000002 20.398213195800782 230.73000000000002 20.398213195800782 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 20.398213195800782 230.73000000000002L 20.398213195800782 140.5925Q 20.398213195800782 134.5925 26.398213195800782 134.5925L 23.381866455078125 134.5925Q 29.381866455078125 134.5925 29.381866455078125 140.5925L 29.381866455078125 140.5925L 29.381866455078125 230.73000000000002L 29.381866455078125 230.73000000000002z" pathFrom="M 20.398213195800782 230.73000000000002L 20.398213195800782 230.73000000000002L 29.381866455078125 230.73000000000002L 29.381866455078125 230.73000000000002L 29.381866455078125 230.73000000000002L 29.381866455078125 230.73000000000002L 29.381866455078125 230.73000000000002L 20.398213195800782 230.73000000000002" cy="134.5925" cx="82.16194610595703" j="0" val="50" barHeight="96.13750000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1578" d="M83.16194610595703 230.73000000000002L83.16194610595703 102.13750000000002C83.16194610595703 98.13750000000002 85.16194610595703 96.13750000000002 89.16194610595703 96.13750000000002L86.14559936523438 96.13750000000002C90.14559936523438 96.13750000000002 92.14559936523438 98.13750000000002 92.14559936523438 102.13750000000002L92.14559936523438 102.13750000000002L92.14559936523438 230.73000000000002L92.14559936523438 230.73000000000002C92.14559936523438 230.73000000000002 83.16194610595703 230.73000000000002 83.16194610595703 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 83.16194610595703 230.73000000000002L 83.16194610595703 102.13750000000002Q 83.16194610595703 96.13750000000002 89.16194610595703 96.13750000000002L 86.14559936523438 96.13750000000002Q 92.14559936523438 96.13750000000002 92.14559936523438 102.13750000000002L 92.14559936523438 102.13750000000002L 92.14559936523438 230.73000000000002L 92.14559936523438 230.73000000000002z" pathFrom="M 83.16194610595703 230.73000000000002L 83.16194610595703 230.73000000000002L 92.14559936523438 230.73000000000002L 92.14559936523438 230.73000000000002L 92.14559936523438 230.73000000000002L 92.14559936523438 230.73000000000002L 92.14559936523438 230.73000000000002L 83.16194610595703 230.73000000000002" cy="96.13750000000002" cx="144.9256790161133" j="1" val="70" barHeight="134.5925" barWidth="10.983653259277343"></path><path id="SvgjsPath1580" d="M145.9256790161133 230.73000000000002L145.9256790161133 63.682500000000005C145.9256790161133 59.682500000000005 147.9256790161133 57.682500000000005 151.9256790161133 57.682500000000005L148.90933227539062 57.682500000000005C152.90933227539062 57.682500000000005 154.90933227539062 59.682500000000005 154.90933227539062 63.682500000000005L154.90933227539062 63.682500000000005L154.90933227539062 230.73000000000002L154.90933227539062 230.73000000000002C154.90933227539062 230.73000000000002 145.9256790161133 230.73000000000002 145.9256790161133 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 145.9256790161133 230.73000000000002L 145.9256790161133 63.682500000000005Q 145.9256790161133 57.682500000000005 151.9256790161133 57.682500000000005L 148.90933227539062 57.682500000000005Q 154.90933227539062 57.682500000000005 154.90933227539062 63.682500000000005L 154.90933227539062 63.682500000000005L 154.90933227539062 230.73000000000002L 154.90933227539062 230.73000000000002z" pathFrom="M 145.9256790161133 230.73000000000002L 145.9256790161133 230.73000000000002L 154.90933227539062 230.73000000000002L 154.90933227539062 230.73000000000002L 154.90933227539062 230.73000000000002L 154.90933227539062 230.73000000000002L 154.90933227539062 230.73000000000002L 145.9256790161133 230.73000000000002" cy="57.682500000000005" cx="207.68941192626954" j="2" val="90" barHeight="173.0475" barWidth="10.983653259277343"></path><path id="SvgjsPath1582" d="M208.68941192626954 230.73000000000002L208.68941192626954 11.768249999999995C208.68941192626954 7.768249999999995 210.68941192626954 5.768249999999995 214.68941192626954 5.768249999999995L211.67306518554688 5.768249999999995C215.67306518554688 5.768249999999995 217.67306518554688 7.768249999999995 217.67306518554688 11.768249999999995L217.67306518554688 11.768249999999995L217.67306518554688 230.73000000000002L217.67306518554688 230.73000000000002C217.67306518554688 230.73000000000002 208.68941192626954 230.73000000000002 208.68941192626954 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 208.68941192626954 230.73000000000002L 208.68941192626954 11.768249999999995Q 208.68941192626954 5.768249999999995 214.68941192626954 5.768249999999995L 211.67306518554688 5.768249999999995Q 217.67306518554688 5.768249999999995 217.67306518554688 11.768249999999995L 217.67306518554688 11.768249999999995L 217.67306518554688 230.73000000000002L 217.67306518554688 230.73000000000002z" pathFrom="M 208.68941192626954 230.73000000000002L 208.68941192626954 230.73000000000002L 217.67306518554688 230.73000000000002L 217.67306518554688 230.73000000000002L 217.67306518554688 230.73000000000002L 217.67306518554688 230.73000000000002L 217.67306518554688 230.73000000000002L 208.68941192626954 230.73000000000002" cy="5.768249999999995" cx="270.4531448364258" j="3" val="117" barHeight="224.96175000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1584" d="M271.4531448364258 230.73000000000002L271.4531448364258 82.91C271.4531448364258 78.91 273.4531448364258 76.91 277.4531448364258 76.91L274.4367980957031 76.91C278.4367980957031 76.91 280.4367980957031 78.91 280.4367980957031 82.91L280.4367980957031 82.91L280.4367980957031 230.73000000000002L280.4367980957031 230.73000000000002C280.4367980957031 230.73000000000002 271.4531448364258 230.73000000000002 271.4531448364258 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 271.4531448364258 230.73000000000002L 271.4531448364258 82.91Q 271.4531448364258 76.91 277.4531448364258 76.91L 274.4367980957031 76.91Q 280.4367980957031 76.91 280.4367980957031 82.91L 280.4367980957031 82.91L 280.4367980957031 230.73000000000002L 280.4367980957031 230.73000000000002z" pathFrom="M 271.4531448364258 230.73000000000002L 271.4531448364258 230.73000000000002L 280.4367980957031 230.73000000000002L 280.4367980957031 230.73000000000002L 280.4367980957031 230.73000000000002L 280.4367980957031 230.73000000000002L 280.4367980957031 230.73000000000002L 271.4531448364258 230.73000000000002" cy="76.91" cx="333.21687774658204" j="4" val="80" barHeight="153.82000000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1586" d="M334.21687774658204 230.73000000000002L334.21687774658204 111.75125C334.21687774658204 107.75125 336.21687774658204 105.75125 340.21687774658204 105.75125L337.2005310058594 105.75125C341.2005310058594 105.75125 343.2005310058594 107.75125 343.2005310058594 111.75125L343.2005310058594 111.75125L343.2005310058594 230.73000000000002L343.2005310058594 230.73000000000002C343.2005310058594 230.73000000000002 334.21687774658204 230.73000000000002 334.21687774658204 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 334.21687774658204 230.73000000000002L 334.21687774658204 111.75125Q 334.21687774658204 105.75125 340.21687774658204 105.75125L 337.2005310058594 105.75125Q 343.2005310058594 105.75125 343.2005310058594 111.75125L 343.2005310058594 111.75125L 343.2005310058594 230.73000000000002L 343.2005310058594 230.73000000000002z" pathFrom="M 334.21687774658204 230.73000000000002L 334.21687774658204 230.73000000000002L 343.2005310058594 230.73000000000002L 343.2005310058594 230.73000000000002L 343.2005310058594 230.73000000000002L 343.2005310058594 230.73000000000002L 343.2005310058594 230.73000000000002L 334.21687774658204 230.73000000000002" cy="105.75125" cx="395.9806106567383" j="5" val="65" barHeight="124.97875000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1588" d="M396.9806106567383 230.73000000000002L396.9806106567383 82.91C396.98061065673835 78.91 398.98061065673835 76.91 402.9806106567383 76.91L399.9642639160156 76.91C403.9642639160156 76.91 405.9642639160156 78.91 405.9642639160156 82.91L405.9642639160156 82.91L405.9642639160156 230.73000000000002L405.9642639160156 230.73000000000002C405.9642639160156 230.73000000000002 396.9806106567383 230.73000000000002 396.9806106567383 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 396.9806106567383 230.73000000000002L 396.9806106567383 82.91Q 396.9806106567383 76.91 402.9806106567383 76.91L 399.9642639160156 76.91Q 405.9642639160156 76.91 405.9642639160156 82.91L 405.9642639160156 82.91L 405.9642639160156 230.73000000000002L 405.9642639160156 230.73000000000002z" pathFrom="M 396.9806106567383 230.73000000000002L 396.9806106567383 230.73000000000002L 405.9642639160156 230.73000000000002L 405.9642639160156 230.73000000000002L 405.9642639160156 230.73000000000002L 405.9642639160156 230.73000000000002L 405.9642639160156 230.73000000000002L 396.9806106567383 230.73000000000002" cy="76.91" cx="458.74434356689454" j="6" val="80" barHeight="153.82000000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1590" d="M459.74434356689454 230.73000000000002L459.74434356689454 63.682500000000005C459.74434356689454 59.682500000000005 461.74434356689454 57.682500000000005 465.74434356689454 57.682500000000005L462.7279968261719 57.682500000000005C466.7279968261719 57.682500000000005 468.7279968261719 59.682500000000005 468.7279968261719 63.682500000000005L468.7279968261719 63.682500000000005L468.7279968261719 230.73000000000002L468.7279968261719 230.73000000000002C468.7279968261719 230.73000000000002 459.74434356689454 230.73000000000002 459.74434356689454 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 459.74434356689454 230.73000000000002L 459.74434356689454 63.682500000000005Q 459.74434356689454 57.682500000000005 465.74434356689454 57.682500000000005L 462.7279968261719 57.682500000000005Q 468.7279968261719 57.682500000000005 468.7279968261719 63.682500000000005L 468.7279968261719 63.682500000000005L 468.7279968261719 230.73000000000002L 468.7279968261719 230.73000000000002z" pathFrom="M 459.74434356689454 230.73000000000002L 459.74434356689454 230.73000000000002L 468.7279968261719 230.73000000000002L 468.7279968261719 230.73000000000002L 468.7279968261719 230.73000000000002L 468.7279968261719 230.73000000000002L 468.7279968261719 230.73000000000002L 459.74434356689454 230.73000000000002" cy="57.682500000000005" cx="521.5080764770507" j="7" val="90" barHeight="173.0475" barWidth="10.983653259277343"></path><path id="SvgjsPath1592" d="M522.5080764770507 230.73000000000002L522.5080764770507 15.613749999999982C522.5080764770507 11.613749999999982 524.5080764770507 9.613749999999982 528.5080764770507 9.613749999999982L525.4917297363281 9.613749999999982C529.4917297363281 9.613749999999982 531.4917297363281 11.613749999999982 531.4917297363281 15.613749999999982L531.4917297363281 15.613749999999982L531.4917297363281 230.73000000000002L531.4917297363281 230.73000000000002C531.4917297363281 230.73000000000002 522.5080764770507 230.73000000000002 522.5080764770507 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 522.5080764770507 230.73000000000002L 522.5080764770507 15.613749999999982Q 522.5080764770507 9.613749999999982 528.5080764770507 9.613749999999982L 525.4917297363281 9.613749999999982Q 531.4917297363281 9.613749999999982 531.4917297363281 15.613749999999982L 531.4917297363281 15.613749999999982L 531.4917297363281 230.73000000000002L 531.4917297363281 230.73000000000002z" pathFrom="M 522.5080764770507 230.73000000000002L 522.5080764770507 230.73000000000002L 531.4917297363281 230.73000000000002L 531.4917297363281 230.73000000000002L 531.4917297363281 230.73000000000002L 531.4917297363281 230.73000000000002L 531.4917297363281 230.73000000000002L 522.5080764770507 230.73000000000002" cy="9.613749999999982" cx="584.271809387207" j="8" val="115" barHeight="221.11625000000004" barWidth="10.983653259277343"></path><path id="SvgjsPath1594" d="M585.271809387207 230.73000000000002L585.271809387207 54.068749999999994C585.271809387207 50.068749999999994 587.271809387207 48.068749999999994 591.271809387207 48.068749999999994L588.2554626464844 48.068749999999994C592.2554626464844 48.068749999999994 594.2554626464844 50.068749999999994 594.2554626464844 54.068749999999994L594.2554626464844 54.068749999999994L594.2554626464844 230.73000000000002L594.2554626464844 230.73000000000002C594.2554626464844 230.73000000000002 585.271809387207 230.73000000000002 585.271809387207 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 585.271809387207 230.73000000000002L 585.271809387207 54.068749999999994Q 585.271809387207 48.068749999999994 591.271809387207 48.068749999999994L 588.2554626464844 48.068749999999994Q 594.2554626464844 48.068749999999994 594.2554626464844 54.068749999999994L 594.2554626464844 54.068749999999994L 594.2554626464844 230.73000000000002L 594.2554626464844 230.73000000000002z" pathFrom="M 585.271809387207 230.73000000000002L 585.271809387207 230.73000000000002L 594.2554626464844 230.73000000000002L 594.2554626464844 230.73000000000002L 594.2554626464844 230.73000000000002L 594.2554626464844 230.73000000000002L 594.2554626464844 230.73000000000002L 585.271809387207 230.73000000000002" cy="48.068749999999994" cx="647.0355422973632" j="9" val="95" barHeight="182.66125000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1596" d="M648.0355422973632 230.73000000000002L648.0355422973632 102.13750000000002C648.0355422973632 98.13750000000002 650.0355422973632 96.13750000000002 654.0355422973632 96.13750000000002L651.0191955566406 96.13750000000002C655.0191955566406 96.13750000000002 657.0191955566406 98.13750000000002 657.0191955566406 102.13750000000002L657.0191955566406 102.13750000000002L657.0191955566406 230.73000000000002L657.0191955566406 230.73000000000002C657.0191955566406 230.73000000000002 648.0355422973632 230.73000000000002 648.0355422973632 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 648.0355422973632 230.73000000000002L 648.0355422973632 102.13750000000002Q 648.0355422973632 96.13750000000002 654.0355422973632 96.13750000000002L 651.0191955566406 96.13750000000002Q 657.0191955566406 96.13750000000002 657.0191955566406 102.13750000000002L 657.0191955566406 102.13750000000002L 657.0191955566406 230.73000000000002L 657.0191955566406 230.73000000000002z" pathFrom="M 648.0355422973632 230.73000000000002L 648.0355422973632 230.73000000000002L 657.0191955566406 230.73000000000002L 657.0191955566406 230.73000000000002L 657.0191955566406 230.73000000000002L 657.0191955566406 230.73000000000002L 657.0191955566406 230.73000000000002L 648.0355422973632 230.73000000000002" cy="96.13750000000002" cx="709.7992752075195" j="10" val="70" barHeight="134.5925" barWidth="10.983653259277343"></path><path id="SvgjsPath1598" d="M710.7992752075195 230.73000000000002L710.7992752075195 75.219C710.7992752075195 71.219 712.7992752075195 69.219 716.7992752075195 69.219L713.7829284667969 69.219C717.7829284667969 69.219 719.7829284667969 71.219 719.7829284667969 75.219L719.7829284667969 75.219L719.7829284667969 230.73000000000002L719.7829284667969 230.73000000000002C719.7829284667969 230.73000000000002 710.7992752075195 230.73000000000002 710.7992752075195 230.73000000000002 " fill="rgba(0,163,255,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="0" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 710.7992752075195 230.73000000000002L 710.7992752075195 75.219Q 710.7992752075195 69.219 716.7992752075195 69.219L 713.7829284667969 69.219Q 719.7829284667969 69.219 719.7829284667969 75.219L 719.7829284667969 75.219L 719.7829284667969 230.73000000000002L 719.7829284667969 230.73000000000002z" pathFrom="M 710.7992752075195 230.73000000000002L 710.7992752075195 230.73000000000002L 719.7829284667969 230.73000000000002L 719.7829284667969 230.73000000000002L 719.7829284667969 230.73000000000002L 719.7829284667969 230.73000000000002L 719.7829284667969 230.73000000000002L 710.7992752075195 230.73000000000002" cy="69.219" cx="772.5630081176757" j="11" val="84" barHeight="161.51100000000002" barWidth="10.983653259277343"></path><g id="SvgjsG1574" class="apexcharts-bar-goals-markers" style="pointer-events: none"><g id="SvgjsG1575" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1577" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1579" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1581" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1583" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1585" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1587" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1589" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1591" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1593" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1595" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1597" className="apexcharts-bar-goals-groups"></g></g></g><g id="SvgjsG1599" class="apexcharts-series" rel="2" seriesName="Revenue" data:realIndex="1"><path id="SvgjsPath1603" d="M31.381866455078125 230.73000000000002L31.381866455078125 140.5925C31.381866455078125 136.5925 33.381866455078125 134.5925 37.381866455078125 134.5925L34.36551971435547 134.5925C38.36551971435547 134.5925 40.36551971435547 136.5925 40.36551971435547 140.5925L40.36551971435547 140.5925L40.36551971435547 230.73000000000002L40.36551971435547 230.73000000000002C40.36551971435547 230.73000000000002 31.381866455078125 230.73000000000002 31.381866455078125 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 31.381866455078125 230.73000000000002L 31.381866455078125 140.5925Q 31.381866455078125 134.5925 37.381866455078125 134.5925L 34.36551971435547 134.5925Q 40.36551971435547 134.5925 40.36551971435547 140.5925L 40.36551971435547 140.5925L 40.36551971435547 230.73000000000002L 40.36551971435547 230.73000000000002z" pathFrom="M 31.381866455078125 230.73000000000002L 31.381866455078125 230.73000000000002L 40.36551971435547 230.73000000000002L 40.36551971435547 230.73000000000002L 40.36551971435547 230.73000000000002L 40.36551971435547 230.73000000000002L 40.36551971435547 230.73000000000002L 31.381866455078125 230.73000000000002" cy="134.5925" cx="93.14559936523438" j="0" val="50" barHeight="96.13750000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1605" d="M94.14559936523438 230.73000000000002L94.14559936523438 102.13750000000002C94.14559936523438 98.13750000000002 96.14559936523438 96.13750000000002 100.14559936523438 96.13750000000002L97.12925262451172 96.13750000000002C101.12925262451171 96.13750000000002 103.12925262451171 98.13750000000002 103.12925262451172 102.13750000000002L103.12925262451172 102.13750000000002L103.12925262451172 230.73000000000002L103.12925262451172 230.73000000000002C103.12925262451172 230.73000000000002 94.14559936523438 230.73000000000002 94.14559936523438 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 94.14559936523438 230.73000000000002L 94.14559936523438 102.13750000000002Q 94.14559936523438 96.13750000000002 100.14559936523438 96.13750000000002L 97.12925262451172 96.13750000000002Q 103.12925262451172 96.13750000000002 103.12925262451172 102.13750000000002L 103.12925262451172 102.13750000000002L 103.12925262451172 230.73000000000002L 103.12925262451172 230.73000000000002z" pathFrom="M 94.14559936523438 230.73000000000002L 94.14559936523438 230.73000000000002L 103.12925262451172 230.73000000000002L 103.12925262451172 230.73000000000002L 103.12925262451172 230.73000000000002L 103.12925262451172 230.73000000000002L 103.12925262451172 230.73000000000002L 94.14559936523438 230.73000000000002" cy="96.13750000000002" cx="155.90933227539062" j="1" val="70" barHeight="134.5925" barWidth="10.983653259277343"></path><path id="SvgjsPath1607" d="M156.90933227539062 230.73000000000002L156.90933227539062 63.682500000000005C156.90933227539062 59.682500000000005 158.90933227539062 57.682500000000005 162.90933227539062 57.682500000000005L159.89298553466796 57.682500000000005C163.89298553466796 57.682500000000005 165.89298553466796 59.682500000000005 165.89298553466796 63.682500000000005L165.89298553466796 63.682500000000005L165.89298553466796 230.73000000000002L165.89298553466796 230.73000000000002C165.89298553466796 230.73000000000002 156.90933227539062 230.73000000000002 156.90933227539062 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 156.90933227539062 230.73000000000002L 156.90933227539062 63.682500000000005Q 156.90933227539062 57.682500000000005 162.90933227539062 57.682500000000005L 159.89298553466796 57.682500000000005Q 165.89298553466796 57.682500000000005 165.89298553466796 63.682500000000005L 165.89298553466796 63.682500000000005L 165.89298553466796 230.73000000000002L 165.89298553466796 230.73000000000002z" pathFrom="M 156.90933227539062 230.73000000000002L 156.90933227539062 230.73000000000002L 165.89298553466796 230.73000000000002L 165.89298553466796 230.73000000000002L 165.89298553466796 230.73000000000002L 165.89298553466796 230.73000000000002L 165.89298553466796 230.73000000000002L 156.90933227539062 230.73000000000002" cy="57.682500000000005" cx="218.67306518554688" j="2" val="90" barHeight="173.0475" barWidth="10.983653259277343"></path><path id="SvgjsPath1609" d="M219.67306518554688 230.73000000000002L219.67306518554688 11.768249999999995C219.67306518554688 7.768249999999995 221.67306518554688 5.768249999999995 225.67306518554688 5.768249999999995L222.6567184448242 5.768249999999995C226.6567184448242 5.768249999999995 228.6567184448242 7.768249999999995 228.6567184448242 11.768249999999995L228.6567184448242 11.768249999999995L228.6567184448242 230.73000000000002L228.6567184448242 230.73000000000002C228.6567184448242 230.73000000000002 219.67306518554688 230.73000000000002 219.67306518554688 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 219.67306518554688 230.73000000000002L 219.67306518554688 11.768249999999995Q 219.67306518554688 5.768249999999995 225.67306518554688 5.768249999999995L 222.6567184448242 5.768249999999995Q 228.6567184448242 5.768249999999995 228.6567184448242 11.768249999999995L 228.6567184448242 11.768249999999995L 228.6567184448242 230.73000000000002L 228.6567184448242 230.73000000000002z" pathFrom="M 219.67306518554688 230.73000000000002L 219.67306518554688 230.73000000000002L 228.6567184448242 230.73000000000002L 228.6567184448242 230.73000000000002L 228.6567184448242 230.73000000000002L 228.6567184448242 230.73000000000002L 228.6567184448242 230.73000000000002L 219.67306518554688 230.73000000000002" cy="5.768249999999995" cx="281.4367980957031" j="3" val="117" barHeight="224.96175000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1611" d="M282.4367980957031 230.73000000000002L282.4367980957031 82.91C282.4367980957031 78.91 284.4367980957031 76.91 288.4367980957031 76.91L285.42045135498046 76.91C289.42045135498046 76.91 291.42045135498046 78.91 291.42045135498046 82.91L291.42045135498046 82.91L291.42045135498046 230.73000000000002L291.42045135498046 230.73000000000002C291.42045135498046 230.73000000000002 282.4367980957031 230.73000000000002 282.4367980957031 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 282.4367980957031 230.73000000000002L 282.4367980957031 82.91Q 282.4367980957031 76.91 288.4367980957031 76.91L 285.42045135498046 76.91Q 291.42045135498046 76.91 291.42045135498046 82.91L 291.42045135498046 82.91L 291.42045135498046 230.73000000000002L 291.42045135498046 230.73000000000002z" pathFrom="M 282.4367980957031 230.73000000000002L 282.4367980957031 230.73000000000002L 291.42045135498046 230.73000000000002L 291.42045135498046 230.73000000000002L 291.42045135498046 230.73000000000002L 291.42045135498046 230.73000000000002L 291.42045135498046 230.73000000000002L 282.4367980957031 230.73000000000002" cy="76.91" cx="344.2005310058594" j="4" val="80" barHeight="153.82000000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1613" d="M345.2005310058594 230.73000000000002L345.2005310058594 111.75125C345.2005310058594 107.75125 347.2005310058594 105.75125 351.2005310058594 105.75125L348.1841842651367 105.75125C352.1841842651367 105.75125 354.1841842651367 107.75125 354.1841842651367 111.75125L354.1841842651367 111.75125L354.1841842651367 230.73000000000002L354.1841842651367 230.73000000000002C354.1841842651367 230.73000000000002 345.2005310058594 230.73000000000002 345.2005310058594 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 345.2005310058594 230.73000000000002L 345.2005310058594 111.75125Q 345.2005310058594 105.75125 351.2005310058594 105.75125L 348.1841842651367 105.75125Q 354.1841842651367 105.75125 354.1841842651367 111.75125L 354.1841842651367 111.75125L 354.1841842651367 230.73000000000002L 354.1841842651367 230.73000000000002z" pathFrom="M 345.2005310058594 230.73000000000002L 345.2005310058594 230.73000000000002L 354.1841842651367 230.73000000000002L 354.1841842651367 230.73000000000002L 354.1841842651367 230.73000000000002L 354.1841842651367 230.73000000000002L 354.1841842651367 230.73000000000002L 345.2005310058594 230.73000000000002" cy="105.75125" cx="406.9642639160156" j="5" val="65" barHeight="124.97875000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1615" d="M407.9642639160156 230.73000000000002L407.9642639160156 82.91C407.9642639160156 78.91 409.9642639160156 76.91 413.9642639160156 76.91L410.94791717529296 76.91C414.9479171752929 76.91 416.9479171752929 78.91 416.94791717529296 82.91L416.94791717529296 82.91L416.94791717529296 230.73000000000002L416.94791717529296 230.73000000000002C416.94791717529296 230.73000000000002 407.9642639160156 230.73000000000002 407.9642639160156 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 407.9642639160156 230.73000000000002L 407.9642639160156 82.91Q 407.9642639160156 76.91 413.9642639160156 76.91L 410.94791717529296 76.91Q 416.94791717529296 76.91 416.94791717529296 82.91L 416.94791717529296 82.91L 416.94791717529296 230.73000000000002L 416.94791717529296 230.73000000000002z" pathFrom="M 407.9642639160156 230.73000000000002L 407.9642639160156 230.73000000000002L 416.94791717529296 230.73000000000002L 416.94791717529296 230.73000000000002L 416.94791717529296 230.73000000000002L 416.94791717529296 230.73000000000002L 416.94791717529296 230.73000000000002L 407.9642639160156 230.73000000000002" cy="76.91" cx="469.7279968261719" j="6" val="80" barHeight="153.82000000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1617" d="M470.7279968261719 230.73000000000002L470.7279968261719 63.682500000000005C470.7279968261719 59.682500000000005 472.7279968261719 57.682500000000005 476.7279968261719 57.682500000000005L473.7116500854492 57.682500000000005C477.71165008544926 57.682500000000005 479.71165008544926 59.682500000000005 479.7116500854492 63.682500000000005L479.7116500854492 63.682500000000005L479.7116500854492 230.73000000000002L479.7116500854492 230.73000000000002C479.7116500854492 230.73000000000002 470.7279968261719 230.73000000000002 470.7279968261719 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 470.7279968261719 230.73000000000002L 470.7279968261719 63.682500000000005Q 470.7279968261719 57.682500000000005 476.7279968261719 57.682500000000005L 473.7116500854492 57.682500000000005Q 479.7116500854492 57.682500000000005 479.7116500854492 63.682500000000005L 479.7116500854492 63.682500000000005L 479.7116500854492 230.73000000000002L 479.7116500854492 230.73000000000002z" pathFrom="M 470.7279968261719 230.73000000000002L 470.7279968261719 230.73000000000002L 479.7116500854492 230.73000000000002L 479.7116500854492 230.73000000000002L 479.7116500854492 230.73000000000002L 479.7116500854492 230.73000000000002L 479.7116500854492 230.73000000000002L 470.7279968261719 230.73000000000002" cy="57.682500000000005" cx="532.4917297363281" j="7" val="90" barHeight="173.0475" barWidth="10.983653259277343"></path><path id="SvgjsPath1619" d="M533.4917297363281 230.73000000000002L533.4917297363281 15.613749999999982C533.4917297363281 11.613749999999982 535.4917297363281 9.613749999999982 539.4917297363281 9.613749999999982L536.4753829956055 9.613749999999982C540.4753829956055 9.613749999999982 542.4753829956055 11.613749999999982 542.4753829956055 15.613749999999982L542.4753829956055 15.613749999999982L542.4753829956055 230.73000000000002L542.4753829956055 230.73000000000002C542.4753829956055 230.73000000000002 533.4917297363281 230.73000000000002 533.4917297363281 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 533.4917297363281 230.73000000000002L 533.4917297363281 15.613749999999982Q 533.4917297363281 9.613749999999982 539.4917297363281 9.613749999999982L 536.4753829956055 9.613749999999982Q 542.4753829956055 9.613749999999982 542.4753829956055 15.613749999999982L 542.4753829956055 15.613749999999982L 542.4753829956055 230.73000000000002L 542.4753829956055 230.73000000000002z" pathFrom="M 533.4917297363281 230.73000000000002L 533.4917297363281 230.73000000000002L 542.4753829956055 230.73000000000002L 542.4753829956055 230.73000000000002L 542.4753829956055 230.73000000000002L 542.4753829956055 230.73000000000002L 542.4753829956055 230.73000000000002L 533.4917297363281 230.73000000000002" cy="9.613749999999982" cx="595.2554626464844" j="8" val="115" barHeight="221.11625000000004" barWidth="10.983653259277343"></path><path id="SvgjsPath1621" d="M596.2554626464844 230.73000000000002L596.2554626464844 54.068749999999994C596.2554626464844 50.068749999999994 598.2554626464844 48.068749999999994 602.2554626464844 48.068749999999994L599.2391159057618 48.068749999999994C603.2391159057618 48.068749999999994 605.2391159057618 50.068749999999994 605.2391159057618 54.068749999999994L605.2391159057618 54.068749999999994L605.2391159057618 230.73000000000002L605.2391159057618 230.73000000000002C605.2391159057618 230.73000000000002 596.2554626464844 230.73000000000002 596.2554626464844 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 596.2554626464844 230.73000000000002L 596.2554626464844 54.068749999999994Q 596.2554626464844 48.068749999999994 602.2554626464844 48.068749999999994L 599.2391159057618 48.068749999999994Q 605.2391159057618 48.068749999999994 605.2391159057618 54.068749999999994L 605.2391159057618 54.068749999999994L 605.2391159057618 230.73000000000002L 605.2391159057618 230.73000000000002z" pathFrom="M 596.2554626464844 230.73000000000002L 596.2554626464844 230.73000000000002L 605.2391159057618 230.73000000000002L 605.2391159057618 230.73000000000002L 605.2391159057618 230.73000000000002L 605.2391159057618 230.73000000000002L 605.2391159057618 230.73000000000002L 596.2554626464844 230.73000000000002" cy="48.068749999999994" cx="658.0191955566406" j="9" val="95" barHeight="182.66125000000002" barWidth="10.983653259277343"></path><path id="SvgjsPath1623" d="M659.0191955566406 230.73000000000002L659.0191955566406 102.13750000000002C659.0191955566406 98.13750000000002 661.0191955566406 96.13750000000002 665.0191955566406 96.13750000000002L662.002848815918 96.13750000000002C666.002848815918 96.13750000000002 668.002848815918 98.13750000000002 668.002848815918 102.13750000000002L668.002848815918 102.13750000000002L668.002848815918 230.73000000000002L668.002848815918 230.73000000000002C668.002848815918 230.73000000000002 659.0191955566406 230.73000000000002 659.0191955566406 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 659.0191955566406 230.73000000000002L 659.0191955566406 102.13750000000002Q 659.0191955566406 96.13750000000002 665.0191955566406 96.13750000000002L 662.002848815918 96.13750000000002Q 668.002848815918 96.13750000000002 668.002848815918 102.13750000000002L 668.002848815918 102.13750000000002L 668.002848815918 230.73000000000002L 668.002848815918 230.73000000000002z" pathFrom="M 659.0191955566406 230.73000000000002L 659.0191955566406 230.73000000000002L 668.002848815918 230.73000000000002L 668.002848815918 230.73000000000002L 668.002848815918 230.73000000000002L 668.002848815918 230.73000000000002L 668.002848815918 230.73000000000002L 659.0191955566406 230.73000000000002" cy="96.13750000000002" cx="720.7829284667969" j="10" val="70" barHeight="134.5925" barWidth="10.983653259277343"></path><path id="SvgjsPath1625" d="M721.7829284667969 230.73000000000002L721.7829284667969 75.219C721.7829284667969 71.219 723.7829284667969 69.219 727.7829284667969 69.219L724.7665817260743 69.219C728.7665817260743 69.219 730.7665817260743 71.219 730.7665817260743 75.219L730.7665817260743 75.219L730.7665817260743 230.73000000000002L730.7665817260743 230.73000000000002C730.7665817260743 230.73000000000002 721.7829284667969 230.73000000000002 721.7829284667969 230.73000000000002 " fill="rgba(239,242,245,1)" fill-opacity="1" stroke="transparent" stroke-opacity="1" stroke-linecap="round" stroke-width="2" stroke-dasharray="0" class="apexcharts-bar-area" index="1" clip-path="url(#gridRectMaskb4ipvokf)" pathTo="M 721.7829284667969 230.73000000000002L 721.7829284667969 75.219Q 721.7829284667969 69.219 727.7829284667969 69.219L 724.7665817260743 69.219Q 730.7665817260743 69.219 730.7665817260743 75.219L 730.7665817260743 75.219L 730.7665817260743 230.73000000000002L 730.7665817260743 230.73000000000002z" pathFrom="M 721.7829284667969 230.73000000000002L 721.7829284667969 230.73000000000002L 730.7665817260743 230.73000000000002L 730.7665817260743 230.73000000000002L 730.7665817260743 230.73000000000002L 730.7665817260743 230.73000000000002L 730.7665817260743 230.73000000000002L 721.7829284667969 230.73000000000002" cy="69.219" cx="783.5466613769531" j="11" val="84" barHeight="161.51100000000002" barWidth="10.983653259277343"></path><g id="SvgjsG1601" class="apexcharts-bar-goals-markers" style="pointer-events: none"><g id="SvgjsG1602" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1604" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1606" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1608" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1610" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1612" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1614" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1616" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1618" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1620" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1622" className="apexcharts-bar-goals-groups"></g><g id="SvgjsG1624" className="apexcharts-bar-goals-groups"></g></g></g><g id="SvgjsG1573" class="apexcharts-datalabels" data:realIndex="0"></g><g id="SvgjsG1600" class="apexcharts-datalabels" data:realIndex="1"></g></g><line id="SvgjsLine1691" x1="0" y1="0" x2="753.164794921875" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" stroke-linecap="butt" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine1692" x1="0" y1="0" x2="753.164794921875" y2="0" stroke-dasharray="0" stroke-width="0" stroke-linecap="butt" class="apexcharts-ycrosshairs-hidden"></line><g id="SvgjsG1693" class="apexcharts-yaxis-annotations"></g><g id="SvgjsG1694" class="apexcharts-xaxis-annotations"></g><g id="SvgjsG1695" class="apexcharts-point-annotations"></g></g><g id="SvgjsG1664" class="apexcharts-yaxis" rel="0" transform="translate(17.835205078125, 0)"><g id="SvgjsG1665" class="apexcharts-yaxis-texts-g"><text id="SvgjsText1667" font-family="inherit" x="20" y="31.4" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1668">120</tspan><title>120</title></text><text id="SvgjsText1670" font-family="inherit" x="20" y="89.08250000000001" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1671">90</tspan><title>90</title></text><text id="SvgjsText1673" font-family="inherit" x="20" y="146.76500000000001" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1674">60</tspan><title>60</title></text><text id="SvgjsText1676" font-family="inherit" x="20" y="204.44750000000002" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1677">30</tspan><title>30</title></text><text id="SvgjsText1679" font-family="inherit" x="20" y="262.13" text-anchor="end" dominant-baseline="auto" font-size="12px" font-weight="400" fill="#b5b5c3" class="apexcharts-text apexcharts-yaxis-label " style="font-family: inherit;"><tspan id="SvgjsTspan1680">0</tspan><title>0</title></text></g></g><g id="SvgjsG1561" class="apexcharts-annotations"></g></svg><div class="apexcharts-legend" style="max-height: 150px;"></div><div class="apexcharts-tooltip apexcharts-theme-light"><div class="apexcharts-tooltip-title" style="font-family: inherit; font-size: 12px;"></div><div class="apexcharts-tooltip-series-group" style="order: 1;"><span class="apexcharts-tooltip-marker" style="background-color: rgb(0, 163, 255);"></span><div class="apexcharts-tooltip-text" style="font-family: inherit; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div><div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group" style="order: 2;"><span class="apexcharts-tooltip-marker" style="background-color: rgb(239, 242, 245);"></span><div class="apexcharts-tooltip-text" style="font-family: inherit; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div><div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div><div class="apexcharts-yaxistooltip apexcharts-yaxistooltip-0 apexcharts-yaxistooltip-left apexcharts-theme-light"><div class="apexcharts-yaxistooltip-text"></div></div></div></div>
+                                                <!--end::Chart-->
+                                            </div>
+                                            <!--end::Tab pane-->
+                                        </div>
+                                        <!--end::Tab content-->
+                                    </div>
+                                    <!--end::Container-->
+                                </div>
+                                <!--end::Tab panel-->
+                                <!--begin::Tab panel-->
+                                <div class="tab-pane fade" id="kt_security_summary_tab_pane_2" role="tabpanel" aria-labelledby="#kt_security_summary_tab_2">
+                                    <!--begin::Container-->
+                                    <div class="pt-2">
+                                        <!--begin::Tabs-->
+                                        <div class="d-flex align-items-center pb-9 px-9">
+                                            <h3 class="m-0 text-gray-800 flex-grow-1">남해본부</h3>
+                                            <!--begin::Nav pills-->
+                                            <ul class="nav nav-pills nav-line-pills border rounded p-1" role="tablist">
+                                                <li class="nav-item me-2" role="presentation">
+                                                    <a class="nav-link btn btn-active-light btn-active-color-gray-700 btn-color-gray-400 py-2 px-5 fs-6 fw-semibold active" data-bs-toggle="tab" id="kt_security_summary_tab_nam1" href="#kt_security_summary_tab_pane_nam1" aria-selected="true" role="tab">생태복원실</a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link btn btn-active-light btn-active-color-gray-700 btn-color-gray-400 py-2 px-5 fs-6 fw-semibold" data-bs-toggle="tab" id="kt_security_summary_tab_nam2" href="#kt_security_summary_tab_pane_nam2" aria-selected="false" tabindex="-1" role="tab">자원센터</a>
+                                                </li>
+                                            </ul>
+                                            <!--end::Nav pills-->
+                                        </div>
+                                        <!--end::Tabs-->
+                                        <!--begin::Tab content-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade active show" id="kt_security_summary_tab_pane_nam1" role="tabpanel" aria-labelledby="#kt_security_summary_tab_nam1">
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 여수</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">남해본부 생태복원실</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 고흥(나로도)</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">나로도수협 나로도위판장</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 거문고</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">거문도수협</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 통영</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">통영 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 사천</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">사천 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 창원(마산)</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">마산 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 창원(진해)</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">국립수산과학원 첨단양식실증센터</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 목포</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">목포 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 영광</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">영광 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 거제</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">거제 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 진도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">전남해양수산기술원 진도지원</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 흑산도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">흑산도수협</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="tab-pane fade" id="kt_security_summary_tab_pane_nam2" role="tabpanel" aria-labelledby="#kt_security_summary_tab_nam2">
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 완도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">남해본부 남해생명자원센터</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::Tab content-->
+                                    </div>
+                                    <!--end::Container-->
+                                </div>
+                                <!--end::Tab panel-->
+                                <!--begin::Tab panel-->
+                                <div class="tab-pane fade" id="kt_security_summary_tab_pane_3" role="tabpanel" aria-labelledby="#kt_security_summary_tab_3">
+                                    <!--begin::Container-->
+                                    <div class="pt-2">
+                                        <!--begin::Tabs-->
+                                        <div class="d-flex align-items-center pb-9 px-9">
+                                            <h3 class="m-0 text-gray-800 flex-grow-1">동해본부</h3>
+                                            <!--begin::Nav pills-->
+                                            <ul class="nav nav-pills nav-line-pills border rounded p-1" role="tablist">
+                                                <li class="nav-item me-2" role="presentation">
+                                                    <a class="nav-link btn btn-active-light btn-active-color-gray-700 btn-color-gray-400 py-2 px-5 fs-6 fw-semibold active" data-bs-toggle="tab" id="kt_security_summary_tab_dong1" href="#kt_security_summary_tab_pane_dong1" aria-selected="true" role="tab">생태복원실</a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link btn btn-active-light btn-active-color-gray-700 btn-color-gray-400 py-2 px-5 fs-6 fw-semibold" data-bs-toggle="tab" id="kt_security_summary_tab_dong2" href="#kt_security_summary_tab_pane_dong2" aria-selected="false" tabindex="-1" role="tab">자원센터</a>
+                                                </li>
+                                            </ul>
+                                            <!--end::Nav pills-->
+                                        </div>
+                                        <!--end::Tabs-->
+                                        <!--begin::Tab content-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade active show" id="kt_security_summary_tab_pane_dong1" role="tabpanel" aria-labelledby="#kt_security_summary_tab_dong1">
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 포항</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">동해본부 생태복원실</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 후포</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">후포 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 울산</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">국립수산과학원 고래연구센터</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 울릉도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">경북어업기술센터 울릉지소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 강구</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">강구 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 축산</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">축산 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 감포</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">경주 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 구룡포</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">구룡포 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 죽변</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">죽변 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="kt_security_summary_tab_pane_dong2" role="tabpanel" aria-labelledby="#kt_security_summary_tab_dong2">
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 강릉/양양</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">동해본부 동해생명자원센터</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 고성/속초</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">속초 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 동해/삼척</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">삼척 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::Tab content-->
+                                    </div>
+                                    <!--end::Container-->
+                                </div>
+                                <!--end::Tab panel-->
+                                <!--begin::Tab panel-->
+                                <div class="tab-pane fade" id="kt_security_summary_tab_pane_4" role="tabpanel" aria-labelledby="#kt_security_summary_tab_4">
+                                    <!--begin::Container-->
+                                    <div class="pt-2">
+                                        <!--begin::Tabs-->
+                                        <div class="d-flex align-items-center pb-9 px-9">
+                                            <h3 class="m-0 text-gray-800 flex-grow-1">서해본부</h3>
+                                            <!--begin::Nav pills-->
+                                            <ul class="nav nav-pills nav-line-pills border rounded p-1" role="tablist">
+                                                <li class="nav-item me-2" role="presentation">
+                                                    <a class="nav-link btn btn-active-light btn-active-color-gray-700 btn-color-gray-400 py-2 px-5 fs-6 fw-semibold active" data-bs-toggle="tab" id="kt_security_summary_tab_seo1" href="#kt_security_summary_tab_pane_seo1" aria-selected="true" role="tab">생태복원실</a>
+                                                </li>
+                                            </ul>
+                                            <!--end::Nav pills-->
+                                        </div>
+                                        <!--end::Tabs-->
+                                        <!--begin::Tab content-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade active show" id="kt_security_summary_tab_pane_seo1" role="tabpanel" aria-labelledby="#kt_security_summary_tab_seo1">
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 군산</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">서해본부 생태복원실</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 안면도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">안면도수협 백사장위판장</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 태안</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">국립수산과학원 양식연구센터</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 보령</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">보령 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 서천</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">서천서부수협 홍원위판장</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 인천</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">인천 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 연평도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">옹진수협 연평출장소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 대청도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">옹진수협 대청지소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class=" text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <!--end::Tab content-->
+                                    </div>
+                                    <!--end::Container-->
+                                </div>
+                                <!--end::Tab panel-->
+                                <!--begin::Tab panel-->
+                                <div class="tab-pane fade" id="kt_security_summary_tab_pane_5" role="tabpanel" aria-labelledby="#kt_security_summary_tab_5">
+                                    <!--begin::Container-->
+                                    <div class="pt-2">
+                                        <!--begin::Tabs-->
+                                        <div class="d-flex align-items-center pb-9 px-9">
+                                            <h3 class="m-0 text-gray-800 flex-grow-1">제주본부</h3>
+                                            <!--begin::Nav pills-->
+                                            <ul class="nav nav-pills nav-line-pills border rounded p-1" role="tablist">
+                                                <li class="nav-item me-2" role="presentation">
+                                                    <a class="nav-link btn btn-active-light btn-active-color-gray-700 btn-color-gray-400 py-2 px-5 fs-6 fw-semibold active" data-bs-toggle="tab" id="kt_security_summary_tab_je1" href="#kt_security_summary_tab_pane_je1" aria-selected="true" role="tab">생태복원실</a>
+                                                </li>
+                                            </ul>
+                                            <!--end::Nav pills-->
+                                        </div>
+                                        <!--end::Tabs-->
+                                        <!--begin::Tab content-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade active show" id="kt_security_summary_tab_pane_je1" role="tabpanel" aria-labelledby="#kt_security_summary_tab_je1">
+                                                <div class="row p-0 mb-5 px-9">
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 제주도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">제주본부 생태복원실</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 제주도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">제주 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 제주도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">서귀포 TAC 현장사무소</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col">
+                                                        <div class="border border-dashed border-gray-300 text-center min-w-125px rounded pt-4 pb-2 my-3">
+                                                            <div class="fs-7 fw-bold text-gray-500 text-end mb-6 pe-5">지역 : 추자도</div>
+                                                            <div class="fs-3 fw-bold text-gray-800 d-block mb-9">추자도수협 추자항위판장</div>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>                                               
+                                            </div>                                      
+                                        </div>
+                                        <!--end::Tab content-->
+                                    </div>
+                                    <!--end::Container-->
+                                </div>
+                                <!--end::Tab panel-->
+                            </div>
+                            <!--end::Tab content-->
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end::Security summary-->
+                </div>
+                <!--end::Wrapper-->
+            </div>
+            <!--end::Products Documentations-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+</div>
+<!--end::Content-->
+<% include ./include/footer_i%>

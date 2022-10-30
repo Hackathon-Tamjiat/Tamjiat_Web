@@ -1,0 +1,67 @@
+		var HOME_PATH = window.HOME_PATH || '.';
+		var map = new naver.maps.Map(document.getElementById('map'), {
+			zoom: 2,
+			center: new naver.maps.LatLng(37.3614483, 129.1114883)
+		});
+		
+		var latlngs = [ 
+			<% for (var i = 0; i < shipName.length; i++) { %>
+                
+                new naver.maps.LatLng(<%= shipLat[i] %>, <%= shipLon[i] %>),
+                
+			<% } %>
+		];
+
+		var name = [ 
+			<% for (var i = 0; i < shipName.length; i++) { %>
+                
+                '<div style="width:150px;text-align:center;padding:10px;"><%= shipName[i] %></b></div>',
+                
+			<% } %>
+		].join('');
+
+
+		
+		var markerList = [];
+		
+		for (var i=0, ii=latlngs.length; i<ii; i++) {
+			var icon = {
+					url: HOME_PATH +'/img/example/sp_pins_spot_v3.png',
+					size: new naver.maps.Size(24, 37),
+					anchor: new naver.maps.Point(12, 37),
+					origin: new naver.maps.Point(i * 29, 0)
+				},
+				marker = new naver.maps.Marker({
+					position: latlngs[i],
+					map: map,
+					icon: icon
+				});
+
+			
+
+			var infowindow = new naver.maps.InfoWindow({
+				content: name[i]
+			});
+
+			marker.set('seq', i);
+			markerList.push(marker);
+
+			icon = null;
+			marker = null;
+
+
+			
+		}
+
+		naver.maps.Event.addListener(marker, "click", function(e) {
+				if (infowindow.getMap()) {
+					infowindow.close();
+				} else {
+					infowindow.open(map, marker);
+				}
+			});
+
+
+
+
+		

@@ -1,0 +1,166 @@
+<% include ./include/header_i%>
+<!--begin::Content-->
+<div class="content fs-6 d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Post-->
+    <div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div class="container-xxl">
+            <!--begin::Card-->
+            <div class="card card-flush pb-0 bgi-position-y-center bgi-no-repeat mb-10" style="background-size: auto calc(100% + 10rem); background-position-x: 100%; background-image: url('../assets/media/illustrations/sigma-1/4.png')">
+                <!--begin::Card header-->
+                <div class="card-header pt-10">
+                    <div class="d-flex align-items-center">
+                        <!--begin::Icon-->
+                        <div class="symbol symbol-circle me-5">
+                            <div class="symbol-label bg-transparent text-primary border border-secondary border-dashed">
+                                <!--begin::Svg Icon | path: icons/duotune/abstract/abs020.svg-->
+                                <span class="svg-icon svg-icon-2x svg-icon-primary">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.302 11.35L12.002 20.55H21.202C21.802 20.55 22.202 19.85 21.902 19.35L17.302 11.35Z" fill="currentColor" />
+                                        <path opacity="0.3" d="M12.002 20.55H2.802C2.202 20.55 1.80202 19.85 2.10202 19.35L6.70203 11.45L12.002 20.55ZM11.302 3.45L6.70203 11.35H17.302L12.702 3.45C12.402 2.85 11.602 2.85 11.302 3.45Z" fill="currentColor" />
+                                    </svg>
+                                </span>
+                                <!--end::Svg Icon-->
+                            </div>
+                        </div>
+                        <!--end::Icon-->
+                        <!--begin::Title-->
+                        <div class="d-flex flex-column">
+                            <h2 class="mb-1">육상용 AI 옵서버</h2>
+                            <div class="text-muted fw-bold">
+                            <span class="mx-3">Home&nbsp;&nbsp;|&nbsp;&nbsp;AI 옵서버 현황&nbsp;&nbsp;|&nbsp;&nbsp;육상용 AI 옵서버</span>
+                            </div>
+                        </div>
+                        <!--end::Title-->
+                    </div>
+                </div>
+                <!--end::Card header-->
+                <!--begin::Card body-->
+                <div class="card-body pb-0">
+                    <!--begin::Navs-->
+                    <div class="d-flex overflow-auto h-55px">
+                        <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-semibold flex-nowrap">
+                            <!--begin::Nav item-->
+                            <li class="nav-item">
+                                <a class="nav-link text-active-primary me-6" href="/marketob" style="font-weight: bold;">현황</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item">
+                                <a class="nav-link text-active-primary me-6 active" href="/marketob/data" style="font-weight: bold;">데이터 표</a>
+                            </li>
+                            <!--end::Nav item-->
+                            <!--begin::Nav item-->
+                            <li class="nav-item">
+                                <a class="nav-link text-active-primary me-6" href="/marketob/map" style="font-weight: bold;">TAC 위판장 지도</a>
+                            </li>
+                            <!--end::Nav item-->
+                        </ul>
+                    </div>
+                    <!--begin::Navs-->
+                </div>
+                <!--end::Card body-->
+            </div>
+            <!--end::Card-->
+            <!--begin::Table-->
+			<div class="card card-flush mt-6 mt-xl-9">
+                <!--begin::Card header-->
+                <div class="card-header mt-5">
+                    <!--begin::Card title-->
+                    <div class="card-title flex-column">
+                        <h3 class="fw-bold mb-1">위판장별 등록 어획량</h3>
+                        <div class="fs-6 text-gray-400">총 41 곳</div>
+                    </div>
+                    <!--begin::Card title-->
+                    <!--begin::Card toolbar-->
+                    <div class="card-toolbar my-1">
+                        <!--begin::Select-->
+                        <div class="me-6 my-1">
+                            <select id="kt_filter_year" name="year" data-control="select2" data-hide-search="true" class="w-125px form-select form-select-solid form-select-sm">
+                                <option value="All" selected="selected">모든 기간</option>
+                                <option value="thisyear">연도별</option>
+                                <option value="thismonth">월별</option>
+                                <option value="lastmonth">일별</option>
+                            </select>
+                        </div>
+                        <!--end::Select-->
+                        <!--begin::Select-->
+                        <div class="me-4 my-1">
+                            <select id="kt_filter_orders" name="orders" data-control="select2" data-hide-search="true" class="w-125px form-select form-select-solid form-select-sm">
+                                <option value="All" selected="selected">소속 부서</option>
+                                <option value="Approved">자원사업본부</option>
+                                <option value="Declined">남해본부</option>
+                                <option value="In Progress">동해본부</option>
+                                <option value="In Transit">서해본부</option>
+                                <option value="In Transit">제주본부</option>
+                            </select>
+                        </div>
+                        <!--end::Select-->
+                        <!--begin::Search-->
+                        <div class="d-flex align-items-center position-relative my-1">
+                            <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+                            <span class="svg-icon svg-icon-3 position-absolute ms-3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+                                    <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                            <!--end::Svg Icon-->
+                            <input type="text" id="kt_filter_search" class="form-control form-control-solid form-select-sm w-150px ps-9" placeholder="Search Order" />
+                        </div>
+                        <!--end::Search-->
+                    </div>
+                    <!--begin::Card toolbar-->
+                </div>
+                <!--end::Card header-->
+                <!--begin::Card body-->
+                <div class="card-body pt-0">
+                    <!--begin::Table container-->
+                    <div class="table-responsive">
+                        <!--begin::Table-->
+                        <table id="kt_profile_overview_table" class="table table-row-bordered table-row-dashed gy-4 align-middle fw-bold">
+                            <!--begin::Head-->
+                            <thead class="fs-7 text-gray-400 text-uppercase">
+                                <tr>
+                                    <th class="min-w-90px">어선명</th>
+                                    <th class="min-w-90px">위판장</th>
+                                    <th class="min-w-90px">지역</th>
+                                    <th class="min-w-90px">TAC 어종</th>
+                                    <th class="min-w-90px">어법</th>
+                                    <th class="min-w-100px">등록 어획량(ton)</th>
+                                    <th class="min-w-90px">날짜</th>
+                                    <th class="min-w-120px text-end">Details</th>
+                                </tr>
+                            </thead>
+                            <!--end::Head-->
+                            <!--begin::Body-->
+                            <tbody class="fs-6">
+                                <tr>
+                                    <td>천사호</td>
+                                    <td>흑산도수협</td>
+                                    <td>흑산도</td>
+                                    <td>참홍어</td>
+                                    <td>근해자망</td>
+                                    <td><span class="badge badge-light-success fw-bold px-5 py-4" style="font-size: 12px;">520</span></td>
+                                    <td>2022-08-31</td>
+                                    <td class="text-end">
+                                        <a href="#" class="btn btn-light btn-sm">보기</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <!--end::Body-->
+                        </table>
+                        <!--end::Table-->
+                    </div>
+                    <!--end::Table container-->
+                </div>
+                <!--end::Card body-->
+            </div>
+            <!--end::Card-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+</div>
+<!--end::Content-->
+<% include ./include/footer_i%>
